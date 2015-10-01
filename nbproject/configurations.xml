@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="contiki"
+                   displayName="contiki"
+                   projectFiles="true"
+                   root="../..">
+      <logicalFolder name="apps" displayName="apps" projectFiles="true">
+        <logicalFolder name="er-coap" displayName="er-coap" projectFiles="true">
+          <itemPath>../../apps/er-coap/er-coap-block1.c</itemPath>
+          <itemPath>../../apps/er-coap/er-coap-block1.h</itemPath>
+          <itemPath>../../apps/er-coap/er-coap-conf.h</itemPath>
+          <itemPath>../../apps/er-coap/er-coap-constants.h</itemPath>
+          <itemPath>../../apps/er-coap/er-coap-engine.c</itemPath>
+          <itemPath>../../apps/er-coap/er-coap-engine.h</itemPath>
+          <itemPath>../../apps/er-coap/er-coap-observe-client.c</itemPath>
+          <itemPath>../../apps/er-coap/er-coap-observe-client.h</itemPath>
+          <itemPath>../../apps/er-coap/er-coap-observe.c</itemPath>
+          <itemPath>../../apps/er-coap/er-coap-observe.h</itemPath>
+          <itemPath>../../apps/er-coap/er-coap-res-well-known-core.c</itemPath>
+          <itemPath>../../apps/er-coap/er-coap-separate.c</itemPath>
+          <itemPath>../../apps/er-coap/er-coap-separate.h</itemPath>
+          <itemPath>../../apps/er-coap/er-coap-transactions.c</itemPath>
+          <itemPath>../../apps/er-coap/er-coap-transactions.h</itemPath>
+          <itemPath>../../apps/er-coap/er-coap.c</itemPath>
+          <itemPath>../../apps/er-coap/er-coap.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="rest-engine" displayName="rest-engine" projectFiles="true">
+          <itemPath>../../apps/rest-engine/rest-constants.h</itemPath>
+          <itemPath>../../apps/rest-engine/rest-engine.c</itemPath>
+          <itemPath>../../apps/rest-engine/rest-engine.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="core" displayName="core" projectFiles="true">
+        <logicalFolder name="cfs" displayName="cfs" projectFiles="true">
+          <itemPath>../../core/cfs/cfs-posix-dir.c</itemPath>
+          <itemPath>../../core/cfs/cfs-posix.c</itemPath>
+          <itemPath>../../core/cfs/cfs.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="ctk" displayName="ctk" projectFiles="true">
+          <itemPath>../../core/ctk/ctk-conio.c</itemPath>
+          <itemPath>../../core/ctk/ctk-draw.h</itemPath>
+          <itemPath>../../core/ctk/ctk-filedialog.h</itemPath>
+          <itemPath>../../core/ctk/ctk-mouse.h</itemPath>
+          <itemPath>../../core/ctk/ctk-textentry-checkbox.c</itemPath>
+          <itemPath>../../core/ctk/ctk-textentry-checkbox.h</itemPath>
+          <itemPath>../../core/ctk/ctk-textentry-cmdline.c</itemPath>
+          <itemPath>../../core/ctk/ctk-textentry-cmdline.h</itemPath>
+          <itemPath>../../core/ctk/ctk-textentry-multiline.h</itemPath>
+          <itemPath>../../core/ctk/ctk.c</itemPath>
+          <itemPath>../../core/ctk/ctk.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="dev" displayName="dev" projectFiles="true">
+          <itemPath>../../core/dev/eeprom.h</itemPath>
+          <itemPath>../../core/dev/leds.c</itemPath>
+          <itemPath>../../core/dev/leds.h</itemPath>
+          <itemPath>../../core/dev/nullradio.c</itemPath>
+          <itemPath>../../core/dev/nullradio.h</itemPath>
+          <itemPath>../../core/dev/radio.h</itemPath>
+          <itemPath>../../core/dev/serial-line.c</itemPath>
+          <itemPath>../../core/dev/serial-line.h</itemPath>
+          <itemPath>../../core/dev/slip.c</itemPath>
+          <itemPath>../../core/dev/slip.h</itemPath>
+          <itemPath>../../core/dev/watchdog.h</itemPath>
+          <itemPath>../../core/dev/xmem.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="lib" displayName="lib" projectFiles="true">
+          <itemPath>../../core/lib/aes-128.c</itemPath>
+          <itemPath>../../core/lib/aes-128.h</itemPath>
+          <itemPath>../../core/lib/assert.c</itemPath>
+          <itemPath>../../core/lib/ccm-star.c</itemPath>
+          <itemPath>../../core/lib/ccm-star.h</itemPath>
+          <itemPath>../../core/lib/crc16.c</itemPath>
+          <itemPath>../../core/lib/gcr.c</itemPath>
+          <itemPath>../../core/lib/ifft.c</itemPath>
+          <itemPath>../../core/lib/ifft.h</itemPath>
+          <itemPath>../../core/lib/list.c</itemPath>
+          <itemPath>../../core/lib/list.h</itemPath>
+          <itemPath>../../core/lib/me.c</itemPath>
+          <itemPath>../../core/lib/me_tabs.h</itemPath>
+          <itemPath>../../core/lib/memb.c</itemPath>
+          <itemPath>../../core/lib/memb.h</itemPath>
+          <itemPath>../../core/lib/mmem.c</itemPath>
+          <itemPath>../../core/lib/mmem.h</itemPath>
+          <itemPath>../../core/lib/petsciiconv.c</itemPath>
+          <itemPath>../../core/lib/print-stats.c</itemPath>
+          <itemPath>../../core/lib/print-stats.h</itemPath>
+          <itemPath>../../core/lib/random.c</itemPath>
+          <itemPath>../../core/lib/random.h</itemPath>
+          <itemPath>../../core/lib/ringbuf.c</itemPath>
+          <itemPath>../../core/lib/ringbuf.h</itemPath>
+          <itemPath>../../core/lib/sensors.c</itemPath>
+          <itemPath>../../core/lib/sensors.h</itemPath>
+          <itemPath>../../core/lib/settings.c</itemPath>
+          <itemPath>../../core/lib/settings.h</itemPath>
+          <itemPath>../../core/lib/trickle-timer.c</itemPath>
+          <itemPath>../../core/lib/trickle-timer.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="loader" displayName="loader" projectFiles="true">
+          <itemPath>../../core/loader/elfloader-arch.h</itemPath>
+          <itemPath>../../core/loader/elfloader-stub.c</itemPath>
+          <itemPath>../../core/loader/elfloader.h</itemPath>
+          <itemPath>../../core/loader/symbols.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="net" displayName="net" projectFiles="true">
+          <logicalFolder name="ip" displayName="ip" projectFiles="true">
+          </logicalFolder>
+          <logicalFolder name="ipv6" displayName="ipv6" projectFiles="true">
+          </logicalFolder>
+          <logicalFolder name="llsec" displayName="llsec" projectFiles="true">
+          </logicalFolder>
+          <logicalFolder name="mac" displayName="mac" projectFiles="true">
+            <itemPath>../../core/net/mac/csma.c</itemPath>
+            <itemPath>../../core/net/mac/csma.h</itemPath>
+            <itemPath>../../core/net/mac/frame802154.c</itemPath>
+            <itemPath>../../core/net/mac/frame802154.h</itemPath>
+            <itemPath>../../core/net/mac/framer-802154.c</itemPath>
+            <itemPath>../../core/net/mac/framer-802154.h</itemPath>
+            <itemPath>../../core/net/mac/framer-nullmac.c</itemPath>
+            <itemPath>../../core/net/mac/framer-nullmac.h</itemPath>
+            <itemPath>../../core/net/mac/framer.c</itemPath>
+            <itemPath>../../core/net/mac/framer.h</itemPath>
+            <itemPath>../../core/net/mac/mac-sequence.c</itemPath>
+            <itemPath>../../core/net/mac/mac-sequence.h</itemPath>
+            <itemPath>../../core/net/mac/mac.c</itemPath>
+            <itemPath>../../core/net/mac/mac.h</itemPath>
+            <itemPath>../../core/net/mac/nullmac.c</itemPath>
+            <itemPath>../../core/net/mac/nullmac.h</itemPath>
+            <itemPath>../../core/net/mac/nullrdc-noframer.c</itemPath>
+            <itemPath>../../core/net/mac/nullrdc-noframer.h</itemPath>
+            <itemPath>../../core/net/mac/nullrdc.c</itemPath>
+            <itemPath>../../core/net/mac/nullrdc.h</itemPath>
+            <itemPath>../../core/net/mac/phase.c</itemPath>
+            <itemPath>../../core/net/mac/phase.h</itemPath>
+            <itemPath>../../core/net/mac/rdc.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="rpl" displayName="rpl" projectFiles="true">
+            <itemPath>../../core/net/rpl/rpl-dag.c</itemPath>
+            <itemPath>../../core/net/rpl/rpl-ext-header.c</itemPath>
+            <itemPath>../../core/net/rpl/rpl-icmp6.c</itemPath>
+            <itemPath>../../core/net/rpl/rpl.c</itemPath>
+          </logicalFolder>
+          <itemPath>../../core/net/nbr-table.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="sys" displayName="sys" projectFiles="true">
+          <itemPath>../../core/sys/arg.c</itemPath>
+          <itemPath>../../core/sys/arg.h</itemPath>
+          <itemPath>../../core/sys/autostart.c</itemPath>
+          <itemPath>../../core/sys/autostart.h</itemPath>
+          <itemPath>../../core/sys/cc.h</itemPath>
+          <itemPath>../../core/sys/clock.h</itemPath>
+          <itemPath>../../core/sys/compower.c</itemPath>
+          <itemPath>../../core/sys/compower.h</itemPath>
+          <itemPath>../../core/sys/ctimer.c</itemPath>
+          <itemPath>../../core/sys/ctimer.h</itemPath>
+          <itemPath>../../core/sys/energest.c</itemPath>
+          <itemPath>../../core/sys/energest.h</itemPath>
+          <itemPath>../../core/sys/etimer.c</itemPath>
+          <itemPath>../../core/sys/etimer.h</itemPath>
+          <itemPath>../../core/sys/lc-switch.h</itemPath>
+          <itemPath>../../core/sys/lc.h</itemPath>
+          <itemPath>../../core/sys/loader.h</itemPath>
+          <itemPath>../../core/sys/mt.c</itemPath>
+          <itemPath>../../core/sys/mt.h</itemPath>
+          <itemPath>../../core/sys/process.h</itemPath>
+          <itemPath>../../core/sys/procinit.c</itemPath>
+          <itemPath>../../core/sys/procinit.h</itemPath>
+          <itemPath>../../core/sys/pt.h</itemPath>
+          <itemPath>../../core/sys/rtimer.h</itemPath>
+          <itemPath>../../core/sys/stimer.c</itemPath>
+          <itemPath>../../core/sys/stimer.h</itemPath>
+          <itemPath>../../core/sys/timer.c</itemPath>
+          <itemPath>../../core/sys/timer.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="cpu" displayName="cpu" projectFiles="true">
+        <logicalFolder name="native" displayName="native" projectFiles="true">
+          <logicalFolder name="dev" displayName="dev" projectFiles="true">
+            <itemPath>../../cpu/native/dev/eeprom.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="net" displayName="net" projectFiles="true">
+            <itemPath>../../cpu/native/net/tapdev-drv.c</itemPath>
+            <itemPath>../../cpu/native/net/tapdev-drv.h</itemPath>
+            <itemPath>../../cpu/native/net/tapdev6.c</itemPath>
+            <itemPath>../../cpu/native/net/tapdev6.h</itemPath>
+          </logicalFolder>
+          <itemPath>../../cpu/native/mtarch.c</itemPath>
+          <itemPath>../../cpu/native/mtarch.h</itemPath>
+          <itemPath>../../cpu/native/rtimer-arch.c</itemPath>
+          <itemPath>../../cpu/native/rtimer-arch.h</itemPath>
+          <itemPath>../../cpu/native/watchdog.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="platform" displayName="platform" projectFiles="true">
+        <logicalFolder name="native" displayName="native" projectFiles="true">
+          <logicalFolder name="ctk" displayName="ctk" projectFiles="true">
+            <itemPath>../../platform/native/ctk/ctk-curses.c</itemPath>
+            <itemPath>../../platform/native/ctk/ctk-curses.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="dev" displayName="dev" projectFiles="true">
+            <itemPath>../../platform/native/dev/button-sensor.c</itemPath>
+            <itemPath>../../platform/native/dev/button-sensor.h</itemPath>
+            <itemPath>../../platform/native/dev/irq.c</itemPath>
+            <itemPath>../../platform/native/dev/leds-arch.c</itemPath>
+            <itemPath>../../platform/native/dev/pir-sensor.c</itemPath>
+            <itemPath>../../platform/native/dev/pir-sensor.h</itemPath>
+            <itemPath>../../platform/native/dev/vib-sensor.c</itemPath>
+            <itemPath>../../platform/native/dev/vib-sensor.h</itemPath>
+            <itemPath>../../platform/native/dev/xmem.c</itemPath>
+          </logicalFolder>
+          <itemPath>../../platform/native/clock.c</itemPath>
+          <itemPath>../../platform/native/contiki-conf.h</itemPath>
+          <itemPath>../../platform/native/contiki-main.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="core"
+                   displayName="core"
+                   projectFiles="true"
+                   root="../../core">
+      <logicalFolder name="ctk" displayName="ctk" projectFiles="true">
+        <itemPath>../../core/ctk/ctk-filedialog.c</itemPath>
+        <itemPath>../../core/ctk/ctk-textentry-multiline.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="dev" displayName="dev" projectFiles="true">
+      </logicalFolder>
+      <logicalFolder name="lib" displayName="lib" projectFiles="true">
+        <itemPath>../../core/lib/me_tabs.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="net" displayName="net" projectFiles="true">
+        <logicalFolder name="ip" displayName="ip" projectFiles="true">
+          <itemPath>../../core/net/ip/dhcpc.c</itemPath>
+          <itemPath>../../core/net/ip/dhcpc.h</itemPath>
+          <itemPath>../../core/net/ip/ip64-addr.c</itemPath>
+          <itemPath>../../core/net/ip/ip64-addr.h</itemPath>
+          <itemPath>../../core/net/ip/psock.c</itemPath>
+          <itemPath>../../core/net/ip/psock.h</itemPath>
+          <itemPath>../../core/net/ip/resolv.c</itemPath>
+          <itemPath>../../core/net/ip/resolv.h</itemPath>
+          <itemPath>../../core/net/ip/simple-udp.c</itemPath>
+          <itemPath>../../core/net/ip/simple-udp.h</itemPath>
+          <itemPath>../../core/net/ip/slipdev.c</itemPath>
+          <itemPath>../../core/net/ip/slipdev.h</itemPath>
+          <itemPath>../../core/net/ip/tcp-socket.c</itemPath>
+          <itemPath>../../core/net/ip/tcp-socket.h</itemPath>
+          <itemPath>../../core/net/ip/tcpip.c</itemPath>
+          <itemPath>../../core/net/ip/tcpip.h</itemPath>
+          <itemPath>../../core/net/ip/udp-socket.c</itemPath>
+          <itemPath>../../core/net/ip/udp-socket.h</itemPath>
+          <itemPath>../../core/net/ip/uip-debug.c</itemPath>
+          <itemPath>../../core/net/ip/uip-debug.h</itemPath>
+          <itemPath>../../core/net/ip/uip-nameserver.c</itemPath>
+          <itemPath>../../core/net/ip/uip-nameserver.h</itemPath>
+          <itemPath>../../core/net/ip/uip-packetqueue.c</itemPath>
+          <itemPath>../../core/net/ip/uip-packetqueue.h</itemPath>
+          <itemPath>../../core/net/ip/uip-split.c</itemPath>
+          <itemPath>../../core/net/ip/uip-split.h</itemPath>
+          <itemPath>../../core/net/ip/uip-udp-packet.c</itemPath>
+          <itemPath>../../core/net/ip/uip-udp-packet.h</itemPath>
+          <itemPath>../../core/net/ip/uip.h</itemPath>
+          <itemPath>../../core/net/ip/uip_arch.h</itemPath>
+          <itemPath>../../core/net/ip/uiplib.c</itemPath>
+          <itemPath>../../core/net/ip/uiplib.h</itemPath>
+          <itemPath>../../core/net/ip/uipopt.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="ipv4" displayName="ipv4" projectFiles="true">
+          <itemPath>../../core/net/ipv4/uip-fw-drv.h</itemPath>
+          <itemPath>../../core/net/ipv4/uip-fw.h</itemPath>
+          <itemPath>../../core/net/ipv4/uip_arp.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="ipv6" displayName="ipv6" projectFiles="true">
+          <logicalFolder name="multicast" displayName="multicast" projectFiles="true">
+            <itemPath>../../core/net/ipv6/multicast/roll-tm.h</itemPath>
+            <itemPath>../../core/net/ipv6/multicast/smrf.h</itemPath>
+            <itemPath>../../core/net/ipv6/multicast/uip-mcast6-engines.h</itemPath>
+            <itemPath>../../core/net/ipv6/multicast/uip-mcast6-route.h</itemPath>
+            <itemPath>../../core/net/ipv6/multicast/uip-mcast6-stats.h</itemPath>
+            <itemPath>../../core/net/ipv6/multicast/uip-mcast6.h</itemPath>
+          </logicalFolder>
+          <itemPath>../../core/net/ipv6/sicslowpan.c</itemPath>
+          <itemPath>../../core/net/ipv6/sicslowpan.h</itemPath>
+          <itemPath>../../core/net/ipv6/uip-ds6-nbr.c</itemPath>
+          <itemPath>../../core/net/ipv6/uip-ds6-nbr.h</itemPath>
+          <itemPath>../../core/net/ipv6/uip-ds6-route.c</itemPath>
+          <itemPath>../../core/net/ipv6/uip-ds6-route.h</itemPath>
+          <itemPath>../../core/net/ipv6/uip-ds6.c</itemPath>
+          <itemPath>../../core/net/ipv6/uip-ds6.h</itemPath>
+          <itemPath>../../core/net/ipv6/uip-icmp6.c</itemPath>
+          <itemPath>../../core/net/ipv6/uip-icmp6.h</itemPath>
+          <itemPath>../../core/net/ipv6/uip-nd6.c</itemPath>
+          <itemPath>../../core/net/ipv6/uip-nd6.h</itemPath>
+          <itemPath>../../core/net/ipv6/uip6.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="llsec" displayName="llsec" projectFiles="true">
+          <itemPath>../../core/net/llsec/anti-replay.c</itemPath>
+          <itemPath>../../core/net/llsec/anti-replay.h</itemPath>
+          <itemPath>../../core/net/llsec/ccm-star-packetbuf.c</itemPath>
+          <itemPath>../../core/net/llsec/llsec.h</itemPath>
+          <itemPath>../../core/net/llsec/llsec802154.h</itemPath>
+          <itemPath>../../core/net/llsec/nullsec.c</itemPath>
+          <itemPath>../../core/net/llsec/nullsec.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="mac" displayName="mac" projectFiles="true">
+        </logicalFolder>
+        <logicalFolder name="rime" displayName="rime" projectFiles="true">
+          <itemPath>../../core/net/rime/abc.h</itemPath>
+          <itemPath>../../core/net/rime/announcement.h</itemPath>
+          <itemPath>../../core/net/rime/broadcast.h</itemPath>
+          <itemPath>../../core/net/rime/chameleon.h</itemPath>
+          <itemPath>../../core/net/rime/channel.h</itemPath>
+          <itemPath>../../core/net/rime/collect-link-estimate.h</itemPath>
+          <itemPath>../../core/net/rime/collect-neighbor.h</itemPath>
+          <itemPath>../../core/net/rime/collect.h</itemPath>
+          <itemPath>../../core/net/rime/ipolite.h</itemPath>
+          <itemPath>../../core/net/rime/mesh.h</itemPath>
+          <itemPath>../../core/net/rime/multihop.h</itemPath>
+          <itemPath>../../core/net/rime/neighbor-discovery.h</itemPath>
+          <itemPath>../../core/net/rime/netflood.h</itemPath>
+          <itemPath>../../core/net/rime/packetqueue.h</itemPath>
+          <itemPath>../../core/net/rime/polite-announcement.h</itemPath>
+          <itemPath>../../core/net/rime/polite.h</itemPath>
+          <itemPath>../../core/net/rime/rime.h</itemPath>
+          <itemPath>../../core/net/rime/rimestats.h</itemPath>
+          <itemPath>../../core/net/rime/rmh.h</itemPath>
+          <itemPath>../../core/net/rime/route-discovery.h</itemPath>
+          <itemPath>../../core/net/rime/route.h</itemPath>
+          <itemPath>../../core/net/rime/rucb.h</itemPath>
+          <itemPath>../../core/net/rime/runicast.h</itemPath>
+          <itemPath>../../core/net/rime/stunicast.h</itemPath>
+          <itemPath>../../core/net/rime/timesynch.h</itemPath>
+          <itemPath>../../core/net/rime/trickle.h</itemPath>
+          <itemPath>../../core/net/rime/unicast.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="rpl" displayName="rpl" projectFiles="true">
+          <itemPath>../../core/net/rpl/rpl-conf.h</itemPath>
+          <itemPath>../../core/net/rpl/rpl-dag-root.c</itemPath>
+          <itemPath>../../core/net/rpl/rpl-dag-root.h</itemPath>
+          <itemPath>../../core/net/rpl/rpl-mrhof.c</itemPath>
+          <itemPath>../../core/net/rpl/rpl-of0.c</itemPath>
+          <itemPath>../../core/net/rpl/rpl-private.h</itemPath>
+          <itemPath>../../core/net/rpl/rpl-timers.c</itemPath>
+          <itemPath>../../core/net/rpl/rpl.h</itemPath>
+        </logicalFolder>
+        <itemPath>../../core/net/linkaddr.c</itemPath>
+        <itemPath>../../core/net/linkaddr.h</itemPath>
+        <itemPath>../../core/net/nbr-table.h</itemPath>
+        <itemPath>../../core/net/netstack.c</itemPath>
+        <itemPath>../../core/net/netstack.h</itemPath>
+        <itemPath>../../core/net/packetbuf.c</itemPath>
+        <itemPath>../../core/net/packetbuf.h</itemPath>
+        <itemPath>../../core/net/queuebuf.c</itemPath>
+        <itemPath>../../core/net/queuebuf.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="sys" displayName="sys" projectFiles="true">
+        <itemPath>../../core/sys/process.c</itemPath>
+        <itemPath>../../core/sys/rtimer.c</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <df root="." name="0">
+      <df name="resources">
+        <in>newfile.h</in>
+        <in>res-alarm.c</in>
+        <in>res-b1-sep-b2.c</in>
+        <in>res-battery.c</in>
+        <in>res-chunks.c</in>
+        <in>res-event.c</in>
+        <in>res-hello.c</in>
+        <in>res-leds.c</in>
+        <in>res-light.c</in>
+        <in>res-mirror.c</in>
+        <in>res-plugtest-create1.c</in>
+        <in>res-plugtest-create2.c</in>
+        <in>res-plugtest-create3.c</in>
+        <in>res-plugtest-large-create.c</in>
+        <in>res-plugtest-large-update.c</in>
+        <in>res-plugtest-large.c</in>
+        <in>res-plugtest-links.c</in>
+        <in>res-plugtest-locquery.c</in>
+        <in>res-plugtest-longpath.c</in>
+        <in>res-plugtest-multi.c</in>
+        <in>res-plugtest-obs.c</in>
+        <in>res-plugtest-path.c</in>
+        <in>res-plugtest-query.c</in>
+        <in>res-plugtest-separate.c</in>
+        <in>res-plugtest-test.c</in>
+        <in>res-plugtest-validate.c</in>
+        <in>res-push.c</in>
+        <in>res-radio.c</in>
+        <in>res-separate.c</in>
+        <in>res-sht11.c</in>
+        <in>res-sub.c</in>
+        <in>res-subscribe.c</in>
+        <in>res-toggle.c</in>
+      </df>
+      <in>er-example-client.c</in>
+      <in>er-example-server.c</in>
+      <in>subscribe.c</in>
+      <in>subscribe.h</in>
+      <in>support-rest-headers.h</in>
+      <in>symbols.c</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-g"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+          <cTool>
+            <incDir>
+              <pElem>/usr/local/include</pElem>
+              <pElem>.</pElem>
+              <pElem>resources</pElem>
+              <pElem>../../platform/native</pElem>
+              <pElem>../../platform/native/dev</pElem>
+              <pElem>../../platform/native/ctk</pElem>
+              <pElem>../../cpu/native</pElem>
+              <pElem>../../cpu/native/net</pElem>
+              <pElem>../../cpu/native/dev</pElem>
+              <pElem>../../core/dev</pElem>
+              <pElem>../../core/lib</pElem>
+              <pElem>../../core/net</pElem>
+              <pElem>../../core/net/llsec</pElem>
+              <pElem>../../core/net/mac</pElem>
+              <pElem>../../core/net/rime</pElem>
+              <pElem>../../core/net/rpl</pElem>
+              <pElem>../../core/sys</pElem>
+              <pElem>../../core/cfs</pElem>
+              <pElem>../../core/ctk</pElem>
+              <pElem>../../core/lib/ctk</pElem>
+              <pElem>../../core/loader</pElem>
+              <pElem>../../core</pElem>
+              <pElem>../../apps/er-coap</pElem>
+              <pElem>../../apps/rest-engine</pElem>
+              <pElem>../../core/net/ipv6</pElem>
+              <pElem>../../core/net/ip</pElem>
+              <pElem>../..</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>CONTIKI=1</Elem>
+              <Elem>CONTIKI_TARGET_NATIVE=1</Elem>
+              <Elem>CONTIKI_VERSION_STRING="Contiki-2.6-2450-geaa8760"</Elem>
+              <Elem>NETSTACK_CONF_WITH_IPV6=1</Elem>
+              <Elem>PROJECT_CONF_H="project-conf.h"</Elem>
+              <Elem>REST=coap_rest_implementation</Elem>
+              <Elem>UIP_CONF_IPV6_RPL=1</Elem>
+            </preprocessorList>
+          </cTool>
+        </makeTool>
+      </makefileType>
+      <item path="../../apps/er-coap/er-coap-block1.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../apps/er-coap/er-coap-engine.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../apps/er-coap/er-coap-observe-client.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../apps/er-coap/er-coap-observe.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../apps/er-coap/er-coap-res-well-known-core.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../apps/er-coap/er-coap-separate.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../apps/er-coap/er-coap-transactions.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../apps/er-coap/er-coap.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../apps/rest-engine/rest-engine.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/cfs/cfs-posix-dir.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/cfs/cfs-posix.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/ctk/ctk-conio.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/ctk/ctk-filedialog.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/ctk/ctk-textentry-checkbox.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/ctk/ctk-textentry-cmdline.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/ctk/ctk-textentry-multiline.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/ctk/ctk.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/dev/leds.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/dev/nullradio.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/dev/serial-line.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/dev/slip.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/lib/aes-128.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/lib/assert.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/lib/ccm-star.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/lib/crc16.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/lib/gcr.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/lib/ifft.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/lib/list.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/lib/me.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/lib/me_tabs.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/lib/memb.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/lib/mmem.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/lib/petsciiconv.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/lib/print-stats.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/lib/random.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/lib/ringbuf.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/lib/sensors.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/lib/settings.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/lib/trickle-timer.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/loader/elfloader-stub.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ip/dhcpc.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ip/ip64-addr.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ip/psock.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ip/resolv.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ip/simple-udp.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ip/slipdev.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ip/tcp-socket.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ip/tcpip.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ip/udp-socket.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ip/uip-debug.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ip/uip-nameserver.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ip/uip-packetqueue.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ip/uip-split.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ip/uip-udp-packet.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ip/uiplib.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ipv6/sicslowpan.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ipv6/uip-ds6-nbr.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ipv6/uip-ds6-route.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ipv6/uip-ds6.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ipv6/uip-icmp6.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ipv6/uip-nd6.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/ipv6/uip6.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/linkaddr.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/llsec/anti-replay.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/llsec/ccm-star-packetbuf.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/llsec/nullsec.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/mac/csma.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/mac/frame802154.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/mac/framer-802154.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/mac/framer-nullmac.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/mac/framer.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/mac/mac-sequence.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/mac/mac.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/mac/nullmac.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/mac/nullrdc-noframer.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/mac/nullrdc.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/mac/phase.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/nbr-table.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/netstack.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/packetbuf.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/queuebuf.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/rpl/rpl-dag-root.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/rpl/rpl-dag.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/rpl/rpl-ext-header.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/rpl/rpl-icmp6.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/rpl/rpl-mrhof.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/rpl/rpl-of0.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/rpl/rpl-timers.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/net/rpl/rpl.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/sys/arg.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/sys/autostart.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/sys/compower.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/sys/ctimer.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/sys/energest.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/sys/etimer.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/sys/mt.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/sys/process.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/sys/procinit.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/sys/rtimer.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/sys/stimer.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../core/sys/timer.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../cpu/native/dev/eeprom.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../cpu/native/mtarch.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../cpu/native/net/tapdev-drv.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../cpu/native/net/tapdev6.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../cpu/native/rtimer-arch.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../cpu/native/watchdog.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../platform/native/clock.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../platform/native/contiki-main.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../platform/native/ctk/ctk-curses.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../platform/native/dev/button-sensor.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../platform/native/dev/irq.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../platform/native/dev/leds-arch.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../platform/native/dev/pir-sensor.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../platform/native/dev/vib-sensor.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="../../platform/native/dev/xmem.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="er-example-client.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>AUTOSTART_ENABLE</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="er-example-server.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>AUTOSTART_ENABLE</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="resources/newfile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/res-alarm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="resources/res-b1-sep-b2.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-battery.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-chunks.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-event.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-hello.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-leds.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-light.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-mirror.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-plugtest-create1.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-plugtest-create2.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-plugtest-create3.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-plugtest-large-create.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-plugtest-large-update.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-plugtest-large.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-plugtest-links.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-plugtest-locquery.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-plugtest-longpath.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-plugtest-multi.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-plugtest-obs.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-plugtest-path.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-plugtest-query.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-plugtest-separate.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-plugtest-test.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-plugtest-validate.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-push.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-radio.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-separate.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-sht11.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-sub.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="resources/res-subscribe.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="resources/res-toggle.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="subscribe.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="subscribe.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="support-rest-headers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="symbols.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

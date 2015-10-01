@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="obj_native">
+      </df>
+      <df name="obj_z1">
+      </df>
+      <df name="resources">
+        <in>newfile.h</in>
+        <in>res-alarm.c</in>
+        <in>res-b1-sep-b2.c</in>
+        <in>res-battery.c</in>
+        <in>res-chunks.c</in>
+        <in>res-event.c</in>
+        <in>res-hello.c</in>
+        <in>res-leds.c</in>
+        <in>res-light.c</in>
+        <in>res-mirror.c</in>
+        <in>res-plugtest-create1.c</in>
+        <in>res-plugtest-create2.c</in>
+        <in>res-plugtest-create3.c</in>
+        <in>res-plugtest-large-create.c</in>
+        <in>res-plugtest-large-update.c</in>
+        <in>res-plugtest-large.c</in>
+        <in>res-plugtest-links.c</in>
+        <in>res-plugtest-locquery.c</in>
+        <in>res-plugtest-longpath.c</in>
+        <in>res-plugtest-multi.c</in>
+        <in>res-plugtest-obs.c</in>
+        <in>res-plugtest-path.c</in>
+        <in>res-plugtest-query.c</in>
+        <in>res-plugtest-separate.c</in>
+        <in>res-plugtest-test.c</in>
+        <in>res-plugtest-validate.c</in>
+        <in>res-push.c</in>
+        <in>res-radio.c</in>
+        <in>res-separate.c</in>
+        <in>res-sht11.c</in>
+        <in>res-sub.c</in>
+        <in>res-subscribe.c</in>
+        <in>res-toggle.c</in>
+      </df>
+      <in>er-example-client.c</in>
+      <in>er-example-observe-client.c</in>
+      <in>er-example-server.c</in>
+      <in>er-plugtest-server.c</in>
+      <in>er-plugtest.h</in>
+      <in>project-conf.h</in>
+      <in>subscribe.c</in>
+      <in>subscribe.h</in>
+      <in>support-rest-headers.h</in>
+      <in>symbols.c</in>
+      <in>symbols.h</in>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>
