@@ -100,4 +100,12 @@
 #undef PLATFORM_HAS_ALARM
 #define PLATFORM_HAS_ALARM 1
 
+/* Enable light-bulb in current platform. */
+#undef PLATFORM_HAS_LB
+#define PLATFORM_HAS_LB 1
+
+/* Enable motion in current platform*/
+#undef PLATFORM_HAS_MOTION
+#define PLATFORM_HAS_MOTION 1
+
 #endif /* __PROJECT_ERBIUM_CONF_H__ */

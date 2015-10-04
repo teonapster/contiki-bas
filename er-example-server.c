@@ -73,7 +73,8 @@ extern resource_t
   res_sub,
   res_b1_sep_b2,
   res_sht11,
-        res_alarm;
+  res_alarm,
+  res_motion;
 #if PLATFORM_HAS_LEDS
 extern resource_t res_leds, res_toggle;
 #endif
@@ -100,6 +101,17 @@ extern resource_t res_sht11;
 #if PLATFORM_HAS_ALARM
 #include "platform/z1/dev/relay-phidget.h"
 extern resource_t res_alarm;
+#endif
+
+#if PLATFORM_HAS_MOTION
+#include "platform/z1/dev/z1-phidgets.h"
+#include "core/lib/sensors.h"
+extern resource_t res_motion;
+#endif
+
+#if PLATFORM_HAS_LB
+#include "platform/z1/dev/relay-phidget.h"
+extern resource_t res_lb;
 #endif
 
 PROCESS(er_example_server, "Erbium Example Server");
@@ -151,11 +163,22 @@ PROCESS_THREAD(er_example_server, ev, data)
   relay_enable(6);
 #endif
   
+#if PLATFORM_HAS_LB
+  rest_activate_resource(&res_lb, "actuators/light_bulb");
+  relay_enable(7);
+#endif
+  
+#if PLATFORM_HAS_MOTION
+  rest_activate_resource(&res_motion,"sensors/motion");
+  SENSORS_ACTIVATE(phidgets);
+#endif
+  
 #if PLATFORM_HAS_LIGHT
   rest_activate_resource(&res_light, "sensors/light"); 
   SENSORS_ACTIVATE(light_sensor);  
 #endif
 
+  
 /*
 #if PLATFORM_HAS_BATTERY
   rest_activate_resource(&res_battery, "sensors/battery");  

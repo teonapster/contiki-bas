@@ -366,8 +366,10 @@
         <in>res-event.c</in>
         <in>res-hello.c</in>
         <in>res-leds.c</in>
+        <in>res-light-bulb.c</in>
         <in>res-light.c</in>
         <in>res-mirror.c</in>
+        <in>res-motion.c</in>
         <in>res-plugtest-create1.c</in>
         <in>res-plugtest-create2.c</in>
         <in>res-plugtest-create3.c</in>
@@ -1046,6 +1048,8 @@
         <cTool flags="0">
         </cTool>
       </item>
+      <item path="resources/res-light-bulb.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="resources/res-light.c" ex="false" tool="0" flavor2="0">
         <cTool flags="0">
         </cTool>
@@ -1053,6 +1057,8 @@
       <item path="resources/res-mirror.c" ex="false" tool="0" flavor2="0">
         <cTool flags="0">
         </cTool>
+      </item>
+      <item path="resources/res-motion.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="resources/res-plugtest-create1.c" ex="false" tool="0" flavor2="0">
         <cTool flags="0">

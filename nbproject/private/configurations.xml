@@ -15,8 +15,10 @@
         <in>res-event.c</in>
         <in>res-hello.c</in>
         <in>res-leds.c</in>
+        <in>res-light-bulb.c</in>
         <in>res-light.c</in>
         <in>res-mirror.c</in>
+        <in>res-motion.c</in>
         <in>res-plugtest-create1.c</in>
         <in>res-plugtest-create2.c</in>
         <in>res-plugtest-create3.c</in>
