@@ -69,23 +69,23 @@
 
 /* Increase rpl-border-router IP-buffer when using more than 64. */
 #undef REST_MAX_CHUNK_SIZE
-#define REST_MAX_CHUNK_SIZE            48
+#define REST_MAX_CHUNK_SIZE            80
 
 /* Estimate your header size, especially when using Proxy-Uri. */
-/*
+///*
    #undef COAP_MAX_HEADER_SIZE
-   #define COAP_MAX_HEADER_SIZE           70
- */
+   #define COAP_MAX_HEADER_SIZE           80
+// */
 
 /* Multiplies with chunk size, be aware of memory constraints. */
 #undef COAP_MAX_OPEN_TRANSACTIONS
-#define COAP_MAX_OPEN_TRANSACTIONS     4
+#define COAP_MAX_OPEN_TRANSACTIONS     8
 
 /* Must be <= open transactions, default is COAP_MAX_OPEN_TRANSACTIONS-1. */
-/*
+///*
    #undef COAP_MAX_OBSERVERS
    #define COAP_MAX_OBSERVERS             2
- */
+// */
 
 /* Filtering .well-known/core per query can be disabled to save space. */
 #undef COAP_LINK_FORMAT_FILTERING

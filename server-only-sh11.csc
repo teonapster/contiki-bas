@@ -78,6 +78,46 @@
       <moteinterface>org.contikios.cooja.mspmote.interfaces.MspLED</moteinterface>
       <moteinterface>org.contikios.cooja.mspmote.interfaces.MspDebugOutput</moteinterface>
     </motetype>
+    <motetype>
+      org.contikios.cooja.mspmote.Z1MoteType
+      <identifier>z14</identifier>
+      <description>Z1 Mote Temperature Client</description>
+      <source EXPORT="discard">[CONTIKI_DIR]/warehouse/er-rest-example/er-example-client-temperature.c</source>
+      <commands EXPORT="discard">make er-example-client-temperature.z1 TARGET=z1</commands>
+      <firmware EXPORT="copy">[CONTIKI_DIR]/warehouse/er-rest-example/er-example-client-temperature.z1</firmware>
+      <moteinterface>org.contikios.cooja.interfaces.Position</moteinterface>
+      <moteinterface>org.contikios.cooja.interfaces.RimeAddress</moteinterface>
+      <moteinterface>org.contikios.cooja.interfaces.IPAddress</moteinterface>
+      <moteinterface>org.contikios.cooja.interfaces.Mote2MoteRelations</moteinterface>
+      <moteinterface>org.contikios.cooja.interfaces.MoteAttributes</moteinterface>
+      <moteinterface>org.contikios.cooja.mspmote.interfaces.MspClock</moteinterface>
+      <moteinterface>org.contikios.cooja.mspmote.interfaces.MspMoteID</moteinterface>
+      <moteinterface>org.contikios.cooja.mspmote.interfaces.MspButton</moteinterface>
+      <moteinterface>org.contikios.cooja.mspmote.interfaces.Msp802154Radio</moteinterface>
+      <moteinterface>org.contikios.cooja.mspmote.interfaces.MspDefaultSerial</moteinterface>
+      <moteinterface>org.contikios.cooja.mspmote.interfaces.MspLED</moteinterface>
+      <moteinterface>org.contikios.cooja.mspmote.interfaces.MspDebugOutput</moteinterface>
+    </motetype>
+    <motetype>
+      org.contikios.cooja.mspmote.Z1MoteType
+      <identifier>z15</identifier>
+      <description>Z1 Mote Type temperature client 2</description>
+      <source EXPORT="discard">[CONTIKI_DIR]/warehouse/er-rest-example/er-example-client-temperature.c</source>
+      <commands EXPORT="discard">make er-example-client-temperature.z1 TARGET=z1</commands>
+      <firmware EXPORT="copy">[CONTIKI_DIR]/warehouse/er-rest-example/er-example-client-temperature.z1</firmware>
+      <moteinterface>org.contikios.cooja.interfaces.Position</moteinterface>
+      <moteinterface>org.contikios.cooja.interfaces.RimeAddress</moteinterface>
+      <moteinterface>org.contikios.cooja.interfaces.IPAddress</moteinterface>
+      <moteinterface>org.contikios.cooja.interfaces.Mote2MoteRelations</moteinterface>
+      <moteinterface>org.contikios.cooja.interfaces.MoteAttributes</moteinterface>
+      <moteinterface>org.contikios.cooja.mspmote.interfaces.MspClock</moteinterface>
+      <moteinterface>org.contikios.cooja.mspmote.interfaces.MspMoteID</moteinterface>
+      <moteinterface>org.contikios.cooja.mspmote.interfaces.MspButton</moteinterface>
+      <moteinterface>org.contikios.cooja.mspmote.interfaces.Msp802154Radio</moteinterface>
+      <moteinterface>org.contikios.cooja.mspmote.interfaces.MspDefaultSerial</moteinterface>
+      <moteinterface>org.contikios.cooja.mspmote.interfaces.MspLED</moteinterface>
+      <moteinterface>org.contikios.cooja.mspmote.interfaces.MspDebugOutput</moteinterface>
+    </motetype>
     <mote>
       <breakpoints />
       <interface_config>
@@ -114,11 +154,29 @@
       </interface_config>
       <motetype_identifier>z13</motetype_identifier>
     </mote>
+    <mote>
+      <breakpoints />
+      <interface_config>
+        org.contikios.cooja.interfaces.Position
+        <x>4.336960281847887</x>
+        <y>4.648406579440973</y>
+        <z>0.0</z>
+      </interface_config>
+      <interface_config>
+        org.contikios.cooja.mspmote.interfaces.MspClock
+        <deviation>1.0</deviation>
+      </interface_config>
+      <interface_config>
+        org.contikios.cooja.mspmote.interfaces.MspMoteID
+        <id>4</id>
+      </interface_config>
+      <motetype_identifier>z15</motetype_identifier>
+    </mote>
   </simulation>
   <plugin>
     org.contikios.cooja.plugins.SimControl
     <width>280</width>
-    <z>1</z>
+    <z>0</z>
     <height>160</height>
     <location_x>400</location_x>
     <location_y>0</location_y>
@@ -132,13 +190,13 @@
       <skin>org.contikios.cooja.plugins.skins.MoteTypeVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.UDGMVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.LEDVisualizerSkin</skin>
-      <viewport>3.531116634676723 0.0 0.0 3.531116634676723 145.19623182786347 202.49114270000894</viewport>
+      <viewport>2.545986378375789 0.0 0.0 2.545986378375789 220.70104236401494 261.59944386068577</viewport>
     </plugin_config>
     <width>400</width>
-    <z>2</z>
+    <z>3</z>
     <height>400</height>
-    <location_x>1</location_x>
-    <location_y>1</location_y>
+    <location_x>877</location_x>
+    <location_y>50</location_y>
   </plugin>
   <plugin>
     org.contikios.cooja.plugins.LogListener
@@ -147,17 +205,18 @@
       <formatted_time />
       <coloring />
     </plugin_config>
-    <width>288</width>
-    <z>3</z>
-    <height>240</height>
-    <location_x>400</location_x>
-    <location_y>160</location_y>
+    <width>594</width>
+    <z>2</z>
+    <height>243</height>
+    <location_x>157</location_x>
+    <location_y>198</location_y>
   </plugin>
   <plugin>
     org.contikios.cooja.plugins.TimeLine
     <plugin_config>
       <mote>0</mote>
       <mote>1</mote>
+      <mote>2</mote>
       <showRadioRXTX />
       <showRadioHW />
       <showLEDs />
@@ -186,13 +245,13 @@
     <mote_arg>1</mote_arg>
     <plugin_config>
       <port>60001</port>
-      <bound>false</bound>
+      <bound>true</bound>
     </plugin_config>
     <width>362</width>
-    <z>0</z>
+    <z>1</z>
     <height>116</height>
-    <location_x>238</location_x>
-    <location_y>448</location_y>
+    <location_x>740</location_x>
+    <location_y>527</location_y>
   </plugin>
 </simconf>
 

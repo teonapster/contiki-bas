@@ -3,6 +3,8 @@ all: er-example-server er-example-client
 ifndef TARGET
 TARGET=z1
 endif
+
+
     
 CONTIKI=../..
 
@@ -10,6 +12,11 @@ CFLAGS += -DPROJECT_CONF_H=\"project-conf.h\"
 ZOLERTIA_Z1SP=0
 # automatically build RESTful resources
 REST_RESOURCES_DIR = ./resources
+
+#automatically build client files
+CLIENT_DIR = ./
+
+
 ifndef TARGET
 REST_RESOURCES_FILES = $(notdir $(shell find $(REST_RESOURCES_DIR) -name '*.c'))
 else
@@ -19,6 +26,14 @@ else
 REST_RESOURCES_FILES = $(notdir $(shell find $(REST_RESOURCES_DIR) -name '*.c' ! -name 'res-plugtest*'))
 endif
 endif
+
+#compile all client scripts
+ifeq ($(CLIENT),YES)
+CLIENT_FILES = $(notdir $(shell find $(CLIENT_DIR) -name '*client*.c'))
+#CLIENT_FILES = ./er-example-client-temperature.c
+PROJECT_SOURCEFILES += $(CLIENT_FILES)
+endif
+
 
 PROJECTDIRS += $(REST_RESOURCES_DIR)
 PROJECT_SOURCEFILES += $(REST_RESOURCES_FILES)

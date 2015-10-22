@@ -16,7 +16,7 @@ obj_z1/res-sht11.o: resources/res-sht11.c ../../core/./contiki.h \
  ../../core/./contiki.h ../../core/./lib/list.h ../../core/./lib/memb.h \
  ../../core/./lib/mmem.h ../../core/./lib/random.h \
  ../../apps/rest-engine/rest-constants.h ../../dev/sht11/sht11-sensor.h \
- ../../core/./lib/sensors.h
+ ../../core/./lib/sensors.h ../../core/lib/random.h
 resources/res-sht11.c ../../core/./contiki.h :
  ../../core/./contiki-version.h ../../platform/z1/./contiki-conf.h :
  ../../platform/z1/./platform-conf.h ../../cpu/msp430/./msp430def.h :
@@ -35,4 +35,4 @@ resources/res-sht11.c ../../core/./contiki.h :
  ../../core/./contiki.h ../../core/./lib/list.h ../../core/./lib/memb.h :
  ../../core/./lib/mmem.h ../../core/./lib/random.h :
  ../../apps/rest-engine/rest-constants.h ../../dev/sht11/sht11-sensor.h :
- ../../core/./lib/sensors.h :
+ ../../core/./lib/sensors.h ../../core/lib/random.h :

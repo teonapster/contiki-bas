@@ -4,8 +4,6 @@
     <df root="." name="0">
       <df name="obj_native">
       </df>
-      <df name="obj_z1">
-      </df>
       <df name="resources">
         <in>newfile.h</in>
         <in>res-alarm.c</in>
@@ -43,8 +41,10 @@
         <in>res-subscribe.c</in>
         <in>res-toggle.c</in>
       </df>
+      <in>er-example-client-temperature.c</in>
       <in>er-example-client.c</in>
       <in>er-example-observe-client.c</in>
+      <in>er-example-observe-motion.c</in>
       <in>er-example-server.c</in>
       <in>er-plugtest-server.c</in>
       <in>er-plugtest.h</in>

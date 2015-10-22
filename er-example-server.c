@@ -63,18 +63,9 @@
  * Resources to be activated need to be imported through the extern keyword.
  * The build system automatically compiles the resources in the corresponding sub-directory.
  */
-extern resource_t
-  res_hello,
-  res_mirror,
-  res_chunks,
-  res_separate,
-  res_push,
-  res_event,
-  res_sub,
-  res_b1_sep_b2,
-  res_sht11,
-  res_alarm,
-  res_motion;
+extern resource_t res_hello,res_push,res_event,res_separate;
+
+
 #if PLATFORM_HAS_LEDS
 extern resource_t res_leds, res_toggle;
 #endif
@@ -145,17 +136,17 @@ PROCESS_THREAD(er_example_server, ev, data)
    * WARNING: Activating twice only means alternate path, not two instances!
    * All static variables are the same for each URI path.
    */
-  rest_activate_resource(&res_hello, "test/hello");
+//  rest_activate_resource(&res_hello, "test/hello");
 /*  rest_activate_resource(&res_mirror, "debug/mirror"); */
 /*  rest_activate_resource(&res_chunks, "test/chunks"); */
 /*  rest_activate_resource(&res_separate, "test/separate"); */
-  rest_activate_resource(&res_push, "test/push");
+//  rest_activate_resource(&res_push, "test/push");
 /*  rest_activate_resource(&res_event, "sensors/button"); */
 /*  rest_activate_resource(&res_sub, "test/sub"); */
 /*  rest_activate_resource(&res_b1_sep_b2, "test/b1sepb2"); */
 #if PLATFORM_HAS_LEDS
 /*  rest_activate_resource(&res_leds, "actuators/leds"); */
-  rest_activate_resource(&res_toggle, "actuators/toggle");
+//  rest_activate_resource(&res_toggle, "actuators/toggle");
 #endif
   
 #if PLATFORM_HAS_ALARM
@@ -193,6 +184,7 @@ PROCESS_THREAD(er_example_server, ev, data)
 #if PLATFORM_HAS_SHT11
   rest_activate_resource(&res_sht11, "sensors/sht11");  
   SENSORS_ACTIVATE(sht11_sensor);  
+  
 #endif
   
   /* Define application-specific events here. */
