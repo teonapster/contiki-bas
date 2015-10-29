@@ -1,4 +1,4 @@
-all: er-example-server er-example-client
+all: er-example-server er-example-client-temperature
 # use target "er-plugtest-server" explicitly when requried 
 ifndef TARGET
 TARGET=z1
@@ -16,7 +16,6 @@ REST_RESOURCES_DIR = ./resources
 #automatically build client files
 CLIENT_DIR = ./
 
-
 ifndef TARGET
 REST_RESOURCES_FILES = $(notdir $(shell find $(REST_RESOURCES_DIR) -name '*.c'))
 else
@@ -27,16 +26,21 @@ REST_RESOURCES_FILES = $(notdir $(shell find $(REST_RESOURCES_DIR) -name '*.c' !
 endif
 endif
 
+
+
 #compile all client scripts
 ifeq ($(CLIENT),YES)
-CLIENT_FILES = $(notdir $(shell find $(CLIENT_DIR) -name '*client*.c'))
-#CLIENT_FILES = ./er-example-client-temperature.c
+#CLIENT_FILES = $(notdir $(shell find $(CLIENT_DIR) -name '*client*.c'))
+CLIENT_FILES = ./er-example-client-temperature.c
 PROJECT_SOURCEFILES += $(CLIENT_FILES)
 endif
 
 
 PROJECTDIRS += $(REST_RESOURCES_DIR)
 PROJECT_SOURCEFILES += $(REST_RESOURCES_FILES)
+
+
+
 
 # linker optimizations
 SMALL=1
@@ -50,6 +54,9 @@ APPS += rest-engine
 #CUSTOM_RULE_S_TO_OBJECTDIR_O = 1
 
 CONTIKI_WITH_IPV6 = 1
+
+MODULES += core/net/ipv4 core/net/ipv6 core/net/ip core/net/mac core/net core/net/rime core/net/rpl core/net/mac/sicslowmac core/net/mac/contikimac core/net/http-socket
+
 include $(CONTIKI)/Makefile.include
 
 # minimal-net target is currently broken in Contiki
@@ -61,6 +68,9 @@ CFLAGS += -DREST_MAX_CHUNK_SIZE=1024
 CFLAGS += -DCOAP_MAX_HEADER_SIZE=176
 CONTIKI_WITH_RPL=0
 endif
+
+
+
 
 # optional rules to get assembly
 #$(OBJECTDIR)/%.o: asmdir/%.S

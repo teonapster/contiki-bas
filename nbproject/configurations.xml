@@ -400,6 +400,8 @@
       <in>subscribe.h</in>
       <in>support-rest-headers.h</in>
       <in>symbols.c</in>
+      <in>time-service-client.c</in>
+      <in>time-service-client.h</in>
     </df>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -457,6 +459,7 @@
               <pElem>../../core</pElem>
               <pElem>../../apps/er-coap</pElem>
               <pElem>../../apps/rest-engine</pElem>
+              <pElem>../../core/net/ipv4</pElem>
               <pElem>../../core/net/ipv6</pElem>
               <pElem>../../core/net/ip</pElem>
               <pElem>../..</pElem>
@@ -1165,6 +1168,10 @@
       <item path="symbols.c" ex="false" tool="0" flavor2="0">
         <cTool flags="0">
         </cTool>
+      </item>
+      <item path="time-service-client.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="time-service-client.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

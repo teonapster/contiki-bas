@@ -74,7 +74,7 @@ static struct etimer et;
 /* Example URIs that can be queried. */
 #define NUMBER_OF_URLS 4
 /* leading and ending slashes only for demo purposes, get cropped automatically when setting the Uri-Path */
-char *service_urls[NUMBER_OF_URLS] =
+char *my_time_urls[NUMBER_OF_URLS] =
 { ".well-known/core", "/actuators/toggle", "battery/", "error/in//path" };
 #if PLATFORM_HAS_BUTTON
 static int uri_switch = 0;
@@ -105,7 +105,7 @@ PROCESS_THREAD(er_example_client, ev, data)
 
 #if PLATFORM_HAS_BUTTON
   SENSORS_ACTIVATE(button_sensor);
-  printf("Press a button to request %s\n", service_urls[uri_switch]);
+  printf("Press a button to request %s\n", my_time_urls[uri_switch]);
 #endif
 
   while(1) {
@@ -116,7 +116,7 @@ PROCESS_THREAD(er_example_client, ev, data)
 
       /* prepare request, TID is set by COAP_BLOCKING_REQUEST() */
       coap_init_message(request, COAP_TYPE_CON, COAP_POST, 0);
-      coap_set_header_uri_path(request, service_urls[1]);
+      coap_set_header_uri_path(request, my_time_urls[1]);
 
       const char msg[] = "Toggle!";
 
@@ -138,9 +138,9 @@ PROCESS_THREAD(er_example_client, ev, data)
       /* send a request to notify the end of the process */
 
       coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
-      coap_set_header_uri_path(request, service_urls[uri_switch]);
+      coap_set_header_uri_path(request, my_time_urls[uri_switch]);
 
-      printf("--Requesting %s--\n", service_urls[uri_switch]);
+      printf("--Requesting %s--\n", my_time_urls[uri_switch]);
 
       PRINT6ADDR(&server_ipaddr);
       PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));

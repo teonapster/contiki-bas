@@ -62,7 +62,7 @@
 
 /* Disabling TCP on CoAP nodes. */
 #undef UIP_CONF_TCP
-#define UIP_CONF_TCP                   0
+#define UIP_CONF_TCP                   1
 
 #undef NETSTACK_CONF_MAC
 #define NETSTACK_CONF_MAC     nullmac_driver
@@ -107,5 +107,22 @@
 /* Enable motion in current platform*/
 #undef PLATFORM_HAS_MOTION
 #define PLATFORM_HAS_MOTION 1
+
+
+#undef NETSTACK_CONF_WITH_IPV6
+#define NETSTACK_CONF_WITH_IPV6 1
+
+#undef NETSTACK_CONF_WITH_RIME
+#define NETSTACK_CONF_WITH_RIME 1
+
+#undef UIP_CONF_IPV6
+#define UIP_CONF_IPV6 1
+
+#undef  UIP_CONF_IPV6_RPL
+#define  UIP_CONF_IPV6_RPL 1
+#define UIP_EXT_HDR_OPT_RPL   0x63
+
+#undef UIP_PROTO_HBHO
+#define UIP_PROTO_HBHO 1
 
 #endif /* __PROJECT_ERBIUM_CONF_H__ */

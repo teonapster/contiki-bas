@@ -43,6 +43,9 @@
 #include "contiki-net.h"
 #include "er-coap-engine.h"
 #include "dev/button-sensor.h"
+#include "http-socket.h"
+#include "ip64-addr.h"
+//#include "./time-service-client.h"
 
 
 #define DEBUG 0
@@ -59,7 +62,7 @@
 
 /* FIXME: This server address is hard-coded for Cooja and link-local for unconnected border router. */
 #define SERVER_NODE(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c, 0x0000, 0x0000, 0x0002)      /* cooja2 */
-/* #define SERVER_NODE(ipaddr)   uip_ip6addr(ipaddr, 0xbbbb, 0, 0, 0, 0, 0, 0, 0x1) */
+#define SERVER_TIME_NODE(ipaddr) uip_ip6addr(ipaddr, 0,0,0,0,0,0xffff,0x58c6,0x284b)
 
 #define LOCAL_PORT      UIP_HTONS(COAP_DEFAULT_PORT + 1)
 #define REMOTE_PORT     UIP_HTONS(COAP_DEFAULT_PORT)
@@ -67,20 +70,28 @@
 #define TOGGLE_INTERVAL 5
 
 PROCESS(er_example_temperature_client, "Temperature process Client");
+PROCESS(time_service_client, "Time process ClienT");
+
+//PROCESS(time_service_client, "Time process Client");
 AUTOSTART_PROCESSES(&er_example_temperature_client);
 
-uip_ipaddr_t server_ipaddr;
+uip_ipaddr_t server_ipaddr,server_time_ipaddr;
 static struct etimer et;
+static struct http_socket s;
+char  *current_time;
 int atWork = 0;
 /* Example URIs that can be queried. */
-#define NUMBER_OF_URLS 5
+#define NUMBER_OF_URLS 4
 /* leading and ending slashes only for demo purposes, get cropped automatically when setting the Uri-Path */
 char *service_temperature_urls[NUMBER_OF_URLS] =
-{ ".well-known/core", "/sensors/sht11", "battery/", "error/in//path",
-    "http://api.geonames.org/timezoneJSON?formatted=true&lat=40.38&lng=22.56&username=demo&style=full"};
+{ ".well-known/core", "/sensors/sht11", "battery/", "error/in//path"};
+
+char *service_url="http://api.geonames.org/timezoneJSON?formatted=true&lat=40.38&lng=22.56&username=demo&style=full";
+
 #if PLATFORM_HAS_BUTTON
 static int uri_switch = 1;
 #endif
+
 
 /* This function is will be passed to COAP_BLOCKING_REQUEST() to handle responses. */
 void
@@ -91,27 +102,14 @@ client_chunk_temperature_handler(void *response)
   int len = coap_get_payload(response, &chunk);
 //  char *firstValue = strtok((char *) chunk,";");
 //  printf("%s",firstValue);
-   if(etimer_expired(&dailyTimer)) {
-       etimer_set(&workTimer,8*3600*CLOCK_SECOND);
-       atWork=1;
-   }
-  if(etimer_expired(&workTimer)){
-      atWork=0;
-      etimer_stop(&workTimer);
-  }
-  if(atWork==1){
-      //GET THRESHOLD
-      
-      //IF VALUE > T -> OPEN THERMOSTAT
-      
-      //ELSE NOTHING
-  }
-  else{
-      //REDUCE THRESHOLD
-  }
-  
-  printf("|%.*s", len, (char *)chunk);
-}
+  /* prepare request, TID is set by COAP_BLOCKING_REQUEST() */
+  process_start(&time_service_client, NULL);
+  printf("|%.*s at (time): %s", len, (char *)chunk,current_time);
+ }
+
+
+    
+
 PROCESS_THREAD(er_example_temperature_client, ev, data)
 {
   PROCESS_BEGIN();
@@ -178,5 +176,40 @@ PROCESS_THREAD(er_example_temperature_client, ev, data)
     }
   }
 
+  PROCESS_END();
+}
+
+
+
+
+//================GET TIME PROCESS ====================================//
+
+void
+    time_callback(struct http_socket *s, void *ptr,
+         http_socket_event_t e,
+         const uint8_t *data, uint16_t datalen)
+{
+
+  if(e == HTTP_SOCKET_DATA) {
+    current_time = "success";
+    printf("HTTP socket received %d bytes of data\n", datalen);
+  }
+}
+
+    
+
+PROCESS_THREAD(time_service_client, ev, data)
+{
+  uip_ip4addr_t ip4addr;
+  uip_ip6addr_t ip6addr;
+
+  PROCESS_BEGIN();
+
+  uip_ipaddr(&ip4addr, 8,8,8,8);
+  ip64_addr_4to6(&ip4addr, &ip6addr);
+  uip_nameserver_update(&ip6addr, UIP_NAMESERVER_INFINITE_LIFETIME);
+  http_socket_init(&s);
+  http_socket_get(&s, service_url, 0, 0,
+                  time_callback, NULL);
   PROCESS_END();
 }

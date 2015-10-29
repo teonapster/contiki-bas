@@ -4,6 +4,8 @@
     <df root="." name="0">
       <df name="obj_native">
       </df>
+      <df name="obj_z1">
+      </df>
       <df name="resources">
         <in>newfile.h</in>
         <in>res-alarm.c</in>
@@ -53,7 +55,8 @@
       <in>subscribe.h</in>
       <in>support-rest-headers.h</in>
       <in>symbols.c</in>
-      <in>symbols.h</in>
+      <in>time-service-client.c</in>
+      <in>time-service-client.h</in>
     </df>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
