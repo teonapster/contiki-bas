@@ -1,32 +1,62 @@
-obj_z1/sht11-sensor.o: ../../dev/sht11/sht11-sensor.c \
- ../../core/./contiki.h ../../core/./contiki-version.h \
- ../../platform/z1/./contiki-conf.h ../../platform/z1/./platform-conf.h \
- ../../cpu/msp430/./msp430def.h project-conf.h \
- ../../core/./contiki-default-conf.h ../../core/./sys/process.h \
- ../../core/./sys/pt.h ../../core/./sys/lc.h ../../core/./sys/lc-switch.h \
- ../../core/./sys/cc.h ../../core/./sys/autostart.h \
- ../../core/./sys/process.h ../../core/./sys/timer.h \
- ../../core/./sys/clock.h ../../core/./sys/ctimer.h \
- ../../core/./sys/etimer.h ../../core/./sys/timer.h \
- ../../core/./sys/etimer.h ../../core/./sys/rtimer.h \
- ../../cpu/msp430/./rtimer-arch.h ../../core/./sys/rtimer.h \
- ../../core/./sys/pt.h ../../core/./sys/procinit.h \
- ../../core/./sys/loader.h ../../core/./sys/clock.h \
- ../../core/./sys/energest.h ../../core/./lib/sensors.h \
- ../../dev/sht11/sht11.h ../../dev/sht11/sht11-sensor.h
-../../dev/sht11/sht11-sensor.c :
- ../../core/./contiki.h ../../core/./contiki-version.h :
- ../../platform/z1/./contiki-conf.h ../../platform/z1/./platform-conf.h :
- ../../cpu/msp430/./msp430def.h project-conf.h :
- ../../core/./contiki-default-conf.h ../../core/./sys/process.h :
- ../../core/./sys/pt.h ../../core/./sys/lc.h ../../core/./sys/lc-switch.h :
- ../../core/./sys/cc.h ../../core/./sys/autostart.h :
- ../../core/./sys/process.h ../../core/./sys/timer.h :
- ../../core/./sys/clock.h ../../core/./sys/ctimer.h :
- ../../core/./sys/etimer.h ../../core/./sys/timer.h :
- ../../core/./sys/etimer.h ../../core/./sys/rtimer.h :
- ../../cpu/msp430/./rtimer-arch.h ../../core/./sys/rtimer.h :
- ../../core/./sys/pt.h ../../core/./sys/procinit.h :
- ../../core/./sys/loader.h ../../core/./sys/clock.h :
- ../../core/./sys/energest.h ../../core/./lib/sensors.h :
- ../../dev/sht11/sht11.h ../../dev/sht11/sht11-sensor.h :
+obj_z1/sht11-sensor.o: ../../../contiki-3.0/dev/sht11/sht11-sensor.c \
+ ../../../contiki-3.0/core/./contiki.h \
+ ../../../contiki-3.0/core/./contiki-version.h \
+ ../../../contiki-3.0/platform/z1/./contiki-conf.h \
+ ../../../contiki-3.0/platform/z1/./platform-conf.h \
+ ../../../contiki-3.0/cpu/msp430/./msp430def.h project-conf.h \
+ ../../../contiki-3.0/core/./contiki-default-conf.h \
+ ../../../contiki-3.0/core/./sys/process.h \
+ ../../../contiki-3.0/core/./sys/pt.h \
+ ../../../contiki-3.0/core/./sys/lc.h \
+ ../../../contiki-3.0/core/./sys/lc-switch.h \
+ ../../../contiki-3.0/core/./sys/cc.h \
+ ../../../contiki-3.0/core/./sys/autostart.h \
+ ../../../contiki-3.0/core/./sys/process.h \
+ ../../../contiki-3.0/core/./sys/timer.h \
+ ../../../contiki-3.0/core/./sys/clock.h \
+ ../../../contiki-3.0/core/./sys/ctimer.h \
+ ../../../contiki-3.0/core/./sys/etimer.h \
+ ../../../contiki-3.0/core/./sys/timer.h \
+ ../../../contiki-3.0/core/./sys/etimer.h \
+ ../../../contiki-3.0/core/./sys/rtimer.h \
+ ../../../contiki-3.0/cpu/msp430/./rtimer-arch.h \
+ ../../../contiki-3.0/core/./sys/rtimer.h \
+ ../../../contiki-3.0/core/./sys/pt.h \
+ ../../../contiki-3.0/core/./sys/procinit.h \
+ ../../../contiki-3.0/core/./sys/loader.h \
+ ../../../contiki-3.0/core/./sys/clock.h \
+ ../../../contiki-3.0/core/./sys/energest.h \
+ ../../../contiki-3.0/core/./lib/sensors.h \
+ ../../../contiki-3.0/dev/sht11/sht11.h \
+ ../../../contiki-3.0/dev/sht11/sht11-sensor.h
+../../../contiki-3.0/dev/sht11/sht11-sensor.c :
+ ../../../contiki-3.0/core/./contiki.h :
+ ../../../contiki-3.0/core/./contiki-version.h :
+ ../../../contiki-3.0/platform/z1/./contiki-conf.h :
+ ../../../contiki-3.0/platform/z1/./platform-conf.h :
+ ../../../contiki-3.0/cpu/msp430/./msp430def.h project-conf.h :
+ ../../../contiki-3.0/core/./contiki-default-conf.h :
+ ../../../contiki-3.0/core/./sys/process.h :
+ ../../../contiki-3.0/core/./sys/pt.h :
+ ../../../contiki-3.0/core/./sys/lc.h :
+ ../../../contiki-3.0/core/./sys/lc-switch.h :
+ ../../../contiki-3.0/core/./sys/cc.h :
+ ../../../contiki-3.0/core/./sys/autostart.h :
+ ../../../contiki-3.0/core/./sys/process.h :
+ ../../../contiki-3.0/core/./sys/timer.h :
+ ../../../contiki-3.0/core/./sys/clock.h :
+ ../../../contiki-3.0/core/./sys/ctimer.h :
+ ../../../contiki-3.0/core/./sys/etimer.h :
+ ../../../contiki-3.0/core/./sys/timer.h :
+ ../../../contiki-3.0/core/./sys/etimer.h :
+ ../../../contiki-3.0/core/./sys/rtimer.h :
+ ../../../contiki-3.0/cpu/msp430/./rtimer-arch.h :
+ ../../../contiki-3.0/core/./sys/rtimer.h :
+ ../../../contiki-3.0/core/./sys/pt.h :
+ ../../../contiki-3.0/core/./sys/procinit.h :
+ ../../../contiki-3.0/core/./sys/loader.h :
+ ../../../contiki-3.0/core/./sys/clock.h :
+ ../../../contiki-3.0/core/./sys/energest.h :
+ ../../../contiki-3.0/core/./lib/sensors.h :
+ ../../../contiki-3.0/dev/sht11/sht11.h :
+ ../../../contiki-3.0/dev/sht11/sht11-sensor.h :

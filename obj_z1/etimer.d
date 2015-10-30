@@ -1,12 +1,24 @@
-obj_z1/etimer.o: ../../core/sys/etimer.c \
- ../../platform/z1/./contiki-conf.h ../../platform/z1/./platform-conf.h \
- ../../cpu/msp430/./msp430def.h project-conf.h ../../core/./sys/etimer.h \
- ../../core/./sys/timer.h ../../core/./sys/clock.h \
- ../../core/./sys/process.h ../../core/./sys/pt.h ../../core/./sys/lc.h \
- ../../core/./sys/lc-switch.h ../../core/./sys/cc.h
-../../core/sys/etimer.c :
- ../../platform/z1/./contiki-conf.h ../../platform/z1/./platform-conf.h :
- ../../cpu/msp430/./msp430def.h project-conf.h ../../core/./sys/etimer.h :
- ../../core/./sys/timer.h ../../core/./sys/clock.h :
- ../../core/./sys/process.h ../../core/./sys/pt.h ../../core/./sys/lc.h :
- ../../core/./sys/lc-switch.h ../../core/./sys/cc.h :
+obj_z1/etimer.o: ../../../contiki-3.0/core/sys/etimer.c \
+ ../../../contiki-3.0/platform/z1/./contiki-conf.h \
+ ../../../contiki-3.0/platform/z1/./platform-conf.h \
+ ../../../contiki-3.0/cpu/msp430/./msp430def.h project-conf.h \
+ ../../../contiki-3.0/core/./sys/etimer.h \
+ ../../../contiki-3.0/core/./sys/timer.h \
+ ../../../contiki-3.0/core/./sys/clock.h \
+ ../../../contiki-3.0/core/./sys/process.h \
+ ../../../contiki-3.0/core/./sys/pt.h \
+ ../../../contiki-3.0/core/./sys/lc.h \
+ ../../../contiki-3.0/core/./sys/lc-switch.h \
+ ../../../contiki-3.0/core/./sys/cc.h
+../../../contiki-3.0/core/sys/etimer.c :
+ ../../../contiki-3.0/platform/z1/./contiki-conf.h :
+ ../../../contiki-3.0/platform/z1/./platform-conf.h :
+ ../../../contiki-3.0/cpu/msp430/./msp430def.h project-conf.h :
+ ../../../contiki-3.0/core/./sys/etimer.h :
+ ../../../contiki-3.0/core/./sys/timer.h :
+ ../../../contiki-3.0/core/./sys/clock.h :
+ ../../../contiki-3.0/core/./sys/process.h :
+ ../../../contiki-3.0/core/./sys/pt.h :
+ ../../../contiki-3.0/core/./sys/lc.h :
+ ../../../contiki-3.0/core/./sys/lc-switch.h :
+ ../../../contiki-3.0/core/./sys/cc.h :

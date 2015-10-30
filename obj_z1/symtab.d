@@ -1,4 +1,6 @@
-obj_z1/symtab.o: ../../core/loader/symtab.c ../../core/loader/symtab.h \
- ../../core/./loader/symbols.h
-../../core/loader/symtab.c ../../core/loader/symtab.h :
- ../../core/./loader/symbols.h :
+obj_z1/symtab.o: ../../../contiki-3.0/core/loader/symtab.c \
+ ../../../contiki-3.0/core/loader/symtab.h \
+ ../../../contiki-3.0/core/./loader/symbols.h
+../../../contiki-3.0/core/loader/symtab.c :
+ ../../../contiki-3.0/core/loader/symtab.h :
+ ../../../contiki-3.0/core/./loader/symbols.h :

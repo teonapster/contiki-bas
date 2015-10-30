@@ -6,7 +6,7 @@ endif
 
 
     
-CONTIKI=../..
+CONTIKI=../../
 
 CFLAGS += -DPROJECT_CONF_H=\"project-conf.h\"
 ZOLERTIA_Z1SP=0
@@ -55,7 +55,7 @@ APPS += rest-engine
 
 CONTIKI_WITH_IPV6 = 1
 
-MODULES += core/net/ipv4 core/net/ipv6 core/net/ip core/net/mac core/net core/net/rime core/net/rpl core/net/mac/sicslowmac core/net/mac/contikimac core/net/http-socket
+MODULES += core/net/http-socket
 
 include $(CONTIKI)/Makefile.include
 

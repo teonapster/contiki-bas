@@ -55,6 +55,7 @@
       <in>subscribe.h</in>
       <in>support-rest-headers.h</in>
       <in>symbols.c</in>
+      <in>symbols.h</in>
       <in>time-service-client.c</in>
       <in>time-service-client.h</in>
     </df>
