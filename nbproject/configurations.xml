@@ -396,10 +396,12 @@
       </df>
       <in>er-example-client.c</in>
       <in>er-example-server.c</in>
+      <in>node-state.h</in>
       <in>subscribe.c</in>
       <in>subscribe.h</in>
       <in>support-rest-headers.h</in>
       <in>symbols.c</in>
+      <in>temperature_settings.h</in>
       <in>time-service-client.c</in>
       <in>time-service-client.h</in>
     </df>
@@ -1023,6 +1025,8 @@
           </preprocessorList>
         </cTool>
       </item>
+      <item path="node-state.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="resources/newfile.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="resources/res-alarm.c" ex="false" tool="0" flavor2="0">
@@ -1168,6 +1172,8 @@
       <item path="symbols.c" ex="false" tool="0" flavor2="0">
         <cTool flags="0">
         </cTool>
+      </item>
+      <item path="temperature_settings.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="time-service-client.c" ex="false" tool="0" flavor2="0">
       </item>

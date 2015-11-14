@@ -2,6 +2,8 @@
 <configurationDescriptor version="95">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
+      <df name="obj_exp5438">
+      </df>
       <df name="obj_native">
       </df>
       <df name="obj_z1">
@@ -50,12 +52,14 @@
       <in>er-example-server.c</in>
       <in>er-plugtest-server.c</in>
       <in>er-plugtest.h</in>
+      <in>node-state.h</in>
       <in>project-conf.h</in>
       <in>subscribe.c</in>
       <in>subscribe.h</in>
       <in>support-rest-headers.h</in>
       <in>symbols.c</in>
       <in>symbols.h</in>
+      <in>temperature_settings.h</in>
       <in>time-service-client.c</in>
       <in>time-service-client.h</in>
     </df>

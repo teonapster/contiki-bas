@@ -34,6 +34,9 @@
  *      Erbium (Er) CoAP client example.
  * \author
  *      Matthias Kovatsch <kovatsch@inf.ethz.ch>
+ * 
+ * edit by 
+ *      Kouroutzidis Theodoros - Nikolaos <kourtheo@csd.auth.gr>
  */
 
 #include <stdio.h>
@@ -43,12 +46,8 @@
 #include "contiki-net.h"
 #include "er-coap-engine.h"
 #include "dev/button-sensor.h"
-#include "http-socket.h"
-#include "ip64-addr.h"
-//#include "./time-service-client.h"
+#include "node-state.h"
 
-
-#define DEBUG 0
 #if DEBUG
 #include <stdio.h>
 #define PRINTF(...) printf(__VA_ARGS__)
@@ -62,154 +61,150 @@
 
 /* FIXME: This server address is hard-coded for Cooja and link-local for unconnected border router. */
 #define SERVER_NODE(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c, 0x0000, 0x0000, 0x0002)      /* cooja2 */
-#define SERVER_TIME_NODE(ipaddr) uip_ip6addr(ipaddr, 0,0,0,0,0,0xffff,0x58c6,0x284b)
+/* #define SERVER_NODE(ipaddr)   uip_ip6addr(ipaddr, 0xbbbb, 0, 0, 0, 0, 0, 0, 0x1) */
 
 #define LOCAL_PORT      UIP_HTONS(COAP_DEFAULT_PORT + 1)
 #define REMOTE_PORT     UIP_HTONS(COAP_DEFAULT_PORT)
 
 #define TOGGLE_INTERVAL 5
-
+#define TOTAL_NODES 1
 PROCESS(er_example_temperature_client, "Temperature process Client");
-PROCESS(time_service_client, "Time process ClienT");
-
-//PROCESS(time_service_client, "Time process Client");
 AUTOSTART_PROCESSES(&er_example_temperature_client);
 
-uip_ipaddr_t server_ipaddr,server_time_ipaddr;
-static struct etimer et;
-static struct http_socket s;
-char  *current_time;
-int atWork = 0;
+uip_ipaddr_t server_ipaddr;
+static struct etimer et, dailyTimer, workTimer;
+static temperature_state node_state;
+static int atWork = 0;
+static int tChanged = 0;
+static uint8_t responderId = 0;
 /* Example URIs that can be queried. */
-#define NUMBER_OF_URLS 4
+#define NUMBER_OF_URLS 3
 /* leading and ending slashes only for demo purposes, get cropped automatically when setting the Uri-Path */
-char *service_temperature_urls[NUMBER_OF_URLS] =
-{ ".well-known/core", "/sensors/sht11", "battery/", "error/in//path"};
-
-char *service_url="http://api.geonames.org/timezoneJSON?formatted=true&lat=40.38&lng=22.56&username=demo&style=full";
-
+char *service_temperature_urls[NUMBER_OF_URLS] = {".well-known/core", "sensors/sht11", "error/in//path"};
 #if PLATFORM_HAS_BUTTON
 static int uri_switch = 1;
 #endif
 
-
 /* This function is will be passed to COAP_BLOCKING_REQUEST() to handle responses. */
 void
-client_chunk_temperature_handler(void *response)
-{
-  const uint8_t *chunk;
+client_chunk_temperature_handler(void *response) {
+    const uint8_t *chunk;
+    //
+    int len = coap_get_payload(response, &chunk);
+    uint8_t curTemperature = atoi(strtok((char *) chunk, ";"));
+    uint8_t curHumidity = atoi(strtok(NULL, ";"));
+    uint8_t curThermostatLow = atoi(strtok(NULL, ";"));
+    uint8_t curThermostatHigh = atoi(strtok(NULL, ";"));
+    uint8_t curThermostatSwitch = atoi(strtok(NULL, ";"));
 
-  int len = coap_get_payload(response, &chunk);
-//  char *firstValue = strtok((char *) chunk,";");
-//  printf("%s",firstValue);
-  /* prepare request, TID is set by COAP_BLOCKING_REQUEST() */
-  process_start(&time_service_client, NULL);
-  printf("|%.*s at (time): %s", len, (char *)chunk,current_time);
- }
-
-
-    
-
-PROCESS_THREAD(er_example_temperature_client, ev, data)
-{
-  PROCESS_BEGIN();
-
-  static coap_packet_t request[1];      /* This way the packet can be treated as pointer as usual. */
-
-  SERVER_NODE(&server_ipaddr);
-
-  /* receives all CoAP messages */
-  coap_init_engine();
-
-  etimer_set(&et, TOGGLE_INTERVAL * CLOCK_SECOND);
-  
-
-#if PLATFORM_HAS_BUTTON
-  SENSORS_ACTIVATE(button_sensor);
-  printf("Press a button to request %s\n", service_temperature_urls[uri_switch]);
+#if DEBUG
+    printf("t=%u, h=%u, therm_l=%u, therm_h=%u, therm_sw=%u\n",
+            curTemperature, curHumidity, curThermostatLow, curThermostatHigh, curThermostatSwitch);
 #endif
-
-  while(1) {
-    PROCESS_YIELD();
-
-    if(etimer_expired(&et)) {
-      printf("--Toggle timer--\n");
-
-      /* prepare request, TID is set by COAP_BLOCKING_REQUEST() */
-      coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
-      coap_set_header_uri_path(request, service_temperature_urls[1]);
-
-      const char msg[] = "Toggle!";
-
-      coap_set_payload(request, (uint8_t *)msg, sizeof(msg) - 1);
-
-      PRINT6ADDR(&server_ipaddr);
-      PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
-
-      COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, request,
-                            client_chunk_temperature_handler);
-
-      printf("\n--Done--\n");
-
-      etimer_reset(&et);
-
-#if PLATFORM_HAS_BUTTON
-    } else if(ev == sensors_event && data == &button_sensor) {
-
-      /* send a request to notify the end of the process */
-
-      coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
-      coap_set_header_uri_path(request, service_temperature_urls[uri_switch]);
-
-      printf("--Requesting %s--\n", service_temperature_urls[uri_switch]);
-
-      PRINT6ADDR(&server_ipaddr);
-      PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
-
-      COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, request,
-                            client_chunk_temperature_handler);
-
-      printf("\n--Done--\n");
-
-      uri_switch = (uri_switch + 1) % NUMBER_OF_URLS;
+    if (etimer_expired(&dailyTimer) && atWork == 0) {
+        etimer_set(&workTimer, 8 * 10 * CLOCK_SECOND);
+        atWork = 1;
+#if DEBUG
+        printf("Start working!\n");
 #endif
+        etimer_reset(&dailyTimer);
     }
-  }
+    if (etimer_expired(&workTimer) && atWork == 1) {
+        etimer_stop(&workTimer);
+#if DEBUG
+        printf("Stop working!\n");
+#endif  
+        atWork = 0;
+    }
 
-  PROCESS_END();
+    if (curTemperature < curThermostatLow && curThermostatSwitch == 0) {// cold + closed thermostat
+        node_state.cold = 1;
+        node_state.hot = 0;
+        printf("COOOOOLD! -> switch on thermostat\n");
+    } else if (curTemperature > curThermostatHigh && curThermostatSwitch == 1) { //hot + open thermostat
+        node_state.hot = 1;
+        node_state.cold = 0;
+        printf("HOOOOOOOOOT! -> switch off thermostat\n");
+    } else {
+        node_state.hot = 0;
+        node_state.cold = 0;
+    }
+
+
 }
-
-
-
-
-//================GET TIME PROCESS ====================================//
 
 void
-    time_callback(struct http_socket *s, void *ptr,
-         http_socket_event_t e,
-         const uint8_t *data, uint16_t datalen)
-{
-
-  if(e == HTTP_SOCKET_DATA) {
-    current_time = "success";
-    printf("HTTP socket received %d bytes of data\n", datalen);
-  }
+threshold_handler(void *response) {
+    const uint8_t *chunk;
+    int len = coap_get_payload(response, &chunk);
+#if DEBUG
+    printf("%s\n", len, (char *) chunk);
+#endif    
 }
 
-    
+PROCESS_THREAD(er_example_temperature_client, ev, data) {
+    PROCESS_BEGIN();
 
-PROCESS_THREAD(time_service_client, ev, data)
-{
-  uip_ip4addr_t ip4addr;
-  uip_ip6addr_t ip6addr;
+    static coap_packet_t request[1], putRequest[1]; /* This way the packet can be treated as pointer as usual. */
 
-  PROCESS_BEGIN();
+    SERVER_NODE(&server_ipaddr); // TODO Configure the rest server nodes :)
 
-  uip_ipaddr(&ip4addr, 8,8,8,8);
-  ip64_addr_4to6(&ip4addr, &ip6addr);
-  uip_nameserver_update(&ip6addr, UIP_NAMESERVER_INFINITE_LIFETIME);
-  http_socket_init(&s);
-  http_socket_get(&s, service_url, 0, 0,
-                  time_callback, NULL);
-  PROCESS_END();
+    /* receives all CoAP messages */
+    coap_init_engine();
+
+    etimer_set(&et, TOGGLE_INTERVAL * CLOCK_SECOND);
+    etimer_set(&dailyTimer, 24 * 10 * CLOCK_SECOND);
+
+#if PLATFORM_HAS_BUTTON
+    SENSORS_ACTIVATE(button_sensor);
+    printf("Press a button to request %s\n", service_temperature_urls[uri_switch]);
+#endif
+
+    while (1) {
+        PROCESS_YIELD();
+
+        if (etimer_expired(&et)) { //TODO repeat for each server
+
+
+#if DEBUG
+            printf("Ask for current temperature\n");
+#endif  
+            /* prepare request, TID is set by COAP_BLOCKING_REQUEST() */
+            coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
+            coap_set_header_uri_path(request, service_temperature_urls[1]);
+
+            const char msg[] = "Toggle!";
+
+            coap_set_payload(request, (uint8_t *) msg, sizeof (msg) - 1);
+
+            PRINT6ADDR(&server_ipaddr);
+            PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
+
+            COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, request,
+                    client_chunk_temperature_handler);
+            char *url;
+            if (atWork == 1) {
+                if (node_state.cold)
+                    url="?thermostat_low=19&thermostat_high=25&thermostat_switch=1";
+                else if (node_state.hot)
+                    url= "?thermostat_low=19&thermostat_high=25&thermostat_switch=0";
+            } else if (atWork == 0 && tChanged == 0) {
+                if (node_state.cold)
+                    url="?thermostat_low=15&thermostat_high=17&thermostat_switch=1";
+                else if (node_state.hot)
+                    url="?thermostat_low=15&thermostat_high=17&thermostat_switch=0";
+
+            }
+
+            coap_init_message(putRequest, COAP_TYPE_CON, COAP_POST, 0);
+            coap_set_header_uri_path(putRequest, service_temperature_urls[1]);
+            coap_set_header_uri_query(putRequest, url);
+            COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, putRequest,
+                    threshold_handler);
+
+            etimer_reset(&et);
+        }
+
+        PROCESS_END();
+    }
 }

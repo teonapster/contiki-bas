@@ -1,4 +1,2 @@
-obj_z1/me.o: ../../../contiki-3.0/core/lib/me.c \
- ../../../contiki-3.0/core/lib/me_tabs.h
-../../../contiki-3.0/core/lib/me.c :
- ../../../contiki-3.0/core/lib/me_tabs.h :
+obj_z1/me.o: ../../core/lib/me.c ../../core/lib/me_tabs.h
+../../core/lib/me.c ../../core/lib/me_tabs.h :
