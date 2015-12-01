@@ -63,7 +63,7 @@
  * Resources to be activated need to be imported through the extern keyword.
  * The build system automatically compiles the resources in the corresponding sub-directory.
  */
-extern resource_t res_hello,res_push,res_event,res_separate;
+extern resource_t res_hello,res_motion_periodic,res_event,res_separate;
 
 
 #if PLATFORM_HAS_LEDS
@@ -140,7 +140,7 @@ PROCESS_THREAD(er_example_server, ev, data)
 /*  rest_activate_resource(&res_mirror, "debug/mirror"); */
 /*  rest_activate_resource(&res_chunks, "test/chunks"); */
 /*  rest_activate_resource(&res_separate, "test/separate"); */
-//  rest_activate_resource(&res_push, "test/push");
+  rest_activate_resource(&res_motion_periodic, "periodic/motion");
 /*  rest_activate_resource(&res_event, "sensors/button"); */
 /*  rest_activate_resource(&res_sub, "test/sub"); */
 /*  rest_activate_resource(&res_b1_sep_b2, "test/b1sepb2"); */

@@ -1,4 +1,4 @@
-all: er-example-server er-example-client
+all: er-example-server er-example-client-temperature er-example-client-toggle er-example-observe-motion
 # use target "er-plugtest-server" explicitly when requried 
 ifndef TARGET
 TARGET=z1
@@ -24,12 +24,21 @@ endif
 PROJECTDIRS += $(REST_RESOURCES_DIR)
 PROJECT_SOURCEFILES += $(REST_RESOURCES_FILES)
 
+#compile all client scripts
+ifeq ($(CLIENT),YES)
+#CLIENT_FILES = $(notdir $(shell find $(CLIENT_DIR) -name '*client*.c'))
+
+CLIENT_FILES = ./er-example-observe-motion.c
+PROJECT_SOURCEFILES += $(CLIENT_FILES)
+endif
+
 # linker optimizations
 SMALL=1
 
 # REST Engine shall use Erbium CoAP implementation
 APPS += er-coap
 APPS += rest-engine
+APPS += coap-rest
 
 # optional rules to get assembly
 #CUSTOM_RULE_C_TO_OBJECTDIR_O = 1

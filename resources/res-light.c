@@ -43,7 +43,9 @@
 #include <string.h>
 #include "rest-engine.h"
 #include "dev/light-sensor.h"
+#include "server-state.h"
 
+uint8_t light_solar = 0;
 static void res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset);
 
 /* A simple getter example. Returns the reading from light sensor with a simple etag */
@@ -58,7 +60,7 @@ static void
 res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset)
 {
   uint16_t light_photosynthetic = light_sensor.value(LIGHT_SENSOR_PHOTOSYNTHETIC);
-  uint16_t light_solar = light_sensor.value(LIGHT_SENSOR_TOTAL_SOLAR);
+  light_solar = light_sensor.value(LIGHT_SENSOR_TOTAL_SOLAR);
 
   unsigned int accept = -1;
   REST.get_header_accept(request, &accept);

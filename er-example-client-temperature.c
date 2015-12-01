@@ -66,7 +66,7 @@
 #define LOCAL_PORT      UIP_HTONS(COAP_DEFAULT_PORT + 1)
 #define REMOTE_PORT     UIP_HTONS(COAP_DEFAULT_PORT)
 
-#define TOGGLE_INTERVAL 5
+#define ASK_TEMPERATURE_EVERY 5
 #define TOTAL_NODES 1
 PROCESS(er_example_temperature_client, "Temperature process Client");
 AUTOSTART_PROCESSES(&er_example_temperature_client);
@@ -74,10 +74,8 @@ AUTOSTART_PROCESSES(&er_example_temperature_client);
 uip_ipaddr_t server_ipaddr;
 static struct etimer et, dailyTimer, workTimer;
 static temperature_state node_state;
-static int atWork = 0;
-static int tChanged = 0;
-static uint8_t responderId = 0;
-/* Example URIs that can be queried. */
+int atWork = 0;
+
 #define NUMBER_OF_URLS 3
 /* leading and ending slashes only for demo purposes, get cropped automatically when setting the Uri-Path */
 char *service_temperature_urls[NUMBER_OF_URLS] = {".well-known/core", "sensors/sht11", "error/in//path"};
@@ -152,13 +150,8 @@ PROCESS_THREAD(er_example_temperature_client, ev, data) {
     /* receives all CoAP messages */
     coap_init_engine();
 
-    etimer_set(&et, TOGGLE_INTERVAL * CLOCK_SECOND);
+    etimer_set(&et, ASK_TEMPERATURE_EVERY * CLOCK_SECOND);
     etimer_set(&dailyTimer, 24 * 10 * CLOCK_SECOND);
-
-#if PLATFORM_HAS_BUTTON
-    SENSORS_ACTIVATE(button_sensor);
-    printf("Press a button to request %s\n", service_temperature_urls[uri_switch]);
-#endif
 
     while (1) {
         PROCESS_YIELD();
@@ -185,15 +178,14 @@ PROCESS_THREAD(er_example_temperature_client, ev, data) {
             char *url;
             if (atWork == 1) {
                 if (node_state.cold)
-                    url="?thermostat_low=19&thermostat_high=25&thermostat_switch=1";
+                    url = "?thermostat_low=19&thermostat_high=25&thermostat_switch=1";
                 else if (node_state.hot)
-                    url= "?thermostat_low=19&thermostat_high=25&thermostat_switch=0";
-            } else if (atWork == 0 && tChanged == 0) {
+                    url = "?thermostat_low=19&thermostat_high=25&thermostat_switch=0";
+            } else if (atWork == 0) {
                 if (node_state.cold)
-                    url="?thermostat_low=15&thermostat_high=17&thermostat_switch=1";
+                    url = "?thermostat_low=15&thermostat_high=17&thermostat_switch=1";
                 else if (node_state.hot)
-                    url="?thermostat_low=15&thermostat_high=17&thermostat_switch=0";
-
+                    url = "?thermostat_low=15&thermostat_high=17&thermostat_switch=0";
             }
 
             coap_init_message(putRequest, COAP_TYPE_CON, COAP_POST, 0);

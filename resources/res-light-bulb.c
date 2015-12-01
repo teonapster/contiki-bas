@@ -11,17 +11,30 @@
 
 #include "rest-engine.h"
 #include "platform/z1/dev/relay-phidget.h"
- 
-static uint8_t lightBulbStatus;
+#include "server-state.h"
+#if DEBUG
+#include <stdio.h>
+#define PRINTF(...) printf(__VA_ARGS__)
+#define PRINT6ADDR(addr) PRINTF("[%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x]", ((uint8_t *)addr)[0], ((uint8_t *)addr)[1], ((uint8_t *)addr)[2], ((uint8_t *)addr)[3], ((uint8_t *)addr)[4], ((uint8_t *)addr)[5], ((uint8_t *)addr)[6], ((uint8_t *)addr)[7], ((uint8_t *)addr)[8], ((uint8_t *)addr)[9], ((uint8_t *)addr)[10], ((uint8_t *)addr)[11], ((uint8_t *)addr)[12], ((uint8_t *)addr)[13], ((uint8_t *)addr)[14], ((uint8_t *)addr)[15])
+#define PRINTLLADDR(lladdr) PRINTF("[%02x:%02x:%02x:%02x:%02x:%02x]", (lladdr)->addr[0], (lladdr)->addr[1], (lladdr)->addr[2], (lladdr)->addr[3], (lladdr)->addr[4], (lladdr)->addr[5])
+#else
+#define PRINTF(...)
+#define PRINT6ADDR(addr)
+#define PRINTLLADDR(addr)
+#endif
+
+
+uint8_t lightBulbStatus = 0;
 
 static void res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset);
 static void res_post_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset);
+static void res_put_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset);
 
 RESOURCE(res_lb,
          "title=\"Light-bulb Endpoint\";rt=\"Light\"",
          res_get_handler,
          res_post_handler,
-         NULL,
+         res_put_handler,
          NULL);
 
 
@@ -55,8 +68,7 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
 }
 
 
-static void
-res_post_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset)
+static void res_post_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset)
 {
   lightBulbStatus = relay_toggle();
   unsigned int accept = -1;
@@ -79,6 +91,24 @@ res_post_handler(void *request, void *response, uint8_t *buffer, uint16_t prefer
     const char *msg = "Supporting content-types text/plain, application/xml, and application/json";
     REST.set_response_payload(response, msg, strlen(msg));
   }
+}
+
+static void res_put_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset) {
+    size_t len = 0;
+    char * t = NULL;
+    const char *msg = NULL;
+    if ((len = REST.get_query_variable(request, "light_value", &t))) {
+        lightBulbStatus = atoi(t);
+#ifdef DEBUG
+        if(lightBulbStatus==1)
+            PRINTF("Turn on lights\n");
+        else
+            PRINTF("Turn off lights\n");
+#endif
+        REST.set_response_status(response, REST.status.OK);
+        msg = "Light actuator updated!!!";
+    }
+    REST.set_response_payload(response, msg, strlen(msg));
 }
 #endif /* PLATFORM_HAS_LB */
 

@@ -7,18 +7,23 @@
 
 #ifndef NODE_STATE_H
 #define	NODE_STATE_H
-#ifdef	__cplusplus
-extern "C" {
-#endif
-  typedef  struct  {
-        uint8_t id,cold,hot;
+
+    
+
+    
+    
+    extern int atWork;
+    extern uint8_t alarm;
+
+    typedef struct {
+        uint8_t id, cold, hot;
     } temperature_state;
 
+    typedef struct {
+        coap_observee_t *obs;
+        uint8_t light, motion;
+    } motion_state;
 
-
-#ifdef	__cplusplus
-}
-#endif
 
 #endif	/* NODE_STATE_H */
 
