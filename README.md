@@ -6,7 +6,7 @@ EXAMPLE FILES
 
 - room-server.c: A RESTful server that contains several resources such as sht11,motion periodic resource,alarm & light resource
 - room-controller.c: A simple controller that polls the server every some seconds. More specific this controller asks frequently room's temperature,light sensor,motion sensor and he decides the next actions. For example if temperature is too low, controller decides to enable thermostat actuator.
-- 
+
 PRELIMINARIES
 -------------
 
