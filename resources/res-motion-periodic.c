@@ -66,7 +66,8 @@ PERIODIC_RESOURCE(res_motion_periodic,
  * Use local resource state that is accessed by res_get_handler() and altered by res_periodic_handler() or PUT or POST.
  */
 static int32_t event_counter = 0;
-uint8_t isDay = 1;
+uint8_t isDay=1;
+
 static void
 res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset)
 {
@@ -97,14 +98,6 @@ res_periodic_handler()
 #else
   motion = phidgets.value(PHIDGET5V_1); // this is how we get motion value
 #endif
-//      light_solar = light_sensor.value(LIGHT_SENSOR_TOTAL_SOLAR); // this is how we get solar light value
-//      if(light_solar>175){// natural light exists
-//          //tell client there is  natural light... maybe he wants to unsubscribe if its office hour
-//          isDay = 1;
-//          lightBulbStatus = relay_toggle(); // close lights
-//      } 
-//      else{ // non office hours and no light existence
-//          isDay = 0;
         /* Notify the registered observers if motion is detected. */
         if(motion==1)
             REST.notify_subscribers(&res_motion_periodic);

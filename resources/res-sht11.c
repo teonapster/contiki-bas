@@ -37,6 +37,8 @@
  *      and the humidity reading from the SHT11.
  * \author
  *      Pablo Corbalan <paul.corbalan@gmail.com>
+ * \edit-by
+ *      Kouroutzidis Theodoros-Nikolaos <kourtheo@csd.auth.gr>
  */
 
 #include "contiki.h"
@@ -69,7 +71,6 @@ static unsigned int lastTempOdd = 0;
 
 /* Get Method Example. Returns the reading from temperature and humidity sensors. */
 RESOURCE(res_sht11,
-//        "title=\"LEDs: ?color=r|g|b, POST/PUT mode=on|off\";rt=\"Control\"",
         "title=\"Temperature and Humidity: ?thermostat=0.. , POST/PUT \";rt=\"Sht11\"",
         res_get_handler,
         res_put_handler,
@@ -83,24 +84,29 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
     /* Temperature in Celsius (t in 14 bits resolution at 3 Volts)
      * T = -39.60 + 0.01*t
      */
-    
-//    int temperature = ((sht11_sensor.value(SHT11_SENSOR_TEMP) / 10) - 396) / 10;
+    int temperature = ((sht11_sensor.value(SHT11_SENSOR_TEMP) / 10) - 396) / 10;
     //Create random values
+    
+#ifdef DEBUG 
     int rnd = get_rand(15,12);
     if(temperature==0||rnd%2==lastTempOdd){
         lastTempOdd = lastTempOdd==0?1:0;
         temperature = rnd;
     }
+#endif
     /* Relative Humidity in percent (h in 12 bits resolution)
      * RH = -4 + 0.0405*h - 2.8e-6*(h*h)
      */
-//    uint16_t humidity = sht11_sensor.value(SHT11_SENSOR_HUMIDITY);
-//    humidity = -4 + 0.0405*humidity - 2.8e-6*(humidity*humidity);
+    uint16_t humidity = sht11_sensor.value(SHT11_SENSOR_HUMIDITY);
+    humidity = -4 + 0.0405*humidity - 2.8e-6*(humidity*humidity);
+    
+#ifdef DEBUG
     rnd = get_rand(30,70);
     if(humidity==0||rnd%2==lastTempOdd){
 //        lastTempOdd = lastTempOdd==0?1:0;
         humidity = rnd;
     }
+#endif
     unsigned int accept = -1;
     REST.get_header_accept(request, &accept);
 
@@ -114,15 +120,6 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
         snprintf((char *) buffer, REST_MAX_CHUNK_SIZE, "<Temperature =\"%u\" Humidity=\"%u\" Temperature_low=\"%u\" Temperature_high=\"%u\" Thermostat_switch=\"%u\" />",
                 temperature, humidity,thermostat_low,thermostat_high,thermostat_switch);
         REST.set_response_payload(response, buffer, strlen((char *) buffer));
-//    } else if (accept == REST.type.APPLICATION_JSON) {
-//        REST.set_header_content_type(response, REST.type.APPLICATION_JSON);
-//        snprintf((char *) buffer, REST_MAX_CHUNK_SIZE, "{'Sht11':{'Temperature':%u,'Humidity':%u,'Temperature_T':%s}}", temperature, humidity,thermostat_T);
-//
-//        REST.set_response_payload(response, buffer, strlen((char *) buffer));
-    } else {
-//        REST.set_response_status(response, REST.status.NOT_ACCEPTABLE);
-//        const char *msg = "Supporting content-types text/plain, application/xml, and application/json";
-//        REST.set_response_payload(response, msg, strlen(msg));
     }
 }
 
