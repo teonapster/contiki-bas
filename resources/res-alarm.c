@@ -21,7 +21,7 @@ RESOURCE(res_alarm,
          "title=\"Alarm Endpoint\";rt=\"Alarm\"",
          res_get_handler,
          res_post_handler,
-         NULL,
+         res_post_handler,
          NULL);
 
 

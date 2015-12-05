@@ -84,7 +84,7 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
     /* Temperature in Celsius (t in 14 bits resolution at 3 Volts)
      * T = -39.60 + 0.01*t
      */
-    int temperature = ((sht11_sensor.value(SHT11_SENSOR_TEMP) / 10) - 396) / 10;
+    temperature = ((sht11_sensor.value(SHT11_SENSOR_TEMP) / 10) - 396) / 10;
     //Create random values
     
 #ifdef DEBUG 
@@ -97,16 +97,16 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
     /* Relative Humidity in percent (h in 12 bits resolution)
      * RH = -4 + 0.0405*h - 2.8e-6*(h*h)
      */
-    uint16_t humidity = sht11_sensor.value(SHT11_SENSOR_HUMIDITY);
+    humidity = sht11_sensor.value(SHT11_SENSOR_HUMIDITY);
     humidity = -4 + 0.0405*humidity - 2.8e-6*(humidity*humidity);
     
-#ifdef DEBUG
-    rnd = get_rand(30,70);
-    if(humidity==0||rnd%2==lastTempOdd){
-//        lastTempOdd = lastTempOdd==0?1:0;
-        humidity = rnd;
-    }
-#endif
+//#ifdef DEBUG
+//    rnd = get_rand(30,70);
+//    if(humidity==0||rnd%2==lastTempOdd){
+////        lastTempOdd = lastTempOdd==0?1:0;
+//        humidity = rnd;
+//    }
+//#endif
     unsigned int accept = -1;
     REST.get_header_accept(request, &accept);
 
@@ -115,7 +115,8 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
         snprintf((char *) buffer, REST_MAX_CHUNK_SIZE, "%d;%u;%u;%u;%u",temperature, humidity,thermostat_low,thermostat_high,thermostat_switch);
 
         REST.set_response_payload(response, (uint8_t *) buffer, strlen((char *) buffer));
-    } else if (accept == REST.type.APPLICATION_XML) {
+    } 
+    else if (accept == REST.type.APPLICATION_XML) {
         REST.set_header_content_type(response, REST.type.APPLICATION_XML);
         snprintf((char *) buffer, REST_MAX_CHUNK_SIZE, "<Temperature =\"%u\" Humidity=\"%u\" Temperature_low=\"%u\" Temperature_high=\"%u\" Thermostat_switch=\"%u\" />",
                 temperature, humidity,thermostat_low,thermostat_high,thermostat_switch);

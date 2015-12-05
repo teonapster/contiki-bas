@@ -112,8 +112,8 @@ static int uri_switch = 1;
 #endif
 /*----------------------------------------------------------------------------*/
 PROCESS(temperature_poll, "Erbium Coap Observe Motion Resource");
-PROCESS(er_example_toggle_client, "Erbium Coap Toggle Resource");
-AUTOSTART_PROCESSES(&temperature_poll);
+PROCESS(toggle_process, "Erbium Coap Toggle Resource");
+AUTOSTART_PROCESSES(&temperature_poll,&toggle_process);
 /*----------------------------------------------------------------------------*/
 
 
@@ -121,99 +121,6 @@ AUTOSTART_PROCESSES(&temperature_poll);
 
 
 /*----------------------------------------------------------------------------*/
-
-/*
- * The main (proto-)thread. It starts/stops the observation of the remote
- * resource every time the timer elapses or the button (if available) is
- * pressed
- */
-PROCESS_THREAD(temperature_poll, ev, data) {
-    PROCESS_BEGIN();
-
-    static coap_packet_t request[1], putRequest[1]; /* This way the packet can be treated as pointer as usual. */
-
-    /* store server address in server_ipaddr */
-    SERVER_NODE(server_ipaddr);
-    /* receives all CoAP messages */
-    coap_init_engine();
-    /* init timer and button (if available) */
-    etimer_set(&et, TOGGLE_INTERVAL * CLOCK_SECOND);
-    etimer_set(&tempInterval, ASK_TEMPERATURE_EVERY * CLOCK_SECOND);
-    etimer_set(&dailyTimer, 24 * 10 * CLOCK_SECOND);
-
-#if PLATFORM_HAS_BUTTON
-    SENSORS_ACTIVATE(button_sensor);
-    printf("Press a button to start/stop observation of remote resource\n");
-#endif
-
-    /* toggle observation every time the timer elapses or the button is pressed */
-    while (1) {
-        PROCESS_YIELD();
-        if (etimer_expired(&et)) {
-            //ASK FOR LIGHT VALUE -- TODO can we make this async?
-            coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
-            coap_set_header_uri_path(request, LIGHT_RESOURCE_URI);
-            COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, request,
-                    light_response_handler);
-            if (serv1state.light < DAY_LIGHT_LIMIT) {
-                set_observation(1);
-            } else { // natural light
-                set_observation(0);
-                process_start(&er_example_toggle_client, "0;0;");
-                process_post_synch(&er_example_toggle_client, PROCESS_EVENT_CONTINUE, NULL);
-            }
-            etimer_reset(&et);
-#if PLATFORM_HAS_BUTTON
-            //    } else if(ev == sensors_event && data == &button_sensor) {
-            //      printf("--Toggle tutton--\n");
-            //      toggle_observation();
-            //      printf("\n--Done--\n");
-#endif
-        }
-
-        if (etimer_expired(&tempInterval)) { //TODO repeat for each server
-
-
-#if DEBUG
-            printf("Ask for current temperature\n");
-#endif  
-            /* prepare request, TID is set by COAP_BLOCKING_REQUEST() */
-            coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
-            coap_set_header_uri_path(request, service_temperature_urls[1]);
-
-            const char msg[] = "Toggle!";
-
-            coap_set_payload(request, (uint8_t *) msg, sizeof (msg) - 1);
-
-            PRINT6ADDR(&server_ipaddr);
-            PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
-
-            COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, request,
-                    client_chunk_temperature_handler);
-            char *url;
-            if (atWork == 1) {
-                if (node_state.cold)
-                    url = "?thermostat_low=19&thermostat_high=25&thermostat_switch=1";
-                else if (node_state.hot)
-                    url = "?thermostat_low=19&thermostat_high=25&thermostat_switch=0";
-            } else if (atWork == 0) {
-                if (node_state.cold)
-                    url = "?thermostat_low=15&thermostat_high=17&thermostat_switch=1";
-                else if (node_state.hot)
-                    url = "?thermostat_low=15&thermostat_high=17&thermostat_switch=0";
-            }
-
-            coap_init_message(putRequest, COAP_TYPE_CON, COAP_POST, 0);
-            coap_set_header_uri_path(putRequest, service_temperature_urls[1]);
-            coap_set_header_uri_query(putRequest, url);
-            COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, putRequest,
-                    threshold_handler);
-
-            etimer_reset(&tempInterval);
-        }
-    }
-    PROCESS_END();
-}
 
 /*
  * Handle the response to the observe request and the following notifications
@@ -239,16 +146,16 @@ notification_callback(coap_observee_t *obs, void *notification,
             if (atWork) {
                 //TODO Open lights
                 printf("TOGGLE LIGHTS");
-                process_start(&er_example_toggle_client, "0;1;");
-                process_post_synch(&er_example_toggle_client, PROCESS_EVENT_CONTINUE, NULL);
+                //                process_start(&toggle_process, "0;1;");
+                process_post(&toggle_process, PROCESS_EVENT_CONTINUE, "0;1;");
 
                 //TODO Close alarm
-                process_start(&er_example_toggle_client, "1;0;");
-                process_post_synch(&er_example_toggle_client, PROCESS_EVENT_CONTINUE, NULL);
+                //                process_start(&toggle_process, "1;0;");
+                process_post(&toggle_process, PROCESS_EVENT_CONTINUE, "1;0;");
             } else {
                 //TODO Open alarm
-                process_start(&er_example_toggle_client, "1;1;");
-                process_post_synch(&er_example_toggle_client, PROCESS_EVENT_CONTINUE, NULL);
+                //                process_start(&toggle_process, "1;1;");
+                process_post(&toggle_process, PROCESS_EVENT_CONTINUE, "1;1;");
             }
             //TODO 
             break;
@@ -353,8 +260,97 @@ threshold_handler(void *response) {
 #endif    
 }
 
+/*
+ * The main (proto-)thread. It starts/stops the observation of the remote
+ * resource every time the timer elapses or the button (if available) is
+ * pressed
+ */
+PROCESS_THREAD(temperature_poll, ev, data) {
+    PROCESS_BEGIN();
+
+    static coap_packet_t request[1], putRequest[1]; /* This way the packet can be treated as pointer as usual. */
+
+    /* store server address in server_ipaddr */
+    SERVER_NODE(server_ipaddr);
+    /* receives all CoAP messages */
+    coap_init_engine();
+    /* init timer and button (if available) */
+    etimer_set(&et, TOGGLE_INTERVAL * CLOCK_SECOND);
+    etimer_set(&tempInterval, ASK_TEMPERATURE_EVERY * CLOCK_SECOND);
+    etimer_set(&dailyTimer, 24 * 10 * CLOCK_SECOND);
+
+#if PLATFORM_HAS_BUTTON
+    SENSORS_ACTIVATE(button_sensor);
+    printf("Press a button to start/stop observation of remote resource\n");
+#endif
+
+    /* toggle observation every time the timer elapses or the button is pressed */
+    while (1) {
+        PROCESS_YIELD();
+        if (etimer_expired(&et)) {
+            //ASK FOR LIGHT VALUE -- TODO can we make this async?
+            coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
+            coap_set_header_uri_path(request, LIGHT_RESOURCE_URI);
+            COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, request,
+                    light_response_handler);
+            if (serv1state.light < DAY_LIGHT_LIMIT) {
+                set_observation(1);
+            } else { // natural light
+                set_observation(0);
+                process_post(&toggle_process, PROCESS_EVENT_CONTINUE, "0;0;");
+            }
+            etimer_reset(&et);
+#if PLATFORM_HAS_BUTTON
+            //    } else if(ev == sensors_event && data == &button_sensor) {
+            //      printf("--Toggle tutton--\n");
+            //      toggle_observation();
+            //      printf("\n--Done--\n");
+#endif
+        }
+
+        if (etimer_expired(&tempInterval)) { //TODO repeat for each server
 
 
+#if DEBUG
+            printf("Ask for current temperature\n");
+#endif  
+            /* prepare request, TID is set by COAP_BLOCKING_REQUEST() */
+            coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
+            coap_set_header_uri_path(request, service_temperature_urls[1]);
+
+            const char msg[] = "Toggle!";
+
+            coap_set_payload(request, (uint8_t *) msg, sizeof (msg) - 1);
+
+            PRINT6ADDR(&server_ipaddr);
+            PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
+
+            COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, request,
+                    client_chunk_temperature_handler);
+            char *url;
+            if (atWork == 1) {
+                if (node_state.cold)
+                    url = "?thermostat_low=19&thermostat_high=25&thermostat_switch=1";
+                else if (node_state.hot)
+                    url = "?thermostat_low=19&thermostat_high=25&thermostat_switch=0";
+            } else if (atWork == 0) {
+                if (node_state.cold)
+                    url = "?thermostat_low=15&thermostat_high=17&thermostat_switch=1";
+                else if (node_state.hot)
+                    url = "?thermostat_low=15&thermostat_high=17&thermostat_switch=0";
+            }
+
+            coap_init_message(putRequest, COAP_TYPE_CON, COAP_POST, 0);
+            coap_set_header_uri_path(putRequest, service_temperature_urls[1]);
+            coap_set_header_uri_query(putRequest, url);
+            COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, putRequest,
+                    threshold_handler);
+
+            etimer_reset(&tempInterval);
+        }
+    }
+    PROCESS_END();
+}
 
 
 
@@ -378,31 +374,43 @@ char *service_parameters[NUMBER_OF_URLS] = {"?light_value=", "?alarm_value="};
 
 /*Not used yet*/
 void service_handler(void *response) {
-    //    const uint8_t *chunk;
-    //    int len = coap_get_payload(response, &chunk);
-    //#if DEBUG
-    //    printf("%s\n", len, (char *) chunk);
-    //#endif    
+#ifdef DEBUG
+    printf("TOGGLE WORKS!!!\n");
+#endif
+    
 }
 
 /*Toggle process thread*/
-PROCESS_THREAD(er_example_toggle_client, ev, data) {
+PROCESS_THREAD(toggle_process, ev, data) {
     PROCESS_BEGIN();
     const uint8_t *parameters;
-    uint8_t serviceIndex = atoi(strtok((char *) data, ";"));
-    char *value = strtok(NULL, ";");
-    static coap_packet_t request[1];
-    char url[100];
+            coap_init_engine();
+    while (1) {
+        PROCESS_YIELD();
+        if (ev == PROCESS_EVENT_CONTINUE) {
+            uint8_t serviceIndex = atoi(strtok((char *) data, ";"));
+            char *value = strtok(NULL, ";");
+            static coap_packet_t request[1];
+            char url[100];
 
-    /* receives all CoAP messages */
-    coap_init_engine();
-    /* prepare request, TID is set by COAP_BLOCKING_REQUEST() */
-    strcpy(url, service_parameters[serviceIndex]);
-    strcat(url, value);
+            /* receives all CoAP messages */
+
+            /* prepare request, TID is set by COAP_BLOCKING_REQUEST() */
+            strcpy(url, service_parameters[serviceIndex]);
+            strcat(url, value);
 #ifdef DEBUG
-    printf("Toggle %s", service_urls[serviceIndex]);
-    printf(" with parameters: %s\n", url);
+            printf("Event data: %s, Selected index: %d\n",(char *)data,serviceIndex);
+            printf("Toggle %s", service_urls[serviceIndex]);
+            printf(" with parameters: %s\n", url);
 #endif
+            coap_init_message(request, COAP_TYPE_CON, COAP_PUT, 0);
+            coap_set_header_uri_path(request, service_urls[serviceIndex]);
+
+            coap_set_header_uri_query(request, url);
+            COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, request,
+                    service_handler);
+        }
+    }
     PROCESS_END();
 }
 

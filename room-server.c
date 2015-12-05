@@ -63,7 +63,7 @@
  * Resources to be activated need to be imported through the extern keyword.
  * The build system automatically compiles the resources in the corresponding sub-directory.
  */
-extern resource_t res_hello,res_motion_periodic,res_event,res_separate;
+extern resource_t res_motion_periodic,res_event,res_separate;
 
 
 #if PLATFORM_HAS_LEDS
