@@ -43,9 +43,11 @@
 #include <string.h>
 #include "contiki.h"
 #include "contiki-net.h"
+#include "rest-engine.h"
 #include "er-coap-engine.h"
 #include "dev/button-sensor.h"
 #include "node-state.h"
+#include "ipv6parser.h"
 
 
 /*----------------------------------------------------------------------------*/
@@ -70,10 +72,11 @@
 #endif
 
 
+
 /*----------------------------------------------------------------------------*/
 /* FIXME: This server address is hard-coded for Cooja */
-#define SERVER_NODE(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c, \
-                                          0x0000, 0x0000, 0x0002)
+#define SERVER_NODE(ipaddr,id)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0xc30c, \
+                                          0x0000, 0x0000, id)
 #define REMOTE_PORT     UIP_HTONS(COAP_DEFAULT_PORT)
 #define LOCAL_PORT 61617
 /* Toggle interval in seconds */
@@ -84,6 +87,9 @@
 /* Light actuator resource*/
 #define LIGHT_ACTUATOR_RESOURCE_URI "actuators/light_bulb"
 
+/* Energy consumption resource*/
+#define ENERGY_RESOURCE_URI "energy/logger"
+
 #define MAX_PAYLOAD_LEN 100
 /* Light resource */
 #define LIGHT_RESOURCE_URI "sensors/light"
@@ -91,7 +97,8 @@
 
 #define COAP_DATA_BUFF_SIZE 1024
 /*----------------------------------------------------------------------------*/
-static uip_ipaddr_t server_ipaddr[1]; /* holds the server ip address */
+static uip_ipaddr_t server_ipaddr[1],building_server_ipaddr[1];/* holds the server ip address */
+static uip_ipaddr_t this_addr; 
 static motion_state serv1state;
 static uint8_t askForLight = 0;
 uint8_t alarm = 0;
@@ -100,7 +107,7 @@ uint8_t alarm = 0;
 #define ASK_TEMPERATURE_EVERY 5
 #define TOTAL_NODES 1
 
-static struct etimer et, dailyTimer, workTimer, tempInterval;
+static struct etimer et, dailyTimer, workTimer, tempInterval,energy_timer;
 static temperature_state node_state;
 int atWork = 0;
 
@@ -110,6 +117,7 @@ char *service_temperature_urls[NUMBER_OF_URLS] = {".well-known/core", "sensors/s
 #if PLATFORM_HAS_BUTTON
 static int uri_switch = 1;
 #endif
+
 /*----------------------------------------------------------------------------*/
 PROCESS(temperature_poll, "Erbium Coap Observe Motion Resource");
 PROCESS(toggle_process, "Erbium Coap Toggle Resource");
@@ -267,18 +275,17 @@ threshold_handler(void *response) {
  */
 PROCESS_THREAD(temperature_poll, ev, data) {
     PROCESS_BEGIN();
-
     static coap_packet_t request[1], putRequest[1]; /* This way the packet can be treated as pointer as usual. */
 
     /* store server address in server_ipaddr */
-    SERVER_NODE(server_ipaddr);
+    
+    SERVER_NODE(server_ipaddr,atoi(SERVER_ID));
     /* receives all CoAP messages */
     coap_init_engine();
     /* init timer and button (if available) */
     etimer_set(&et, TOGGLE_INTERVAL * CLOCK_SECOND);
     etimer_set(&tempInterval, ASK_TEMPERATURE_EVERY * CLOCK_SECOND);
     etimer_set(&dailyTimer, 24 * 10 * CLOCK_SECOND);
-
 #if PLATFORM_HAS_BUTTON
     SENSORS_ACTIVATE(button_sensor);
     printf("Press a button to start/stop observation of remote resource\n");
@@ -345,7 +352,7 @@ PROCESS_THREAD(temperature_poll, ev, data) {
             coap_set_header_uri_query(putRequest, url);
             COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, putRequest,
                     threshold_handler);
-
+            printf("Energy units spent: %u \n",ec.energy_units_spent);
             etimer_reset(&tempInterval);
         }
     }
@@ -414,6 +421,32 @@ PROCESS_THREAD(toggle_process, ev, data) {
     PROCESS_END();
 }
 
+
+
+/*********************************************************************************************
+ **************************************ENERGY CONSUMPTION PROCESS*****************************
+ *********************************************************************************************/
+PROCESS_THREAD(energy_consumption,ev,data){
+    /* store server address in server_ipaddr */
+    SERVER_NODE(building_server_ipaddr,atoi(BUILDING_ID));
+    /* receives all CoAP messages */
+    coap_init_engine();
+    static coap_packet_t putRequest[1];
+    etimer_set(&energy_timer, TOGGLE_INTERVAL * CLOCK_SECOND);
+    PROCESS_BEGIN();
+    while(1){
+       if (etimer_expired(&energy_timer)){
+           coap_init_message(putRequest, COAP_TYPE_CON, COAP_POST, 0);
+            coap_set_header_uri_path(putRequest, ENERGY_RESOURCE_URI);
+            coap_set_header_uri_query(putRequest, (char *) server_ipaddr);
+            COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, putRequest,
+                    threshold_handler);
+            printf("Energy units spent: %u \n",ec.energy_units_spent);
+            etimer_reset(&tempInterval);
+       }
+    }
+    PROCESS_END();
+}
 
 
 

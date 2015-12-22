@@ -7,7 +7,8 @@
 
 #ifndef NODE_STATE_H
 #define	NODE_STATE_H
-
+#include "contiki.h"
+#include "contiki-net.h"
     
 
     
@@ -23,6 +24,13 @@
         coap_observee_t *obs;
         uint8_t light, motion;
     } motion_state;
+    
+    typedef struct {
+        coap_observee_t *obs;
+        uip_ipaddr_t addr;
+    } room_state;
+    
+    
 
 
 #endif	/* NODE_STATE_H */

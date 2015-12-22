@@ -42,6 +42,7 @@
 #include "contiki.h"
 #include "contiki-net.h"
 #include "rest-engine.h"
+#include "ipv6parser.h"
 
 #if PLATFORM_HAS_BUTTON
 #include "dev/button-sensor.h"
@@ -95,11 +96,15 @@ extern resource_t res_motion;
 extern resource_t res_lb;
 #endif
 
+
+static uip_ipaddr_t this_addr[1];
+
 PROCESS(er_example_server, "Erbium Example Server");
 AUTOSTART_PROCESSES(&er_example_server);
 
 PROCESS_THREAD(er_example_server, ev, data)
 {
+    
   PROCESS_BEGIN();
 
   PROCESS_PAUSE();
@@ -166,7 +171,8 @@ PROCESS_THREAD(er_example_server, ev, data)
   SENSORS_ACTIVATE(sht11_sensor);  
   
 #endif
-  
+//  SET_IP_FROM_STR((char *)THIS_IP,this_addr);
+//    SET_THIS_ADDR(this_addr);
   /* Define application-specific events here. */
   while(1) {
     PROCESS_WAIT_EVENT();
