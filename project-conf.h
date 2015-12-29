@@ -92,8 +92,15 @@
 #undef COAP_PROXY_OPTION_PROCESSING
 #define COAP_PROXY_OPTION_PROCESSING   0
 
+#undef  PROCESS_CONF_NO_PROCESS_NAMES 
+#define PROCESS_CONF_NO_PROCESS_NAMES 0
+
 /* Enable client-side support for COAP observe */
-#define COAP_OBSERVE_CLIENT 1
+#define COAP_OBSERVE_CLIENT 2
+
+/* Disable platform button*/
+#undef PLATFORM_HAS_BUTTON
+#define PLATFORM_HAS_BUTTON 0
 
 /* Enable alarm in current platform. */
 #undef PLATFORM_HAS_ALARM
@@ -123,4 +130,7 @@
 
 #undef PLATFORM_HAS_ENERGY
 #define PLATFORM_HAS_ENERGY 1
+
+#undef ENERGY_CONSUMER_SIZE
+#define ENERGY_CONSUMER_SIZE 50 // Number of messages to watch
 #endif /* __PROJECT_ERBIUM_CONF_H__ */

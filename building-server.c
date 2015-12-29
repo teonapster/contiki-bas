@@ -11,7 +11,6 @@
 #include "rest-engine.h"
 #include "ipv6parser.h"
 
-#define DEBUG 0
 #if DEBUG
 #include <stdio.h>
 #define PRINTF(...) printf(__VA_ARGS__)
@@ -22,8 +21,9 @@
 #define PRINT6ADDR(addr)
 #define PRINTLLADDR(addr)
 #endif
-static uip_ipaddr_t this_addr[1];
+
 extern resource_t res_energy_logger;
+rtimer_clock_t start_count, end_count;
 
 PROCESS(building_server, "Erbium Example Server");
 AUTOSTART_PROCESSES(&building_server);

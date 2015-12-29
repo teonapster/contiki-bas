@@ -24,6 +24,7 @@ endif
 #ifdef ($(SRV_IP))
 CFLAGS += -DSERVER_IP=\"$(SERVER_IP)\"
 CFLAGS += -DSERVER_ID=\"$(SERVER_ID)\"
+CFLAGS += -DROOM_ID=\"$(ROOM_ID)\"
 #ifdef ($(BUILD_IP))
 CFLAGS += -DBUILDING_ID=\"$(BUILDING_ID)\"
 
@@ -44,9 +45,14 @@ endif
 SMALL=1
 
 # REST Engine shall use Erbium CoAP implementation
+APPDIRS += $(CONTIKI)/warehouse/er-rest-git/apps
 APPS += er-coap
 APPS += rest-engine
 APPS += coap-rest
+
+#Memory optimization
+CFLAGS += -ffunction-sections
+LDFLAGS += -Wl,--gc-sections,--undefined=_reset_vector__,--undefined=InterruptVectors,--undefined=_copy_data_init__,--undefined=_clear_bss_init__,--undefined=_end_of_init__
 
 # optional rules to get assembly
 #CUSTOM_RULE_C_TO_OBJECTDIR_O = 1
@@ -81,7 +87,7 @@ connect-router:	$(CONTIKI)/tools/tunslip6
 	sudo $(CONTIKI)/tools/tunslip6 aaaa::1/64
 
 connect-router-cooja:	$(CONTIKI)/tools/tunslip6
-	sudo $(CONTIKI)/tools/tunslip6 -a 127.0.0.1 -p 60001 aaaa::1/64
+	sudo $(CONTIKI)/tools/tunslip6 -a 127.0.0.1 -p 6000$(MOTE_ID) aaaa::$(MOTE_ID)/64
 
 connect-router-cooja-z1:	$(CONTIKI)/tools/tunslip6
 	sudo $(CONTIKI)/tools/tunslip6 -B 38400 -s /dev/ttyUSB0 -a 127.0.0.1 -p 60001 aaaa::1/64
