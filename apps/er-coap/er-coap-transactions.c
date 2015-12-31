@@ -39,7 +39,7 @@
 #include "contiki.h"
 #include "contiki-net.h"
 #include "er-coap-transactions.h"
-#include "er-coap-energy-consumer.h"
+//#include "er-coap-energy-consumer.h"
 #include "er-coap-observe.h"
 
 #define DEBUG 0
@@ -93,7 +93,7 @@ coap_send_transaction(coap_transaction_t *t)
   PRINTF("Sending transaction %u\n", t->mid);
 
   coap_send_message(&t->addr, t->port, t->packet, t->packet_len);
-  msg_start();
+//  msg_start();
   if(COAP_TYPE_CON ==
      ((COAP_HEADER_TYPE_MASK & t->packet[0]) >> COAP_HEADER_TYPE_POSITION)) {
     if(t->retrans_counter < COAP_MAX_RETRANSMIT) {
@@ -137,7 +137,7 @@ coap_send_transaction(coap_transaction_t *t)
       coap_clear_transaction(t);
 
       if(callback) {
-          msg_receive_end();
+//          msg_receive_end();
         callback(callback_data, NULL);
       }
     }

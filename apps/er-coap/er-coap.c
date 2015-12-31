@@ -44,7 +44,7 @@
 
 #include "er-coap.h"
 #include "er-coap-transactions.h"
-#include "er-coap-energy-consumer.h"
+//#include "er-coap-energy-consumer.h"
 
 #define DEBUG 0
 #if DEBUG
@@ -427,9 +427,9 @@ coap_send_message(uip_ipaddr_t *addr, uint16_t port, uint8_t *data,
   uip_ipaddr_copy(&udp_conn->ripaddr, addr);
   udp_conn->rport = port;
 
-  msg_start();
+//  msg_start();
   uip_udp_packet_send(udp_conn, data, length);
-  msg_send_end();
+//  msg_send_end();
   PRINTF("-sent UDP datagram (%u)-\n", length);
 
   /* restore server socket to allow data from any node */

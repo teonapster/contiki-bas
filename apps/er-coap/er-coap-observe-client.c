@@ -43,7 +43,7 @@
 #include "er-coap.h"
 #include "er-coap-engine.h"
 #include "er-coap-observe-client.h"
-#include "er-coap-energy-consumer.h"
+//#include "er-coap-energy-consumer.h"
 
 /* Compile this code only if client-side support for CoAP Observe is required */
 #if COAP_OBSERVE_CLIENT
@@ -71,7 +71,7 @@
 #define PRINTLLADDR(addr)
 #endif
 
-struct energy_consumer ec = { .energy_units_spent=0, .energy_transmit_multiplier=1, .energy_receive_multiplier=1};
+//struct energy_consumer ec = { .energy_units_spent=0, .energy_transmit_multiplier=1, .energy_receive_multiplier=1};
 
 MEMB(obs_subjects_memb, coap_observee_t, COAP_MAX_OBSERVEES);
 LIST(obs_subjects_list);
@@ -275,7 +275,7 @@ coap_handle_notification(uip_ipaddr_t *addr, uint16_t port,
       obs->last_observe = observe;
     }
     obs->notification_callback(obs, notification, flag);
-    ec.energy_units_spent+=1*ec.energy_receive_multiplier;
+//    ec.energy_units_spent+=1*ec.energy_receive_multiplier;
   }
 }
 /*----------------------------------------------------------------------------*/
