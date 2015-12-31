@@ -48,11 +48,12 @@
 #include "dev/button-sensor.h"
 #include "node-state.h"
 #include "ipv6parser.h"
-#include "apps/er-coap/er-coap-energy-consumer.h"
+#include "powertrace.h"
+//#include "apps/er-coap/er-coap-energy-consumer.h"
 
 
 /*----------------------------------------------------------------------------*/
-//#define DEBUG 0
+#define DEBUG 1
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)
 #define PRINTFLN(format, ...) printf(format "\n", ##__VA_ARGS__)
@@ -129,9 +130,9 @@ static process_event_t energy_event, start_motion_observe, stop_motion_observe;
 /*----------------------------------------------------------------------------*/
 PROCESS(temperature_poll, "Erbium Coap Observe Motion Resource");
 PROCESS(toggle_process, "Erbium Coap Toggle Resource");
-PROCESS(motion_observer, "Erbium Coap Observe motion");
-PROCESS(energy_submit, "Erbium Coap submit energy");
-AUTOSTART_PROCESSES(&temperature_poll, &toggle_process, &motion_observer);
+//PROCESS(motion_observer, "Erbium Coap Observe motion");
+//PROCESS(energy_submit, "Erbium Coap submit energy");
+AUTOSTART_PROCESSES(&temperature_poll, &toggle_process);
 /*----------------------------------------------------------------------------*/
 
 
@@ -271,6 +272,18 @@ energy_handler(void *response) {
 #endif    
 }
 
+
+void toggle_observation(int ev){
+    if (ev==0) {
+            printf("Stopping observation\n");
+            coap_obs_remove_observee(serv1state.obs);
+            serv1state.obs = NULL;
+        } else if (!serv1state.obs && ev==1) {
+            printf("Starting observation with");
+            serv1state.obs = coap_obs_request_registration(&server_ipaddr, REMOTE_PORT,
+                    OBS_RESOURCE_URI, notification_callback, NULL);
+        }
+}
 /*
  * The main (proto-)thread. It starts/stops the observation of the remote
  * resource every time the timer elapses or the button (if available) is
@@ -282,8 +295,8 @@ PROCESS_THREAD(temperature_poll, ev, data) {
     printf("Server id: %d, Building id: %d, Room id: %d\n",atoi(SERVER_ID),atoi(BUILDING_ID),atoi(ROOM_ID));
     /* store server address in server_ipaddr */
     SERVER_NODE(&server_ipaddr,atoi(SERVER_ID));
-    BUILDING_SERVER_NODE(&building_addr,atoi(ROOM_ID));
-    
+//    BUILDING_SERVER_NODE(&building_addr,atoi(ROOM_ID));
+     powertrace_start(CLOCK_SECOND*10);
     /* receives all CoAP messages */
     coap_init_engine();
 
@@ -291,7 +304,7 @@ PROCESS_THREAD(temperature_poll, ev, data) {
     etimer_set(&et, TOGGLE_INTERVAL * CLOCK_SECOND);
     etimer_set(&tempInterval, ASK_TEMPERATURE_EVERY * CLOCK_SECOND);
     etimer_set(&dailyTimer, 24 * 10 * CLOCK_SECOND);
-    etimer_set(&energy_timer, 10 * CLOCK_SECOND);
+    etimer_set(&energy_timer, 1000 * CLOCK_SECOND);
 
 
     energy_event = process_alloc_event();
@@ -313,47 +326,21 @@ PROCESS_THREAD(temperature_poll, ev, data) {
             COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, request,
                     light_response_handler);
             if (serv1state.light < DAY_LIGHT_LIMIT) {
-                process_post(&motion_observer, start_motion_observe, NULL);
+                printf("Enable motion observation\n");
+                toggle_observation(1);
+//                process_post(&motion_observer, start_motion_observe, NULL);
             } else { // natural light
-                process_post(&motion_observer, stop_motion_observe, NULL);
+                printf("Disable motion observation\n");
+//                process_post(&motion_observer, stop_motion_observe, NULL);
+                toggle_observation(0);
                 process_post(&toggle_process, PROCESS_EVENT_CONTINUE, "0;0;");
             }
 
             etimer_reset(&et);
-#if PLATFORM_HAS_BUTTON
-            //     if(ev == sensors_event && data == &button_sensor) {
-            //      printf("--Toggle tutton--\n");
-            //      toggle_observation();
-            //      printf("\n--Done--\n"); }
-#endif
         }
 
-        if (etimer_expired(&energy_timer)) {
-            const char energy_params [100];
-//            const char * energy_params = "?address=1&units=10";
-            const char unit_num[5];
-            const char str_addr[5];
-            int int_addr = atoi(ROOM_ID);
-            sprintf(unit_num,"%d",ec.energy_units_spent);
-            sprintf(str_addr,"%d",int_addr);
-            
-            strcpy(energy_params,"?address=");
-            strcat(energy_params,str_addr);
-            strcat(energy_params,"&units=");
-            strcat(energy_params,unit_num);
-            static coap_packet_t request [1];
-#ifdef DEBUG
-            printf("Sent energy units to building controller with params: %s and address: %s \n",energy_params,str_addr );
-#endif
-            coap_init_message(request, COAP_TYPE_CON, COAP_PUT, 0);
-            coap_set_header_uri_path(request, ENERGY_RESOURCE_URI);
-            coap_set_header_uri_query(request, energy_params);
-            COAP_BLOCKING_REQUEST(&building_addr, REMOTE_PORT, request,
-                    energy_handler);
-            printf("Energy units spent: %u \n", ec.energy_units_spent);
-            etimer_reset(&energy_timer);
-        }
-        if (etimer_expired(&tempInterval)) { //TODO repeat for each server
+        
+         if (etimer_expired(&tempInterval)) { //TODO repeat for each server
 
 
 #if DEBUG
@@ -366,12 +353,13 @@ PROCESS_THREAD(temperature_poll, ev, data) {
             const char msg[] = "Toggle!";
 
             coap_set_payload(request, (uint8_t *) msg, sizeof (msg) - 1);
-
-            PRINT6ADDR(&server_ipaddr);
-            PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
+//
+//            PRINT6ADDR(&server_ipaddr);
+//            PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
 
             COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, request,
                     client_chunk_temperature_handler);
+            printf("Temperature got");
             char *url;
             if (atWork == 1) {
                 if (node_state.cold)
@@ -390,9 +378,35 @@ PROCESS_THREAD(temperature_poll, ev, data) {
             coap_set_header_uri_query(putRequest, url);
             COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, putRequest,
                     threshold_handler);
-            printf("Energy units spent: %u \n", ec.energy_units_spent);
+//            printf("Energy units spent: %u \n", ec.energy_units_spent);
             etimer_reset(&tempInterval);
         }
+        
+//        if (etimer_expired(&energy_timer)) {
+//            const char energy_params [100];
+////            const char * energy_params = "?address=1&units=10";
+//            const char unit_num[5];
+//            const char str_addr[5];
+//            int int_addr = atoi(ROOM_ID);
+//            sprintf(unit_num,"%d",ec.energy_units_spent);
+//            sprintf(str_addr,"%d",int_addr);
+//            
+//            strcpy(energy_params,"?address=");
+//            strcat(energy_params,str_addr);
+//            strcat(energy_params,"&units=");
+//            strcat(energy_params,unit_num);
+//            static coap_packet_t request [1];
+//#ifdef DEBUG
+//            printf("Sent energy units to building controller with params: %s and address: %s \n",energy_params,str_addr );
+//#endif
+//            coap_init_message(request, COAP_TYPE_CON, COAP_PUT, 0);
+//            coap_set_header_uri_path(request, ENERGY_RESOURCE_URI);
+//            coap_set_header_uri_query(request, energy_params);
+//            COAP_BLOCKING_REQUEST(&building_addr, REMOTE_PORT, request,
+//                    energy_handler);
+//            printf("Energy units spent: %u \n", ec.energy_units_spent);
+//            etimer_reset(&energy_timer);
+//        }
     }
     PROCESS_END();
 }
@@ -458,27 +472,6 @@ PROCESS_THREAD(toggle_process, ev, data) {
                     toggle_handler);
         }
         //        set_observation(0);
-    }
-    PROCESS_END();
-}
-
-
-PROCESS_THREAD(motion_observer, ev, data) {
-    PROCESS_BEGIN();
-    while (1) {
-        PROCESS_WAIT_EVENT();
-        
-        //TODO Fix bug: Corruption whenever we define 2 or more ip addresses
-        //
-//        if (serv1state.obs && ev == stop_motion_observe) {
-//            printf("Stopping observation\n");
-//            coap_obs_remove_observee(serv1state.obs);
-//            serv1state.obs = NULL;
-//        } else if (!serv1state.obs && ev == start_motion_observe) {
-//            printf("Starting observation with");
-//            serv1state.obs = coap_obs_request_registration(&server_ipaddr, REMOTE_PORT,
-//                    OBS_RESOURCE_URI, notification_callback, NULL);
-//        }
     }
     PROCESS_END();
 }
