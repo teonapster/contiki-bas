@@ -17,7 +17,11 @@ extern uint8_t lightBulbStatus, // light bulbs status
                 alarm,          // alarm state 0 || 1
                 isDay;
 
-
+typedef struct {
+        int energy_units;
+        int address;
+        
+    } room_energy;
 #ifdef	__cplusplus
 }
 #endif

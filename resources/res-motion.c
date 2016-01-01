@@ -15,12 +15,18 @@
 #include "platform/z1/dev/z1-phidgets.h"
 #include "core/lib/sensors.h"
 #include "server-state.h"
+#ifdef DEBUG
+#include "core/lib/random.h"
+#endif
 
 #define MAX_TEMPERATURE 30
 #define MIN_TEMPERATURE 10
 
 
 uint8_t motion = 0;
+static int get_rand(){
+    return (int) ((random_rand()*1)+0);
+}
 static void res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset);
 static void res_put_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset);
 
@@ -35,8 +41,12 @@ RESOURCE(res_motion,
 static void
 res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset) {
 
-    motion = phidgets.value(PHIDGET5V_1);
-
+    #if DEBUG
+        motion = get_rand()%2;
+    #else
+        motion = phidgets.value(PHIDGET5V_1); // this is how we get motion value
+    #endif
+        
     unsigned int accept = -1;
     REST.get_header_accept(request, &accept);
 

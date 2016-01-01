@@ -49,6 +49,7 @@ APPDIRS += $(CONTIKI)/warehouse/er-rest-git/apps
 APPS += er-coap
 APPS += rest-engine
 APPS += coap-rest
+APPS += powertrace
 
 #Memory optimization
 CFLAGS += -ffunction-sections
@@ -60,6 +61,7 @@ LDFLAGS += -Wl,--gc-sections,--undefined=_reset_vector__,--undefined=InterruptVe
 
 CONTIKI_WITH_IPV6 = 1
 include $(CONTIKI)/Makefile.include
+include $(CONTIKI)/tools/powertrace/Makefile.powertrace
 
 # minimal-net target is currently broken in Contiki
 ifeq ($(TARGET), minimal-net)

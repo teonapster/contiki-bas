@@ -206,6 +206,7 @@ PROCESS_THREAD(powertrace_process, ev, data)
 
   while(1) {
     PROCESS_WAIT_UNTIL(etimer_expired(&periodic));
+//    PROCESS_YIELD();
     etimer_reset(&periodic);
     powertrace_print("");
   }
