@@ -1,0 +1,33 @@
+#!/usr/bin/perl
+
+$i = 0;
+$current_normal = 0.33;
+$current_lpm    = 0.0011;
+$current_tx     = 17.4;
+$current_rx     = 18.8;
+$voltage = 3;
+$ticks_per_sec = 32768;
+
+while(<>) {
+
+    if(/P (\d+) (\d+) (\d+) (\d+)/) {
+        $all_cpu[$i]    = $1;
+        $all_lpm[$i]    = $2;
+        $all_tx [$i]    = $3;
+        $all_rx [$i]    = $4;
+        
+        if($i>0){
+            $all_cpu[$i] = ($1-$all_cpu[$i-1])*$current_normal*$voltage/$ticks_per_sec;
+            $all_lpm[$i] = ($2-$all_lpm[$i-1])*$current_lpm   *$voltage/$ticks_per_sec;
+            $all_tx [$i] = ($3-$all_tx [$i-1])*$current_tx    *$voltage/$ticks_per_sec;
+            $all_rx [$i] = ($4-$all_rx [$i-1])*$current_rx    *$voltage/$ticks_per_sec;
+            $row_tot[$i]  = $all_cpu[$i]+$all_lpm[$i]+$all_tx[$i]+$all_rx[$i];
+            $index = $i*10;
+            print $index." ".$all_cpu[$i]." ".$all_lpm[$i]." ".$all_tx[$i]." ".$all_rx[$i]." ".$row_tot[$i]."\n";
+        }
+    }
+    $i= $i+1;
+}
+#for($j=0;$j<$i-1;$j++){
+#   $total=$total+$row_tot[$i];
+#}

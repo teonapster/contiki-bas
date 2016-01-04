@@ -82,8 +82,7 @@
                                           0x0000, 0x0000, id)
 #define REMOTE_PORT     UIP_HTONS(COAP_DEFAULT_PORT)
 #define LOCAL_PORT 61617
-/* Toggle interval in seconds */
-#define TOGGLE_INTERVAL 30
+
 /* Motion sensor observer resource */
 #define OBS_RESOURCE_URI "periodic/motion"
 
@@ -108,7 +107,6 @@ static uint8_t askForLight = 0;
 uint8_t alarm = 0;
 
 
-#define ASK_TEMPERATURE_EVERY 5
 #define TOTAL_NODES 1
 
 static struct etimer et, dailyTimer, workTimer, tempInterval, energy_timer;
@@ -304,18 +302,19 @@ PROCESS_THREAD(temperature_poll, ev, data) {
     SERVER_NODE(&server_ipaddr, atoi(SERVER_ID));
     //    BUILDING_SERVER_NODE(&building_addr,atoi(ROOM_ID));
 #ifdef ENERGY_ANALYSIS
-    powertrace_start(CLOCK_SECOND * 100);
+    powertrace_start(CLOCK_SECOND * 10);
 #endif
     /* receives all CoAP messages */
     coap_init_engine();
 
     /* init timer and button (if available) */
-    etimer_set(&et, TOGGLE_INTERVAL * CLOCK_SECOND);
-    etimer_set(&tempInterval, ASK_TEMPERATURE_EVERY * CLOCK_SECOND);
+    etimer_set(&et, 30 * CLOCK_SECOND);
+    etimer_set(&tempInterval, 30 * CLOCK_SECOND);
     etimer_set(&dailyTimer, 24 * 10 * CLOCK_SECOND);
-    etimer_set(&energy_timer, 5 * CLOCK_SECOND);
+    etimer_set(&energy_timer, 10 * CLOCK_SECOND);
 
-
+    printf("RTIMER: %u\n", RTIMER_SECOND);
+    
     energy_event = process_alloc_event();
     start_motion_observe = process_alloc_event();
     stop_motion_observe = process_alloc_event();
@@ -329,7 +328,7 @@ PROCESS_THREAD(temperature_poll, ev, data) {
     while (1) {
         PROCESS_YIELD();
 #ifdef ENERGY_ANALYSIS
-        if (etimer_expired(&energy_timer)) {
+        if (etimer_expired(&energy_timer) && atWork==0) {
 
             coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
             coap_set_header_uri_path(request, MOTION_URI);

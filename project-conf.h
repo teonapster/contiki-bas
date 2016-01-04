@@ -131,6 +131,11 @@
 #undef PLATFORM_HAS_ENERGY
 #define PLATFORM_HAS_ENERGY 1
 
-#undef ENERGY_CONSUMER_SIZE
-#define ENERGY_CONSUMER_SIZE 50 // Number of messages to watch
+//define if energy_analysis is needed (powertrace)
+#undef ENERGY_ANALYSIS
+#define ENERGY_ANALYSIS
+
+#undef NETSTACK_CONF_WITH_RIME
+//#define NETSTACK_CONF_WITH_RIME 1
+
 #endif /* __PROJECT_ERBIUM_CONF_H__ */

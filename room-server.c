@@ -43,7 +43,7 @@
 #include "contiki-net.h"
 #include "rest-engine.h"
 #include "ipv6parser.h"
-
+#include "powertrace.h"
 #if PLATFORM_HAS_BUTTON
 #include "dev/button-sensor.h"
 #endif
@@ -174,6 +174,9 @@ PROCESS_THREAD(er_example_server, ev, data)
 //  SET_IP_FROM_STR((char *)THIS_IP,this_addr);
 //    SET_THIS_ADDR(this_addr);
   /* Define application-specific events here. */
+  #ifdef ENERGY_ANALYSIS
+//    powertrace_start(CLOCK_SECOND * 10);
+#endif
   while(1) {
     PROCESS_WAIT_EVENT();
 #if PLATFORM_HAS_BUTTON
