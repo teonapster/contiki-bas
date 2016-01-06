@@ -56,8 +56,8 @@
 /* Disabling RDC and CSMA for demo purposes. Core updates often
    require more memory. */
 /* For projects, optimize memory and enable RDC and CSMA again. */
-#undef NETSTACK_CONF_RDC
-#define NETSTACK_CONF_RDC              nullrdc_driver
+//#undef NETSTACK_CONF_RDC
+//#define NETSTACK_CONF_RDC              nullrdc_driver
 
 /* Disabling TCP on CoAP nodes. */
 #undef UIP_CONF_TCP
@@ -78,7 +78,7 @@
 
 /* Multiplies with chunk size, be aware of memory constraints. */
 #undef COAP_MAX_OPEN_TRANSACTIONS
-#define COAP_MAX_OPEN_TRANSACTIONS     8
+#define COAP_MAX_OPEN_TRANSACTIONS     5
 
 /* Must be <= open transactions, default is COAP_MAX_OPEN_TRANSACTIONS-1. */
 ///*

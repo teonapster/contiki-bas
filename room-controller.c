@@ -462,16 +462,15 @@ void toggle_handler(void *response) {
 /*Toggle process thread*/
 PROCESS_THREAD(toggle_process, ev, data) {
     PROCESS_BEGIN();
-    const uint8_t *parameters;
     coap_init_engine();
-
+    static coap_packet_t request[1];
     while (1) {
         PROCESS_WAIT_EVENT();
 
         if (ev == PROCESS_EVENT_CONTINUE) {
             uint8_t serviceIndex = atoi(strtok((char *) data, ";"));
             char *value = strtok(NULL, ";");
-            static coap_packet_t request[1];
+            
             char url[100];
 
             /* receives all CoAP messages */

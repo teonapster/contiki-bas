@@ -22,11 +22,15 @@ while(<>) {
             $all_tx [$i] = ($3-$all_tx [$i-1])*$current_tx    *$voltage/$ticks_per_sec;
             $all_rx [$i] = ($4-$all_rx [$i-1])*$current_rx    *$voltage/$ticks_per_sec;
             $row_tot[$i]  = $all_cpu[$i]+$all_lpm[$i]+$all_tx[$i]+$all_rx[$i];
+
+            $all_tx_per[$i] = ($3-$all_tx[$i-1])/($1-$all_cpu[$i-1]+$2-$all_lpm[$i-1]);
+            $all_rx_per[$i] = ($4-$all_rx[$i-1])/($1-$all_cpu[$i-1]+$2-$all_lpm[$i-1]);
             $index = $i*10;
-            print $index." ".$all_cpu[$i]." ".$all_lpm[$i]." ".$all_tx[$i]." ".$all_rx[$i]." ".$row_tot[$i]."\n";
+            print $index." ".$all_cpu[$i]." ".$all_lpm[$i]." ".$all_tx[$i]." ".$all_rx[$i]." ".$row_tot[$i]." ".$all_tx_per[$i]." ".$all_rx_per[$i]."\n";
         }
+        $i= $i+1;
     }
-    $i= $i+1;
+    
 }
 #for($j=0;$j<$i-1;$j++){
 #   $total=$total+$row_tot[$i];

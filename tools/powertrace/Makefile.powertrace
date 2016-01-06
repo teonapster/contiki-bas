@@ -14,7 +14,8 @@ powertrace-plot: #TO INCLUDE REST PLOTS powertrace-plot-node powertrace-plot-sni
 
 powertrace-show:
 	gv ./tools/powertrace/energy-consumption.eps
-	#gv powertrace-node-power.eps
+	gv ./tools/powertrace/energy-consumption-rx.eps
+	gv ./tools/powertrace/duty-cycle.eps
 powertrace-all: powertrace-parse powertrace-plot powertrace-show
 
 powertrace-help:
