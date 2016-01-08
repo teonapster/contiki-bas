@@ -57,7 +57,7 @@
    require more memory. */
 /* For projects, optimize memory and enable RDC and CSMA again. */
 //#undef NETSTACK_CONF_RDC
-//#define NETSTACK_CONF_RDC              nullrdc_driver
+//#define NETSTACK_CONF_RDC         cxmac_driver
 
 /* Disabling TCP on CoAP nodes. */
 #undef UIP_CONF_TCP
@@ -131,9 +131,6 @@
 #undef PLATFORM_HAS_ENERGY
 #define PLATFORM_HAS_ENERGY 1
 
-//define if energy_analysis is needed (powertrace)
-#undef ENERGY_ANALYSIS
-#define ENERGY_ANALYSIS
 
 #undef NETSTACK_CONF_WITH_RIME
 //#define NETSTACK_CONF_WITH_RIME 1

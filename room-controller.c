@@ -204,14 +204,6 @@ void light_response_handler(void *response) {
 }
 
 
-void manual_motion_handler(void *response) {
-    const uint8_t *chunk;
-    int len = coap_get_payload(response, &chunk);
-    serv1state.motion = atoi((char *) chunk);
-    
-    alarm_handle();
-}
-
 void
 client_chunk_temperature_handler(void *response) {
     const uint8_t *chunk;
@@ -301,9 +293,9 @@ PROCESS_THREAD(temperature_poll, ev, data) {
     /* store server address in server_ipaddr */
     SERVER_NODE(&server_ipaddr, atoi(SERVER_ID));
     //    BUILDING_SERVER_NODE(&building_addr,atoi(ROOM_ID));
-#ifdef ENERGY_ANALYSIS
+//#ifdef ENERGY_ANALYSIS
     powertrace_start(CLOCK_SECOND * 10);
-#endif
+//#endif
     /* receives all CoAP messages */
     coap_init_engine();
 
@@ -327,16 +319,6 @@ PROCESS_THREAD(temperature_poll, ev, data) {
     /* toggle observation every time the timer elapses or the button is pressed */
     while (1) {
         PROCESS_YIELD();
-#ifdef ENERGY_ANALYSIS
-        if (etimer_expired(&energy_timer) && atWork==0) {
-
-            coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
-            coap_set_header_uri_path(request, MOTION_URI);
-            COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, request,
-                    manual_motion_handler);
-            etimer_reset(&energy_timer);
-        }
-#endif
         if (etimer_expired(&et)) {
             //ASK FOR LIGHT VALUE -- TODO can we make this async?
             coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
@@ -344,17 +326,12 @@ PROCESS_THREAD(temperature_poll, ev, data) {
             COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, request,
                     light_response_handler);
             if (serv1state.light < DAY_LIGHT_LIMIT) {
-
-#ifndef ENERGY_ANALYSIS
                 toggle_observation(1);
                 printf("Enable motion observation\n");
-#endif
             } else { // natural light
 
-#ifndef ENERGY_ANALYSIS
                 toggle_observation(0);
                 printf("Disable motion observation\n");
-#endif
                 process_post(&toggle_process, PROCESS_EVENT_CONTINUE, "0;0;");
             }
 

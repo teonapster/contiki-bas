@@ -14,15 +14,11 @@ plot [0:1200] [0:] './tools/powertrace/energy-consumption-data' using ($1):($2) 
     './tools/powertrace/energy-consumption-data' using ($1):($4) with lines title 'TX Energy' , \
     './tools/powertrace/energy-consumption-data' using ($1):($5) with lines title "RX Energy"
 
-set output "./tools/powertrace/energy-consumption-rx.eps"
-set title "Energy consumption (rx)"
-set ylabel "Power(mW)"
-set xlabel "Time (s)"
-plot [0:1200] [0:] './tools/powertrace/energy-consumption-data' using ($1):($5) with lines title "RX Energy"
-
 set output "./tools/powertrace/duty-cycle.eps"
 set title "Duty cycle"
 set ylabel "Duty cycle(%)"
 set xlabel "Time (s)"
-plot [0:1200] [0:1.5] './tools/powertrace/energy-consumption-data' using ($1):($7) with lines title 'TX' , \
-    './tools/powertrace/energy-consumption-data' using ($1):($8) with lines title 'RX' 
+plot [0:1200] [0:5] './tools/powertrace/energy-consumption-data' using ($1):($7*100) with lines title 'TX' , \
+    './tools/powertrace/energy-consumption-data' using ($1):($8*100) with lines title 'RX' , \
+    './tools/powertrace/energy-consumption-data' using ($1):($9*100) with lines title 'CPU' , \
+    './tools/powertrace/energy-consumption-data' using ($1):($10*100) with lines title 'LPM'
