@@ -44,10 +44,18 @@
 #include "core/lib/sensors.h"
 #include "dev/light-sensor.h"
 #if DEBUG
-    #include "core/lib/random.h"
+#include <stdio.h>
+#define PRINTF(...) printf(__VA_ARGS__)
+#define PRINT6ADDR(addr) PRINTF("[%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x]", ((uint8_t *)addr)[0], ((uint8_t *)addr)[1], ((uint8_t *)addr)[2], ((uint8_t *)addr)[3], ((uint8_t *)addr)[4], ((uint8_t *)addr)[5], ((uint8_t *)addr)[6], ((uint8_t *)addr)[7], ((uint8_t *)addr)[8], ((uint8_t *)addr)[9], ((uint8_t *)addr)[10], ((uint8_t *)addr)[11], ((uint8_t *)addr)[12], ((uint8_t *)addr)[13], ((uint8_t *)addr)[14], ((uint8_t *)addr)[15])
+#define PRINTLLADDR(lladdr) PRINTF("[%02x:%02x:%02x:%02x:%02x:%02x]", (lladdr)->addr[0], (lladdr)->addr[1], (lladdr)->addr[2], (lladdr)->addr[3], (lladdr)->addr[4], (lladdr)->addr[5])
+#else
+#define PRINTF(...)
+#define PRINT6ADDR(addr)
+#define PRINTLLADDR(addr)
 #endif
 
 static void res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset);
+static void res_put_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset);
 static void res_periodic_handler(void);
 static int get_rand(){
     return (int) ((random_rand()*1)+0);
@@ -56,16 +64,17 @@ static int get_rand(){
 PERIODIC_RESOURCE(res_motion_periodic,
                   "title=\"Periodic Motion Resource\";obs",
                   res_get_handler,
+                  res_put_handler,
+                  res_put_handler,
                   NULL,
-                  NULL,
-                  NULL,
-                  5 * CLOCK_SECOND,
+                  1 * CLOCK_SECOND,
                   res_periodic_handler);
 
 /*
  * Use local resource state that is accessed by res_get_handler() and altered by res_periodic_handler() or PUT or POST.
  */
-uint8_t isDay=1;
+uint8_t isDay = 1;
+uint8_t isWorkingHours = 0;
 
 static void
 res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset)
@@ -81,6 +90,22 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
 
   /* The REST.subscription_handler() will be called for observable resources by the REST framework. */
 }
+
+static void res_put_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset) {
+     size_t len = 0;
+    char * param = NULL;
+    const uint8_t *chunk;
+    const char *msg = NULL;
+    int roomIndex = -1;
+    
+    if ((len = REST.get_query_variable(request, "at_work", &param))) {
+        PRINTF("At work flag is: %s from now on\n",param);
+        REST.set_response_status(response, REST.status.OK);
+        isWorkingHours = atoi(param);
+    }
+    REST.set_response_payload(response, msg, strlen(msg));
+}
+
 /*
  * Additionally, a handler function named [resource name]_handler must be implemented for each PERIODIC_RESOURCE.
  * It will be called by the REST manager process with the defined period.
@@ -92,7 +117,20 @@ res_periodic_handler()
 
   /* Usually a condition is defined under with subscribers are notified, e.g., large enough delta in sensor reading. */
 #if DEBUG
-  motion = get_rand()%2;
+    uint8_t retriesToSucceed=3;
+    motion = 0;
+    
+  if(isWorkingHours){
+   motion = get_rand()%2;
+  }   
+  else{
+   while(get_rand()%2){
+       retriesToSucceed--;
+   }
+   if(retriesToSucceed==0)
+       motion=1;   
+  }
+    
 #else
   motion = phidgets.value(PHIDGET5V_1); // this is how we get motion value
 #endif
