@@ -7,31 +7,45 @@ $current_tx     = 17.4;
 $current_rx     = 18.8;
 $voltage = 3;
 $ticks_per_sec = 32768;
-
+$msg="";
 while(<>) {
 
-    if(/P (\d+) (\d+) (\d+) (\d+)/) {
+    if(/P (\d+) (\d+) (\d+) (\d+) (\d+) (\d+) (\d+) (\d+)/) {
         $all_cpu[$i]    = $1;
         $all_lpm[$i]    = $2;
         $all_tx [$i]    = $3;
         $all_rx [$i]    = $4;
         
         if($i>0){
-            $all_cpu[$i] = ($1-$all_cpu[$i-1])*$current_normal*$voltage/$ticks_per_sec;
-            $all_lpm[$i] = ($2-$all_lpm[$i-1])*$current_lpm   *$voltage/$ticks_per_sec;
-            $all_tx [$i] = ($3-$all_tx [$i-1])*$current_tx    *$voltage/$ticks_per_sec;
-            $all_rx [$i] = ($4-$all_rx [$i-1])*$current_rx    *$voltage/$ticks_per_sec;
+            $all_cpu[$i] = ($5)*$current_normal*$voltage/$ticks_per_sec;
+            $all_lpm[$i] = ($6)*$current_lpm*$voltage/$ticks_per_sec;
+            $all_tx[$i] = ($7)*$current_tx*$voltage/$ticks_per_sec;
+            $all_rx[$i] = ($8)*$current_rx*$voltage/$ticks_per_sec;
             $row_tot[$i]  = $all_cpu[$i]+$all_lpm[$i]+$all_tx[$i]+$all_rx[$i];
 
-            $all_tx_per[$i] = ($3-$all_tx[$i-1]) / ($1-$all_cpu[$i-1]+$2-$all_lpm[$i-1]+3-$all_tx[$i-1]+4-$all_rx[$i-1]);
-            $all_rx_per[$i] = ($4-$all_rx[$i-1]) / ($1-$all_cpu[$i-1]+$2-$all_lpm[$i-1]+3-$all_tx[$i-1]+4-$all_rx[$i-1]);
-            $all_cpu_per[$i]= ($1-$all_cpu[$i-1])/ ($1-$all_cpu[$i-1]+$2-$all_lpm[$i-1]+3-$all_tx[$i-1]+4-$all_rx[$i-1]);
-            $all_lpm_per[$i]= ($2-$all_lpm[$i-1])/ ($1-$all_cpu[$i-1]+$2-$all_lpm[$i-1]+3-$all_tx[$i-1]+4-$all_rx[$i-1]);
+            $all_tx_per[$i] = $7 / ($5+$6+$7+$8);
+            $all_rx_per[$i] = $8 / ($5+$6+$7+$8);
+            $all_cpu_per[$i]= $5/ ($5+$6+$7+$8);
+            $all_lpm_per[$i]= $2/ ($5+$6+$7+$8);
             
-            $index = $i*10;
-            print $index." ".$all_cpu[$i]." ".$all_lpm[$i]." ".$all_tx[$i]." ".$all_rx[$i]." ".$row_tot[$i]." ".$all_tx_per[$i]." ".$all_rx_per[$i]." ". $all_cpu_per[$i]." ".$all_lpm_per[$i]."\n";
+            $index = $i*10.0/60.0;
+            print $index." ".$all_cpu[$i]." ".$all_lpm[$i]." ".$all_tx[$i]." ".$all_rx[$i]." ".$row_tot[$i]." ".$all_tx_per[$i].
+            " ".$all_rx_per[$i]." ". $all_cpu_per[$i]." ".$all_lpm_per[$i]." ".$msg."\n";
+            $msg="";
         }
         $i= $i+1;
+    }
+    elsif (/WORK_START/){
+        $msg.="wB-";
+    }
+    elsif (/STOP_WORK/){
+        $msg.="wE-";
+    }
+    elsif (/START_OBSERVE/){
+        $msg.="oB-";
+    }
+    elsif (/STOP_OBSERVE/){
+        $msg.="oE-";
     }
     
 }

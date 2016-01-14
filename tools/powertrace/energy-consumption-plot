@@ -4,21 +4,28 @@ set style data boxes
 set pointsize 2
 
 set ylabel "Power (mW)"
-set xlabel "Time (s)"
+set xlabel "Time (m)"
 set terminal postscript eps enhanced "Helvetica" 16 lw 4 dl 5
-
 set output "./tools/powertrace/energy-consumption.eps"
 set title "Energy Consumption"
-plot [0:1000] [0:300] './tools/powertrace/energy-consumption-data' using ($1):($2) with lines title 'CPU Energy' , \
+plot [0:40] [15:30] './tools/powertrace/energy-consumption-data' using ($1):($2) with lines title 'CPU Energy' , \
     './tools/powertrace/energy-consumption-data' using ($1):($3) with lines title 'LPM Energy', \
     './tools/powertrace/energy-consumption-data' using ($1):($4) with lines title 'TX Energy' , \
-    './tools/powertrace/energy-consumption-data' using ($1):($5) with lines title "RX Energy"
+    './tools/powertrace/energy-consumption-data' using ($1):($5) with lines title "RX Energy" , \
+    './tools/powertrace/energy-consumption-data' using 1:($4+20):11 with labels
+
+set output "./tools/powertrace/energy-consumption-total.eps"
+set title "Energh Consumption (Total)"
+set ylabel "Power (mW)"
+set xlabel "Time (m)"
+plot [0:40] [0:60] './tools/powertrace/energy-consumption-data' using ($1):($6) with lines title 'Total Energy'
+
 
 set output "./tools/powertrace/duty-cycle.eps"
 set title "Duty cycle"
 set ylabel "Duty cycle(%)"
-set xlabel "Time (s)"
-plot [0:1000] [0:100] './tools/powertrace/energy-consumption-data' using ($1):($7*100) with lines title 'TX' , \
+set xlabel "Time (m)"
+plot [0:70] [0:60] './tools/powertrace/energy-consumption-data' using ($1):($7*100) with lines title 'TX' , \
     './tools/powertrace/energy-consumption-data' using ($1):($8*100) with lines title 'RX' , \
     './tools/powertrace/energy-consumption-data' using ($1):($9*100) with lines title 'CPU' , \
     './tools/powertrace/energy-consumption-data' using ($1):($10*100) with lines title 'LPM'

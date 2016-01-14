@@ -97,8 +97,10 @@
 /* Light resource */
 #define LIGHT_RESOURCE_URI "sensors/light"
 #define DAY_LIGHT_LIMIT 175
-
+#define DAY 500 //DAY DURATION
 #define COAP_DATA_BUFF_SIZE 1024
+#define T_WORK 1.3
+#define T_AWAY T_WORK*6
 /*----------------------------------------------------------------------------*/
 
 
@@ -109,7 +111,7 @@ uint8_t alarm = 0;
 
 #define TOTAL_NODES 1
 
-static struct etimer et, dailyTimer, workTimer, tempInterval, energy_timer;
+static struct etimer lightTimer, dailyTimer, workTimer, tempInterval, energy_timer;
 static temperature_state node_state;
 int atWork = 0;
 
@@ -130,12 +132,13 @@ static process_event_t energy_event, start_motion_observe, stop_motion_observe;
 PROCESS(temperature_poll, "Erbium Coap Observe Motion Resource");
 PROCESS(toggle_process, "Erbium Coap Toggle Resource");
 AUTOSTART_PROCESSES(&temperature_poll, &toggle_process);
+
 /*----------------------------------------------------------------------------*/
+uint8_t dayInit = 1;
+uint8_t watchLights = 0;
 
-
-
-void alarm_handle(){
-    printf("New motion: %d\n",serv1state.motion);
+void alarm_handle() {
+    printf("New motion: %d\n", serv1state.motion);
     if (atWork) {
         // Open lights
         printf("TOGGLE LIGHTS");
@@ -203,6 +206,19 @@ void light_response_handler(void *response) {
 
 }
 
+void toggle_observation(int ev) {
+    if (ev == 0) {
+        printf("STOP_OBSERVE Stopping observation\n");
+        printf("LL Stop motion observation\n");
+        coap_obs_remove_observee(serv1state.obs);
+        serv1state.obs = NULL;
+    } else if (!serv1state.obs && ev == 1) {
+        printf("START_OBSERVE Starting observation with\n");
+        printf("LL Start motion observation\n");
+        serv1state.obs = coap_obs_request_registration(&server_ipaddr, REMOTE_PORT,
+                OBS_RESOURCE_URI, notification_callback, NULL);
+    }
+}
 
 void
 client_chunk_temperature_handler(void *response) {
@@ -220,18 +236,32 @@ client_chunk_temperature_handler(void *response) {
             curTemperature, curHumidity, curThermostatLow, curThermostatHigh, curThermostatSwitch);
 #endif
     if (etimer_expired(&dailyTimer) && atWork == 0) {
-        etimer_set(&workTimer, 8 * 10 * CLOCK_SECOND);
+        printf("LL New Day\n");
+        toggle_observation(1);
+        watchLights = 1;   
         atWork = 1;
 #if DEBUG
-        printf("Start working!\n");
+        printf("WORK_START Start working!\n");
+        printf("LL Start work\n");
+        //send atWork = 1 msg to motion observer
+        process_post(&toggle_process, PROCESS_EVENT_CONTINUE, "2;1;");
 #endif
         etimer_reset(&dailyTimer);
+        etimer_reset(&workTimer);
     }
+    
+    
     if (etimer_expired(&workTimer) && atWork == 1) {
-        etimer_stop(&workTimer);
+        
+        printf("LL Stop work %u \n",atWork);
 #if DEBUG
-        printf("Stop working!\n");
+        printf("STOP_WORK Stop working!\n");
+        //send atWork = 0 msg to motion observer
+        process_post(&toggle_process, PROCESS_EVENT_CONTINUE, "2;0;");
 #endif  
+        toggle_observation(1);
+        etimer_reset(&workTimer);
+        watchLights = 0;
         atWork = 0;
     }
 
@@ -269,17 +299,7 @@ energy_handler(void *response) {
 #endif    
 }
 
-void toggle_observation(int ev) {
-    if (ev == 0) {
-        printf("Stopping observation\n");
-        coap_obs_remove_observee(serv1state.obs);
-        serv1state.obs = NULL;
-    } else if (!serv1state.obs && ev == 1) {
-        printf("Starting observation with");
-        serv1state.obs = coap_obs_request_registration(&server_ipaddr, REMOTE_PORT,
-                OBS_RESOURCE_URI, notification_callback, NULL);
-    }
-}
+
 
 /*
  * The main (proto-)thread. It starts/stops the observation of the remote
@@ -288,25 +308,28 @@ void toggle_observation(int ev) {
  */
 PROCESS_THREAD(temperature_poll, ev, data) {
     PROCESS_BEGIN();
+    
     static coap_packet_t request[1], putRequest[1]; /* This way the packet can be treated as pointer as usual. */
     printf("Server id: %d, Building id: %d, Room id: %d\n", atoi(SERVER_ID), atoi(BUILDING_ID), atoi(ROOM_ID));
     /* store server address in server_ipaddr */
     SERVER_NODE(&server_ipaddr, atoi(SERVER_ID));
     //    BUILDING_SERVER_NODE(&building_addr,atoi(ROOM_ID));
-//#ifdef ENERGY_ANALYSIS
-    powertrace_start(CLOCK_SECOND * 10);
-//#endif
+    //#ifdef ENERGY_ANALYSIS
+    powertrace_start(CLOCK_SECOND * 5);
+    //#endif
     /* receives all CoAP messages */
     coap_init_engine();
 
     /* init timer and button (if available) */
-    etimer_set(&et, 30 * CLOCK_SECOND);
-    etimer_set(&tempInterval, 30 * CLOCK_SECOND);
-    etimer_set(&dailyTimer, 24 * 10 * CLOCK_SECOND);
-    etimer_set(&energy_timer, 10 * CLOCK_SECOND);
-
-    printf("RTIMER: %u\n", RTIMER_SECOND);
     
+    etimer_set(&tempInterval, T_AWAY * CLOCK_SECOND);
+    etimer_set(&energy_timer, 10 * CLOCK_SECOND);
+    etimer_set(&dailyTimer, DAY * CLOCK_SECOND);
+    etimer_set(&workTimer, (DAY/3) * CLOCK_SECOND);
+    etimer_set(&lightTimer,(DAY/7) * CLOCK_SECOND);
+    
+    printf("RTIMER: %u\n", RTIMER_SECOND);
+
     energy_event = process_alloc_event();
     start_motion_observe = process_alloc_event();
     stop_motion_observe = process_alloc_event();
@@ -319,7 +342,7 @@ PROCESS_THREAD(temperature_poll, ev, data) {
     /* toggle observation every time the timer elapses or the button is pressed */
     while (1) {
         PROCESS_YIELD();
-        if (etimer_expired(&et)) {
+        if (etimer_expired(&lightTimer)&& watchLights) {
             //ASK FOR LIGHT VALUE -- TODO can we make this async?
             coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0);
             coap_set_header_uri_path(request, LIGHT_RESOURCE_URI);
@@ -327,15 +350,15 @@ PROCESS_THREAD(temperature_poll, ev, data) {
                     light_response_handler);
             if (serv1state.light < DAY_LIGHT_LIMIT) {
                 toggle_observation(1);
-                printf("Enable motion observation\n");
             } else { // natural light
-
-                toggle_observation(0);
-                printf("Disable motion observation\n");
+                if (atWork == 1 ) {
+                    toggle_observation(0);
+                }
+                watchLights = 0;
                 process_post(&toggle_process, PROCESS_EVENT_CONTINUE, "0;0;");
             }
 
-            etimer_reset(&et);
+            etimer_reset(&lightTimer);
         }
 
 
@@ -421,11 +444,11 @@ PROCESS_THREAD(temperature_poll, ev, data) {
  ******************************************************************************************/
 
 /* Example URIs that can be queried. */
-#define NUMBER_OF_URLS 2
+#define NUMBER_OF_URLS 3
 
 /* Service URLs and parameters */
-char *service_urls[NUMBER_OF_URLS] = {"actuators/light_bulb", "actuators/alarm"};
-char *service_parameters[NUMBER_OF_URLS] = {"?light_value=", "?alarm_value="};
+char *toggle_urls[NUMBER_OF_URLS] = {"actuators/light_bulb", "actuators/alarm", OBS_RESOURCE_URI}; //update NUMBER_OF_URLS IF NEW
+char *service_parameters[NUMBER_OF_URLS] = {"?light_value=", "?alarm_value=", "?at_work="};
 
 /*Not used yet*/
 void toggle_handler(void *response) {
@@ -434,7 +457,6 @@ void toggle_handler(void *response) {
 #endif
 
 }
-
 
 /*Toggle process thread*/
 PROCESS_THREAD(toggle_process, ev, data) {
@@ -447,7 +469,7 @@ PROCESS_THREAD(toggle_process, ev, data) {
         if (ev == PROCESS_EVENT_CONTINUE) {
             uint8_t serviceIndex = atoi(strtok((char *) data, ";"));
             char *value = strtok(NULL, ";");
-            
+
             char url[100];
 
             /* receives all CoAP messages */
@@ -455,14 +477,13 @@ PROCESS_THREAD(toggle_process, ev, data) {
             /* prepare request, TID is set by COAP_BLOCKING_REQUEST() */
             strcpy(url, service_parameters[serviceIndex]);
             strcat(url, value);
-            PRINTF("Actuator value change!!!!");
 #ifdef DEBUG
             printf("Event data: %s, Selected index: %d\n", (char *) data, serviceIndex);
-            printf("Toggle %s", service_urls[serviceIndex]);
+            printf("Toggle %s", toggle_urls[serviceIndex]);
             printf(" with parameters: %s\n", url);
 #endif
             coap_init_message(request, COAP_TYPE_CON, COAP_PUT, 0);
-            coap_set_header_uri_path(request, service_urls[serviceIndex]);
+            coap_set_header_uri_path(request, toggle_urls[serviceIndex]);
 
             coap_set_header_uri_query(request, url);
             COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, request,

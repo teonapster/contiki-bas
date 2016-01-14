@@ -1,20 +1,23 @@
+POWERTRACE_PATH = './tools/powertrace'
 ifndef MAKEFILE_POWERTRACE
 MAKEFILE_POWERTRACE = 1
 ifdef LOG
 powertrace-parse:
-	cat $(LOG) | grep -a "P " | ./tools/powertrace/energy-consumption > ./tools/powertrace/energy-consumption-data
-	#cat $(LOG) | grep -a "P " | ./tools/powertrace/duty-cycle | sort -nr > dity-cycle-data
+	cat $(LOG) | grep -e WORK_START -e STOP_WORK -e "P " -e START_OBSERVE -e STOP_OBSERVE -a | $(POWERTRACE_PATH)/energy-consumption > $(POWERTRACE_PATH)/energy-consumption-data
+	#cat $(LOG) | grep -a "P " | $(POWERTRACE_PATH)/duty-cycle | sort -nr > dity-cycle-data
 else #LOG
 powertrace-parse:
 	@echo LOG must be defined to point to the powertrace log file to parse
 endif #LOG
 
 powertrace-plot: #TO INCLUDE REST PLOTS powertrace-plot-node powertrace-plot-sniff
-	@gnuplot ./tools/powertrace/energy-consumption-plot || echo gnuplot failed
+	@gnuplot $(POWERTRACE_PATH)/energy-consumption-plot || echo gnuplot failed
 
 powertrace-show:
-	gv ./tools/powertrace/energy-consumption.eps
-	gv ./tools/powertrace/duty-cycle.eps
+	gv $(POWERTRACE_PATH)/energy-consumption.eps
+	gv $(POWERTRACE_PATH)/energy-consumption-total.eps
+	gv $(POWERTRACE_PATH)/duty-cycle.eps
+
 powertrace-all: powertrace-parse powertrace-plot powertrace-show
 
 powertrace-help:
