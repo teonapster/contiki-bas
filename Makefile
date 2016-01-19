@@ -31,7 +31,7 @@ CFLAGS += -DBUILDING_ID=\"$(BUILDING_ID)\"
 #CFLAGS += -DMACID=$(THIS_ID)
 
 PROJECTDIRS += $(REST_RESOURCES_DIR)
-PROJECT_SOURCEFILES += $(REST_RESOURCES_FILES)
+PROJECT_SOURCEFILES += $(REST_RESOURCES_FILES) 
 
 #compile all client scripts
 ifeq ($(CLIENT),YES)
@@ -71,6 +71,9 @@ CFLAGS += -DREST_MAX_CHUNK_SIZE=1024
 CFLAGS += -DCOAP_MAX_HEADER_SIZE=176
 CONTIKI_WITH_RPL=0
 endif
+
+#INCLUDE cxmac RDC driver
+MODULES+= core/net core/net/mac core/net/mac/cxmac
 
 # optional rules to get assembly
 #$(OBJECTDIR)/%.o: asmdir/%.S

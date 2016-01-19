@@ -1,0 +1,40 @@
+preprocess editing: 
+
+->.csc automatic mote configuration (SERVER_ID,ROOM_ID)
+-> total rooms/servers (R)
+-> rpl-router location (x/y)
+-> noise ratio
+-> idle mode column (time percentage relation with rx/tx)
+
+-> motion power law detection
+-> timers adjustments
+-> Coap - HTTP ?
+-> motion dummy payload (big)
+-> distance 
+-> snr
+-> CPU fake loop
+
+
+->duty cycle (min - max - avg)
+->battery lifetime              
+->cxmac , z1                    (DONE)
+->powertrace on server          (DONE)
+->ppt       
+
+
+ISSUES
+-> observation - powertrace
+-> Sky mote cannot handle all the needed resources (rom overflows)
+
+
+WARNINGS
+-> Change platform/z1/Makefile.z1:
+    - Add cxmac module ! (by default its missing)
+
+
+
+->Key parameters
+-cxmac,contikicmac protocols
+-RX ratio
+-TX ratio
+-rdc check
