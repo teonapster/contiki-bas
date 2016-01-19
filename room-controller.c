@@ -97,7 +97,7 @@
 /* Light resource */
 #define LIGHT_RESOURCE_URI "sensors/light"
 #define DAY_LIGHT_LIMIT 175
-#define DAY 500 //DAY DURATION
+#define DAY 800 //DAY DURATION
 #define COAP_DATA_BUFF_SIZE 1024
 #define T_WORK 1.3
 #define T_AWAY T_WORK*6
@@ -237,7 +237,7 @@ client_chunk_temperature_handler(void *response) {
 #endif
     if (etimer_expired(&dailyTimer) && atWork == 0) {
         printf("LL New Day\n");
-        toggle_observation(1);
+        toggle_observation(0);
         watchLights = 1;   
         atWork = 1;
 #if DEBUG
@@ -247,7 +247,8 @@ client_chunk_temperature_handler(void *response) {
         process_post(&toggle_process, PROCESS_EVENT_CONTINUE, "2;1;");
 #endif
         etimer_reset(&dailyTimer);
-        etimer_reset(&workTimer);
+        etimer_restart(&workTimer);
+        etimer_restart(&lightTimer);
     }
     
     
@@ -314,9 +315,9 @@ PROCESS_THREAD(temperature_poll, ev, data) {
     /* store server address in server_ipaddr */
     SERVER_NODE(&server_ipaddr, atoi(SERVER_ID));
     //    BUILDING_SERVER_NODE(&building_addr,atoi(ROOM_ID));
-    //#ifdef ENERGY_ANALYSIS
+    #if ENERGY_ANALYSIS==CTRL_ANALYSIS
     powertrace_start(CLOCK_SECOND * 5);
-    //#endif
+    #endif
     /* receives all CoAP messages */
     coap_init_engine();
 
@@ -325,8 +326,8 @@ PROCESS_THREAD(temperature_poll, ev, data) {
     etimer_set(&tempInterval, T_AWAY * CLOCK_SECOND);
     etimer_set(&energy_timer, 10 * CLOCK_SECOND);
     etimer_set(&dailyTimer, DAY * CLOCK_SECOND);
-    etimer_set(&workTimer, (DAY/3) * CLOCK_SECOND);
-    etimer_set(&lightTimer,(DAY/7) * CLOCK_SECOND);
+    etimer_set(&workTimer, (DAY/2) * CLOCK_SECOND);
+    etimer_set(&lightTimer,(DAY/2)/3 * CLOCK_SECOND);
     
     printf("RTIMER: %u\n", RTIMER_SECOND);
 
@@ -348,9 +349,12 @@ PROCESS_THREAD(temperature_poll, ev, data) {
             coap_set_header_uri_path(request, LIGHT_RESOURCE_URI);
             COAP_BLOCKING_REQUEST(&server_ipaddr, REMOTE_PORT, request,
                     light_response_handler);
+            printf("LL Watch lights\n");
             if (serv1state.light < DAY_LIGHT_LIMIT) {
+                printf("LL dark\n");
                 toggle_observation(1);
             } else { // natural light
+                printf("LL enough light\n");
                 if (atWork == 1 ) {
                     toggle_observation(0);
                 }

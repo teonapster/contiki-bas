@@ -57,7 +57,11 @@
    require more memory. */
 /* For projects, optimize memory and enable RDC and CSMA again. */
 #undef NETSTACK_CONF_RDC
-#define NETSTACK_CONF_RDC         cxmac_driver
+#define NETSTACK_CONF_RDC        contikimac_driver
+
+
+#undef NETSTACK_RDC_CHANNEL_CHECK_RATE
+#define NETSTACK_RDC_CHANNEL_CHECK_RATE 8
 
 /* Disabling TCP on CoAP nodes. */
 #undef UIP_CONF_TCP
@@ -134,5 +138,9 @@
 
 #undef NETSTACK_CONF_WITH_RIME
 //#define NETSTACK_CONF_WITH_RIME 1
+
+#define SERVER_ANALYSIS 1
+#define CTRL_ANALYSIS 2
+#define ENERGY_ANALYSIS SERVER_ANALYSIS
 
 #endif /* __PROJECT_ERBIUM_CONF_H__ */

@@ -1,24 +1,47 @@
 POWERTRACE_PATH = './tools/powertrace'
+EXPERIMENTS_PATH = ./tools/powertrace/experiments
+FINAL_RESULTS_PATH = $(EXPERIMENTS_PATH)/finalResults
+EXPERIMENT_PATH=$(FINAL_RESULTS_PATH)/$(PARAMETER)
+MKDIR_P = mkdir -p
+DF=energy-consumption-data-$(PARAMETER)-$(CASE)
+DATA_FILE=$(EXPERIMENT_PATH)/$(DF)
 ifndef MAKEFILE_POWERTRACE
 MAKEFILE_POWERTRACE = 1
 ifdef LOG
 powertrace-parse:
 	cat $(LOG) | grep -e WORK_START -e STOP_WORK -e "P " -e START_OBSERVE -e STOP_OBSERVE -a | $(POWERTRACE_PATH)/energy-consumption > $(POWERTRACE_PATH)/energy-consumption-data
-	#cat $(LOG) | grep -a "P " | $(POWERTRACE_PATH)/duty-cycle | sort -nr > dity-cycle-data
 else #LOG
 powertrace-parse:
 	@echo LOG must be defined to point to the powertrace log file to parse
 endif #LOG
 
+
+#ifdef PARAMETER && CASE && LOG
+powertrace-save:
+	cp $(LOG) $(EXPERIMENT_PATH)/logfile-$(CASE).txt
+	cat $(LOG) | grep -e WORK_START -e STOP_WORK -e "P " -e START_OBSERVE -e STOP_OBSERVE -a | $(POWERTRACE_PATH)/energy-consumption > $(DATA_FILE)
+	tail -1 $(DATA_FILE) >> $(FINAL_RESULTS_PATH)/energy-consumption-totals
+	head -n -1 $(DATA_FILE) >ecd && mv ecd $(DATA_FILE)
+#endif #PARAMETER + CASE
+
+
+
 powertrace-plot: #TO INCLUDE REST PLOTS powertrace-plot-node powertrace-plot-sniff
-	@gnuplot $(POWERTRACE_PATH)/energy-consumption-plot || echo gnuplot failed
+	@gnuplot -e "filename='$(DATA_FILE)'; path='$(EXPERIMENT_PATH)/'; case='$(CASE)';" $(POWERTRACE_PATH)/energy-consumption-plot || echo gnuplot failed
 
 powertrace-show:
-	gv $(POWERTRACE_PATH)/energy-consumption.eps
-	gv $(POWERTRACE_PATH)/energy-consumption-total.eps
-	gv $(POWERTRACE_PATH)/duty-cycle.eps
+	gv $(EXPERIMENT_PATH)/energy-consumption-$(CASE).eps
+	gv $(EXPERIMENT_PATH)/energy-consumption-total-$(CASE).eps
+	gv $(EXPERIMENT_PATH)/duty-cycle-$(CASE).eps
 
 powertrace-all: powertrace-parse powertrace-plot powertrace-show
+
+powertrace-deploy: directory powertrace-save powertrace-plot powertrace-show
+
+directory: $(EXPERIMENT_PATH)
+
+$(EXPERIMENT_PATH):
+	$(MKDIR_P) $(EXPERIMENT_PATH)
 
 powertrace-help:
 	@echo Contiki powertrace is a tool that helps with collecting power data

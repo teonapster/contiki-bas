@@ -7,9 +7,12 @@ $current_tx     = 17.4;
 $current_rx     = 18.8;
 $voltage = 3;
 $ticks_per_sec = 32768;
+$mah = 2300;
 $msg="";
-while(<>) {
+$total_energy_consumption=0.0;
+$total_lpm_consumption=0.0;
 
+while(<>) {
     if(/P (\d+) (\d+) (\d+) (\d+) (\d+) (\d+) (\d+) (\d+)/) {
         $all_cpu[$i]    = $1;
         $all_lpm[$i]    = $2;
@@ -26,13 +29,21 @@ while(<>) {
             $all_tx_per[$i] = $7 / ($5+$6+$7+$8);
             $all_rx_per[$i] = $8 / ($5+$6+$7+$8);
             $all_cpu_per[$i]= $5/ ($5+$6+$7+$8);
-            $all_lpm_per[$i]= $2/ ($5+$6+$7+$8);
+            $all_lpm_per[$i]= $6/ ($5+$6+$7+$8);
             
             $index = $i*10.0/60.0;
             print $index." ".$all_cpu[$i]." ".$all_lpm[$i]." ".$all_tx[$i]." ".$all_rx[$i]." ".$row_tot[$i]." ".$all_tx_per[$i].
             " ".$all_rx_per[$i]." ". $all_cpu_per[$i]." ".$all_lpm_per[$i]." ".$msg."\n";
             $msg="";
         }
+        else{
+            $row_tot[$i]  = $all_cpu[$i]+$all_lpm[$i]+$all_tx[$i]+$all_rx[$i];
+        }
+            #Overall energy consumption counter
+            $total_energy_consumption+=$row_tot[$i];
+
+            #LPM energy consumption counter
+            $total_lpm_consumption+=$all_lpm[$i];
         $i= $i+1;
     }
     elsif (/WORK_START/){
@@ -49,6 +60,6 @@ while(<>) {
     }
     
 }
-#for($j=0;$j<$i-1;$j++){
-#   $total=$total+$row_tot[$i];
-#}
+$total_energy_consumption = $mah*$voltage/$total_energy_consumption;
+$total_lpm_consumption= $total_lpm_consumption/($i+1);
+print $total_energy_consumption." ".$total_lpm_consumption."\n";
