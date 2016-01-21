@@ -1,0 +1,3892 @@
+00:02.912	ID:2	Rime started with address 193.12.0.0.0.0.0.2
+00:02.926	ID:2	MAC c1:0c:00:00:00:00:00:02 Contiki-3.0-6-g84830d0 started. Node id is set to 2.
+00:02.936	ID:2	nullmac CX-MAC, channel check rate 8 Hz, radio channel 26
+00:02.952	ID:2	Tentative link-local IPv6 address fe80:0000:0000:0000:c30c:0000:0000:0002
+00:02.957	ID:2	Starting 'Erbium Example Server'
+00:02.960	ID:2	Starting Building Server
+00:02.963	ID:2	PAN ID: 0xABCD
+00:03.027	ID:4	Rime started with address 193.12.0.0.0.0.0.4
+00:03.042	ID:4	MAC c1:0c:00:00:00:00:00:04 Contiki-3.0-6-g84830d0 started. Node id is set to 4.
+00:03.052	ID:4	nullmac CX-MAC, channel check rate 8 Hz, radio channel 26
+00:03.054	ID:1	Rime started with address 193.12.0.0.0.0.0.1
+00:03.068	ID:4	Tentative link-local IPv6 address fe80:0000:0000:0000:c30c:0000:0000:0004
+00:03.070	ID:1	MAC c1:0c:00:00:00:00:00:01 Contiki-3.0-6-g84830d0 started. Node id is set to 1.
+00:03.079	ID:4	Starting 'Erbium Coap Observe Motion Resource' 'Erbium Coap Toggle Resource'
+00:03.080	ID:1	CSMA ContikiMAC, channel check rate 8 Hz, radio channel 26
+00:03.085	ID:4	Server id: 3, Building id: 2, Room id: 0
+00:03.088	ID:4	RTIMER: 32768
+00:03.096	ID:1	Tentative link-local IPv6 address fe80:0000:0000:0000:c30c:0000:0000:0001
+00:03.103	ID:1	Starting 'Border router process' 'Web server'
+00:03.576	ID:3	Rime started with address 193.12.0.0.0.0.0.3
+00:03.590	ID:3	MAC c1:0c:00:00:00:00:00:03 Contiki-3.0-6-g84830d0 started. Node id is set to 3.
+00:03.600	ID:3	nullmac CX-MAC, channel check rate 8 Hz, radio channel 26
+00:03.616	ID:3	Tentative link-local IPv6 address fe80:0000:0000:0000:c30c:0000:0000:0003
+00:03.621	ID:3	Starting 'Erbium Example Server'
+00:13.631	ID:3	P 7795 155846 957 9861 7795 155846 957 9861
+00:18.680	ID:4	Ask for current temperature
+00:23.631	ID:3	P 10764 316527 957 20203 2967 160681 0 10342
+00:33.633	ID:3	P 17902 473062 1318 34060 7136 156535 361 13857
+00:40.386	ID:4	t=217, h=252, therm_l=16, therm_h=18, therm_sw=0
+00:40.869	ID:4	Temperature got
+00:40.873	ID:4	Ask for current temperature
+00:41.399	ID:4	t=24, h=252, therm_l=16, therm_h=18, therm_sw=0
+00:41.893	ID:4	Temperature got
+00:43.633	ID:3	P 41342 613299 1715 45650 23438 140237 397 11590
+00:49.867	ID:4	Ask for current temperature
+00:50.401	ID:4	t=217, h=252, therm_l=16, therm_h=18, therm_sw=0
+00:50.884	ID:4	Temperature got
+00:53.633	ID:3	P 52533 765774 1848 56090 11188 152475 133 10437
+01:03.632	ID:3	P 55319 926639 1848 66392 2783 160865 0 10299
+01:05.461	ID:4	Ask for current temperature
+01:05.903	ID:4	t=15, h=252, therm_l=16, therm_h=18, therm_sw=0
+01:05.908	ID:4	COOOOOLD! -> switch on thermostat
+01:06.153	ID:3	thermostat low 15
+01:06.156	ID:3	thermostat high 17
+01:06.159	ID:3	thermostat switch1
+01:06.408	ID:4	Temperature got
+01:13.633	ID:3	P 66655 1078964 2023 77286 11333 152325 175 10891
+01:21.056	ID:4	Ask for current temperature
+01:21.416	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=1
+01:21.422	ID:4	HOOOOOOOOOT! -> switch off thermostat
+01:21.655	ID:3	thermostat low 15
+01:21.658	ID:3	thermostat high 17
+01:21.661	ID:3	thermostat switch0
+01:21.899	ID:4	Temperature got
+01:23.633	ID:3	P 77850 1231435 2156 87788 11193 152471 133 10502
+01:33.632	ID:3	P 80644 1392291 2156 98043 2792 160856 0 10255
+01:36.649	ID:4	Ask for current temperature
+01:37.169	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+01:37.663	ID:4	Temperature got
+01:43.634	ID:3	P 91868 1544728 2317 108766 11222 152437 161 10723
+01:52.242	ID:4	Ask for current temperature
+01:52.682	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+01:53.165	ID:4	Temperature got
+01:53.634	ID:3	P 103083 1697172 2466 119285 11213 152444 149 10519
+02:03.633	ID:3	P 105889 1858016 2466 129540 2804 160844 0 10255
+02:07.836	ID:4	Ask for current temperature
+02:08.184	ID:4	t=18, h=252, therm_l=15, therm_h=17, therm_sw=0
+02:08.678	ID:4	Temperature got
+02:13.634	ID:3	P 122096 2005474 3583 140046 16205 147458 1117 10506
+02:23.431	ID:4	Ask for current temperature
+02:23.633	ID:3	P 124899 2166320 3583 150299 2801 160846 0 10253
+02:23.937	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+02:24.441	ID:4	Temperature got
+02:33.634	ID:3	P 136316 2318573 3743 160956 11415 152253 160 10657
+02:39.024	ID:4	Ask for current temperature
+02:39.449	ID:4	t=23, h=252, therm_l=15, therm_h=17, therm_sw=0
+02:39.932	ID:4	Temperature got
+02:43.634	ID:3	P 147585 2470968 3875 171511 11267 152395 132 10555
+02:53.633	ID:3	P 150381 2631821 3875 181764 2794 160853 0 10253
+02:54.618	ID:4	Ask for current temperature
+02:54.962	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+02:55.445	ID:4	Temperature got
+03:03.634	ID:3	P 161612 2784246 4035 192422 11229 152425 160 10658
+03:10.211	ID:4	Ask for current temperature
+03:10.715	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+03:11.198	ID:4	Temperature got
+03:13.634	ID:3	P 172879 2936638 4181 203171 11265 152392 146 10749
+03:23.633	ID:3	P 175678 3097500 4181 213293 2797 160862 0 10122
+03:25.805	ID:4	Ask for current temperature
+03:26.227	ID:4	t=12, h=252, therm_l=15, therm_h=17, therm_sw=0
+03:26.232	ID:4	COOOOOLD! -> switch on thermostat
+03:26.466	ID:3	thermostat low 15
+03:26.469	ID:3	thermostat high 17
+03:26.472	ID:3	thermostat switch1
+03:26.711	ID:4	Temperature got
+03:33.634	ID:3	P 186875 3249975 4342 223853 11195 152475 161 10560
+03:41.399	ID:4	Ask for current temperature
+03:41.730	ID:4	t=17, h=252, therm_l=15, therm_h=17, therm_sw=1
+03:42.213	ID:4	Temperature got
+03:43.634	ID:3	P 198118 3402405 4489 234284 11241 152430 147 10431
+03:53.633	ID:3	P 200917 3563268 4489 244406 2797 160863 0 10122
+03:56.992	ID:4	Ask for current temperature
+03:57.483	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=1
+03:57.488	ID:4	HOOOOOOOOOT! -> switch off thermostat
+03:57.731	ID:3	thermostat low 15
+03:57.734	ID:3	thermostat high 17
+03:57.737	ID:3	thermostat switch0
+03:57.987	ID:4	Temperature got
+04:03.634	ID:3	P 212307 3715541 4666 255326 11388 152273 177 10920
+04:12.586	ID:4	Ask for current temperature
+04:13.170	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+04:13.664	ID:4	Temperature got
+04:13.683	ID:3	P 228589 3863712 5988 268253 16280 148171 1322 12927
+04:23.633	ID:3	P 231379 4023796 5988 278440 2787 160084 0 10185
+04:28.180	ID:4	Ask for current temperature
+04:28.683	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+04:29.166	ID:4	Temperature got
+04:33.634	ID:3	P 242427 4176412 6134 288829 11046 152616 146 10389
+04:43.633	ID:3	P 245238 4337251 6134 299082 2809 160839 0 10253
+04:43.774	ID:4	Ask for current temperature
+04:44.185	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+04:44.689	ID:4	Temperature got
+04:53.634	ID:3	P 256651 4489507 6309 309867 11411 152256 175 10785
+04:59.367	ID:4	Ask for current temperature
+04:59.697	ID:4	t=24, h=252, therm_l=15, therm_h=17, therm_sw=0
+05:00.181	ID:4	Temperature got
+05:03.634	ID:3	P 267889 4641938 6442 320100 11236 152431 133 10233
+05:13.633	ID:3	P 270700 4802787 6442 330221 2809 160849 0 10121
+05:14.961	ID:4	Ask for current temperature
+05:15.450	ID:4	t=17, h=252, therm_l=15, therm_h=17, therm_sw=0
+05:15.945	ID:4	Temperature got
+05:23.634	ID:3	P 281940 4955217 6599 340850 11238 152430 157 10629
+05:30.555	ID:4	Ask for current temperature
+05:30.953	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+05:31.458	ID:4	Temperature got
+05:33.634	ID:3	P 293383 5107439 6759 351539 11441 152222 160 10689
+05:43.633	ID:3	P 296194 5268277 6759 361792 2809 160838 0 10253
+05:46.149	ID:4	Ask for current temperature
+05:46.466	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+05:46.960	ID:4	Temperature got
+05:53.634	ID:3	P 307423 5420707 6906 372361 11227 152430 147 10569
+06:01.743	ID:4	Ask for current temperature
+06:02.218	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+06:02.723	ID:4	Temperature got
+06:03.634	ID:3	P 318864 5572928 7067 383127 11439 152221 161 10766
+06:13.633	ID:3	P 326681 5728767 8025 392980 7815 155839 958 9853
+06:17.336	ID:4	Ask for current temperature
+06:17.916	ID:4	t=16, h=252, therm_l=15, therm_h=17, therm_sw=0
+06:18.399	ID:4	Temperature got
+06:23.634	ID:3	P 337717 5881395 8389 405982 11034 152628 364 13002
+06:32.930	ID:4	Ask for current temperature
+06:33.419	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+06:33.633	ID:3	P 344829 6037950 8473 416364 7110 156555 84 10382
+06:33.913	ID:4	Temperature got
+06:43.633	ID:3	P 351965 6194467 8550 426764 7134 156517 77 10400
+06:48.524	ID:4	Ask for current temperature
+06:48.931	ID:4	t=25, h=252, therm_l=15, therm_h=17, therm_sw=0
+06:49.414	ID:4	Temperature got
+06:53.634	ID:3	P 363180 6346911 8696 437262 11213 152444 146 10498
+07:03.633	ID:3	P 365988 6507753 8696 447517 2806 160842 0 10255
+07:04.117	ID:4	Ask for current temperature
+07:04.433	ID:4	t=22, h=252, therm_l=15, therm_h=17, therm_sw=0
+07:04.916	ID:4	Temperature got
+07:13.634	ID:3	P 377230 6660177 8841 458198 11240 152424 145 10681
+07:19.711	ID:4	Ask for current temperature
+07:20.196	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+07:20.680	ID:4	Temperature got
+07:23.634	ID:3	P 388452 6812624 9002 468733 11220 152447 161 10535
+07:33.633	ID:3	P 391258 6973477 9002 478845 2804 160853 0 10112
+07:35.305	ID:4	Ask for current temperature
+07:35.698	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+07:36.181	ID:4	Temperature got
+07:43.634	ID:3	P 402487 7125907 9150 489621 11227 152430 148 10776
+07:50.899	ID:4	Ask for current temperature
+07:51.211	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+07:51.695	ID:4	Temperature got
+07:53.634	ID:3	P 413436 7278616 9312 500390 10947 152709 162 10769
+08:03.633	ID:3	P 416244 7439468 9312 510502 2806 160852 0 10112
+08:06.492	ID:4	Ask for current temperature
+08:07.184	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+08:07.689	ID:4	Temperature got
+08:13.635	ID:3	P 432599 7586782 10701 524162 16353 147314 1389 13660
+08:22.086	ID:4	Ask for current temperature
+08:22.447	ID:4	t=17, h=252, therm_l=15, therm_h=17, therm_sw=0
+08:22.930	ID:4	Temperature got
+08:23.634	ID:3	P 443809 7739241 10833 534420 11208 152459 132 10258
+08:33.094	ID:1	# [1024 bytes, no line ending]: ?P?P?P?P?P...
+08:33.633	ID:3	P 446622 7900088 10833 544532 2811 160847 0 10112
+08:37.681	ID:4	Ask for current temperature
+08:38.199	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+08:38.694	ID:4	Temperature got
+08:43.634	ID:3	P 457845 8052531 10994 555169 11221 152443 161 10637
+08:53.274	ID:4	Ask for current temperature
+08:53.702	ID:4	t=22, h=252, therm_l=15, therm_h=17, therm_sw=0
+08:53.712	ID:3	P 464958 8210367 11062 565792 7111 157836 68 10623
+08:54.206	ID:4	Temperature got
+09:03.634	ID:3	P 471853 8365842 11154 576343 6893 155475 92 10549
+09:08.868	ID:4	Ask for current temperature
+09:09.214	ID:4	t=21, h=252, therm_l=15, therm_h=17, therm_sw=0
+09:09.698	ID:4	Temperature got
+09:13.634	ID:3	P 482906 8518445 11286 586757 11051 152603 132 10414
+09:23.633	ID:3	P 485709 8679291 11286 597010 2801 160846 0 10253
+09:24.461	ID:4	Ask for current temperature
+09:24.967	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+09:25.471	ID:4	Temperature got
+09:33.635	ID:3	P 497111 8831554 11464 607844 11400 152263 178 10834
+09:40.055	ID:4	Ask for current temperature
+09:40.480	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+09:40.963	ID:4	Temperature got
+09:43.634	ID:3	P 508169 8984163 11597 618147 11056 152609 133 10303
+09:53.633	ID:3	P 510975 9145018 11597 628269 2804 160855 0 10122
+09:55.649	ID:4	Ask for current temperature
+09:55.982	ID:4	t=14, h=252, therm_l=15, therm_h=17, therm_sw=0
+09:55.987	ID:4	COOOOOLD! -> switch on thermostat
+09:56.232	ID:3	thermostat low 15
+09:56.235	ID:3	thermostat high 17
+09:56.238	ID:3	thermostat switch1
+09:56.487	ID:4	Temperature got
+10:03.635	ID:3	P 522357 9297304 11772 639244 11380 152286 175 10975
+10:11.243	ID:4	Ask for current temperature
+10:11.930	ID:4	t=15, h=252, therm_l=15, therm_h=17, therm_sw=1
+10:12.414	ID:4	Temperature got
+10:13.635	ID:3	P 538585 9444742 13094 651922 16226 147438 1322 12678
+10:23.633	ID:3	P 541395 9605581 13094 662175 2808 160839 0 10253
+10:26.836	ID:4	Ask for current temperature
+10:27.183	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=1
+10:27.188	ID:4	HOOOOOOOOOT! -> switch off thermostat
+10:27.422	ID:3	thermostat low 15
+10:27.425	ID:3	thermostat high 17
+10:27.428	ID:3	thermostat switch0
+10:27.666	ID:4	Temperature got
+10:33.635	ID:3	P 552588 9758053 13242 672935 11191 152472 148 10760
+10:42.430	ID:4	Ask for current temperature
+10:42.945	ID:4	t=20, h=252, therm_l=15, therm_h=17, therm_sw=0
+10:43.429	ID:4	Temperature got
+10:43.634	ID:3	P 563814 9910496 13401 683457 11224 152443 159 10522
+10:53.634	ID:3	P 566617 10071341 13401 693710 2801 160845 0 10253
+10:58.024	ID:4	Ask for current temperature
+10:58.437	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+10:58.943	ID:4	Temperature got
+11:03.635	ID:3	P 577853 10223769 13563 704631 11234 152428 162 10921
+11:13.617	ID:4	Ask for current temperature
+11:13.634	ID:3	P 580679 10384601 13563 714752 2824 160832 0 10121
+11:13.951	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+11:14.455	ID:4	Temperature got
+11:23.635	ID:3	P 593879 10535060 13798 725661 13198 150459 235 10909
+11:29.211	ID:4	Ask for current temperature
+11:29.714	ID:4	t=17, h=252, therm_l=15, therm_h=17, therm_sw=0
+11:30.198	ID:4	Temperature got
+11:33.635	ID:3	P 609254 10683358 14034 736548 15373 148298 236 10887
+11:43.634	ID:3	P 612081 10844192 14034 746669 2825 160834 0 10121
+11:44.805	ID:4	Ask for current temperature
+11:45.229	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+11:45.712	ID:4	Temperature got
+11:53.635	ID:3	P 623293 10996651 14167 756915 11210 152459 133 10246
+12:00.399	ID:4	Ask for current temperature
+12:00.732	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+12:01.236	ID:4	Temperature got
+12:03.635	ID:3	P 634736 11148873 14342 767738 11441 152222 175 10823
+12:13.634	ID:3	P 642563 11304700 15300 777461 7825 155827 958 9723
+12:15.994	ID:4	Ask for current temperature
+12:16.680	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+12:17.163	ID:4	Temperature got
+12:23.635	ID:3	P 653777 11457154 15664 790474 11212 152454 364 13013
+12:31.586	ID:4	Ask for current temperature
+12:31.921	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+12:32.426	ID:4	Temperature got
+12:33.635	ID:3	P 665212 11609389 15824 801098 11433 152235 160 10624
+12:43.634	ID:3	P 668039 11770212 15824 811351 2825 160823 0 10253
+12:47.181	ID:4	Ask for current temperature
+12:47.684	ID:4	t=16, h=252, therm_l=15, therm_h=17, therm_sw=0
+12:48.189	ID:4	Temperature got
+12:53.635	ID:3	P 679444 11922469 15986 822041 11403 152257 162 10690
+13:02.774	ID:4	Ask for current temperature
+13:03.197	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+13:03.680	ID:4	Temperature got
+13:03.700	ID:3	P 690702 12075945 16119 832521 11256 153476 133 10480
+13:13.633	ID:3	P 693499 12235745 16119 842386 2795 159800 0 9865
+13:18.367	ID:4	Ask for current temperature
+13:18.699	ID:4	t=23, h=252, therm_l=15, therm_h=17, therm_sw=0
+13:19.182	ID:4	Temperature got
+13:23.635	ID:3	P 704543 12388368 16265 852849 11042 152623 146 10463
+13:33.634	ID:3	P 707364 12549207 16265 862961 2819 160839 0 10112
+13:33.961	ID:4	Ask for current temperature
+13:34.451	ID:4	t=22, h=252, therm_l=15, therm_h=17, therm_sw=0
+13:34.956	ID:4	Temperature got
+13:43.635	ID:3	P 718774 12701458 16441 873904 11408 152251 176 10943
+13:49.555	ID:4	Ask for current temperature
+13:49.964	ID:4	t=25, h=252, therm_l=15, therm_h=17, therm_sw=0
+13:50.447	ID:4	Temperature got
+13:53.635	ID:3	P 730020 12853871 16573 884506 11244 152413 132 10602
+14:03.634	ID:3	P 732843 13014710 16573 894618 2821 160839 0 10112
+14:05.149	ID:4	Ask for current temperature
+14:12.905	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+14:13.633	ID:4	Temperature got
+14:13.654	ID:3	P 748789 13162731 18201 911115 15944 148021 1628 16497
+14:20.742	ID:4	Ask for current temperature
+14:21.142	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+14:21.636	ID:4	Temperature got
+14:23.635	ID:3	P 759993 13314899 18352 921309 11202 152168 151 10194
+14:33.634	ID:3	P 762814 13475730 18352 931646 2818 160831 0 10334
+14:36.336	ID:4	Ask for current temperature
+14:36.655	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+14:37.149	ID:4	Temperature got
+14:43.635	ID:3	P 774359 13627848 18797 945749 11542 152118 445 14100
+14:51.930	ID:4	Ask for current temperature
+14:52.407	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+14:52.901	ID:4	Temperature got
+14:53.635	ID:3	P 785554 13780326 18948 955983 11193 152478 151 10234
+15:03.634	ID:3	P 788379 13941164 18948 966027 2823 160838 0 10044
+15:07.524	ID:4	Ask for current temperature
+15:07.920	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+15:08.414	ID:4	Temperature got
+15:13.635	ID:3	P 799933 14093274 19393 980030 11552 152110 445 14003
+15:23.118	ID:4	Ask for current temperature
+15:23.433	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+15:23.634	ID:3	P 807050 14249807 19476 990688 7115 156533 83 10658
+15:23.916	ID:4	Temperature got
+15:33.635	ID:3	P 813793 14406718 19539 1000868 6741 156911 63 10180
+15:38.711	ID:4	Ask for current temperature
+15:39.186	ID:4	t=20, h=252, therm_l=15, therm_h=17, therm_sw=0
+15:39.690	ID:4	Temperature got
+15:43.635	ID:3	P 825208 14558964 19713 1011770 11413 152246 174 10902
+15:53.634	ID:3	P 828027 14719806 19713 1021892 2817 160842 0 10122
+15:54.305	ID:4	Ask for current temperature
+15:54.698	ID:4	t=19, h=252, therm_l=15, therm_h=17, therm_sw=0
+15:55.182	ID:4	Temperature got
+16:03.635	ID:3	P 839072 14872428 19846 1032190 11043 152622 133 10298
+16:09.899	ID:4	Ask for current temperature
+16:10.440	ID:4	t=16, h=252, therm_l=15, therm_h=17, therm_sw=0
+16:10.923	ID:4	Temperature got
+16:13.636	ID:3	P 855442 15019727 21222 1045554 16368 147299 1376 13364
+16:23.634	ID:3	P 858267 15180551 21222 1055807 2823 160824 0 10253
+16:25.492	ID:4	Ask for current temperature
+16:25.931	ID:4	t=13, h=252, therm_l=15, therm_h=17, therm_sw=0
+16:25.936	ID:4	COOOOOLD! -> switch on thermostat
+16:26.171	ID:3	thermostat low 15
+16:26.174	ID:3	thermostat high 17
+16:26.177	ID:3	thermostat switch1
+16:26.415	ID:4	Temperature got
+16:33.635	ID:3	P 869458 15333024 21353 1066392 11189 152473 131 10585
+16:41.086	ID:4	Ask for current temperature
+16:41.455	ID:4	t=26, h=252, therm_l=15, therm_h=17, therm_sw=1
+16:41.461	ID:4	HOOOOOOOOOT! -> switch off thermostat
+16:41.695	ID:3	thermostat low 15
+16:41.698	ID:3	thermostat high 17
+16:41.701	ID:3	thermostat switch0
+16:41.939	ID:4	Temperature got
+16:43.635	ID:3	P 880817 15485334 21528 1077047 11357 152310 175 10655
+16:53.634	ID:3	P 883636 15646176 21528 1087169 2817 160842 0 10122
+16:56.681	ID:4	Ask for current temperature
+16:57.186	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+16:57.680	ID:4	Temperature got
+17:03.635	ID:3	P 894853 15798620 21661 1097824 11215 152444 133 10655
+17:07.093	ID:1	# [1024 bytes, no line ending]: ?P?P?P?P?P...
+17:12.274	ID:4	Ask for current temperature
+17:12.721	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+17:13.226	ID:4	Temperature got
+17:13.635	ID:3	P 906446 15950686 21863 1109082 11591 152066 202 11258
+17:23.634	ID:3	P 909262 16111520 21863 1119337 2814 160834 0 10255
+17:27.867	ID:4	Ask for current temperature
+17:28.244	ID:4	t=15, h=252, therm_l=15, therm_h=17, therm_sw=0
+17:28.728	ID:4	Temperature got
+17:33.635	ID:3	P 920299 16264142 22010 1129923 11035 152622 147 10586
+17:43.462	ID:4	Ask for current temperature
+17:43.634	ID:3	P 923131 16424959 22010 1140176 2830 160817 0 10253
+17:43.986	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+17:44.492	ID:4	Temperature got
+17:53.635	ID:3	P 934416 16577346 22172 1150830 11283 152387 162 10654
+17:59.055	ID:4	Ask for current temperature
+17:59.510	ID:4	t=14, h=252, therm_l=15, therm_h=17, therm_sw=0
+17:59.515	ID:4	COOOOOLD! -> switch on thermostat
+17:59.748	ID:3	thermostat low 15
+17:59.751	ID:3	thermostat high 17
+17:59.754	ID:3	thermostat switch1
+17:59.993	ID:4	Temperature got
+18:03.635	ID:3	P 945704 16729725 22320 1161545 11286 152379 148 10715
+18:13.635	ID:3	P 953505 16885580 23278 1171459 7799 155855 958 9914
+18:14.649	ID:4	Ask for current temperature
+18:15.187	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=1
+18:15.192	ID:4	HOOOOOOOOOT! -> switch off thermostat
+18:15.435	ID:3	thermostat low 15
+18:15.438	ID:3	thermostat high 17
+18:15.441	ID:3	thermostat switch0
+18:15.692	ID:4	Temperature got
+18:23.635	ID:3	P 964954 17037787 23672 1185126 11447 152207 394 13667
+18:30.243	ID:4	Ask for current temperature
+18:30.700	ID:4	t=15, h=252, therm_l=15, therm_h=17, therm_sw=0
+18:31.197	ID:4	Temperature got
+18:33.635	ID:3	P 976324 17190079 24103 1199271 11368 152292 431 14145
+18:43.634	ID:3	P 979158 17350906 24103 1209392 2832 160827 0 10121
+18:45.836	ID:4	Ask for current temperature
+18:46.227	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+18:46.721	ID:4	Temperature got
+18:53.635	ID:3	P 990209 17503523 24277 1220321 11049 152617 174 10929
+19:01.430	ID:4	Ask for current temperature
+19:01.729	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+19:02.224	ID:4	Temperature got
+19:03.636	ID:3	P 1001312 17656087 24424 1231030 11101 152564 147 10709
+19:13.634	ID:3	P 1004150 17816897 24424 1241283 2836 160810 0 10253
+19:17.024	ID:4	Ask for current temperature
+19:17.492	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+19:17.986	ID:4	Temperature got
+19:23.636	ID:3	P 1015205 17969497 24585 1252169 11053 152600 161 10886
+19:32.617	ID:4	Ask for current temperature
+19:32.995	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+19:33.489	ID:4	Temperature got
+19:33.636	ID:3	P 1026316 18122041 24730 1262973 11109 152544 145 10804
+19:43.634	ID:3	P 1029157 18282861 24730 1273095 2839 160820 0 10122
+19:48.211	ID:4	Ask for current temperature
+19:48.497	ID:4	t=22, h=252, therm_l=15, therm_h=17, therm_sw=0
+19:48.993	ID:4	Temperature got
+19:53.636	ID:3	P 1040504 18435187 25157 1286892 11345 152326 427 13797
+20:03.634	ID:3	P 1043345 18596007 25157 1297013 2839 160820 0 10121
+20:03.805	ID:4	Ask for current temperature
+20:04.251	ID:4	t=19, h=252, therm_l=15, therm_h=17, therm_sw=0
+20:04.757	ID:4	Temperature got
+20:13.636	ID:3	P 1059745 18743277 26278 1307295 16398 147270 1121 10282
+20:19.399	ID:4	Ask for current temperature
+20:19.939	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+20:20.455	ID:4	Temperature got
+20:23.636	ID:3	P 1071214 18895465 26669 1321189 11467 152188 391 13894
+20:33.634	ID:3	P 1074051 19056290 26669 1331301 2835 160825 0 10112
+20:34.992	ID:4	Ask for current temperature
+20:35.485	ID:4	t=24, h=252, therm_l=15, therm_h=17, therm_sw=0
+20:35.979	ID:4	Temperature got
+20:43.636	ID:3	P 1085453 19208549 26846 1342113 11400 152259 177 10812
+20:50.586	ID:4	Ask for current temperature
+20:50.998	ID:4	t=17, h=252, therm_l=15, therm_h=17, therm_sw=0
+20:51.492	ID:4	Temperature got
+20:53.636	ID:3	P 1097035 19360631 27290 1356217 11580 152082 444 14104
+21:03.634	ID:3	P 1099876 19521451 27290 1366338 2839 160820 0 10121
+21:06.180	ID:4	Ask for current temperature
+21:06.500	ID:4	t=22, h=252, therm_l=15, therm_h=17, therm_sw=0
+21:06.994	ID:4	Temperature got
+21:13.636	ID:3	P 1111103 19673896 27438 1376632 11225 152445 148 10294
+21:21.774	ID:4	Ask for current temperature
+21:22.264	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+21:22.758	ID:4	Temperature got
+21:23.636	ID:3	P 1122684 19825988 27880 1390613 11579 152092 442 13981
+21:33.635	ID:3	P 1125525 19986808 27880 1400734 2839 160820 0 10121
+21:37.368	ID:4	Ask for current temperature
+21:37.765	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+21:38.259	ID:4	Temperature got
+21:43.636	ID:3	P 1136913 20139088 28029 1411170 11386 152280 149 10436
+21:52.961	ID:4	Ask for current temperature
+21:53.267	ID:4	t=19, h=252, therm_l=15, therm_h=17, therm_sw=0
+21:53.773	ID:4	Temperature got
+21:53.793	ID:3	P 1148347 20293899 28192 1422073 11432 154811 163 10903
+22:03.635	ID:3	P 1151140 20452187 28192 1432075 2791 158288 0 10002
+22:08.555	ID:4	Ask for current temperature
+22:09.173	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+22:09.667	ID:4	Temperature got
+22:13.636	ID:3	P 1167337 20599661 29471 1444309 16195 147474 1279 12234
+22:23.635	ID:3	P 1173204 20757445 29533 1454639 5865 157784 62 10330
+22:24.149	ID:4	Ask for current temperature
+22:24.665	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+22:25.148	ID:4	Temperature got
+22:33.636	ID:3	P 1188441 20905869 29781 1466322 15235 148424 248 11683
+22:39.742	ID:4	Ask for current temperature
+22:40.202	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+22:40.696	ID:4	Temperature got
+22:43.636	ID:3	P 1199838 21058132 30230 1480401 11395 152263 449 14079
+22:53.634	ID:3	P 1202663 21218955 30230 1490654 2823 160823 0 10253
+22:55.336	ID:4	Ask for current temperature
+22:55.704	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+22:56.198	ID:4	Temperature got
+23:03.636	ID:3	P 1213874 21371404 30379 1501104 11209 152449 149 10450
+23:10.931	ID:4	Ask for current temperature
+23:11.446	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+23:11.940	ID:4	Temperature got
+23:13.636	ID:3	P 1224729 21524201 30513 1511741 10853 152797 134 10637
+23:23.634	ID:3	P 1227554 21685024 30513 1521994 2823 160823 0 10253
+23:26.524	ID:4	Ask for current temperature
+23:26.970	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+23:27.475	ID:4	Temperature got
+23:33.636	ID:3	P 1238895 21837350 30699 1533155 11339 152326 186 11161
+23:42.117	ID:4	Ask for current temperature
+23:42.483	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+23:42.977	ID:4	Temperature got
+23:43.636	ID:3	P 1250251 21989663 30845 1543604 11354 152313 146 10449
+23:53.634	ID:3	P 1253074 22150490 30845 1553859 2821 160827 0 10255
+23:57.712	ID:4	Ask for current temperature
+23:58.234	ID:4	t=12, h=252, therm_l=15, therm_h=17, therm_sw=0
+23:58.239	ID:4	COOOOOLD! -> switch on thermostat
+23:58.485	ID:3	thermostat low 15
+23:58.488	ID:3	thermostat high 17
+23:58.491	ID:3	thermostat switch1
+23:58.740	ID:4	Temperature got
+24:03.636	ID:3	P 1264301 22302928 31009 1564633 11225 152438 164 10774
+24:13.305	ID:4	Ask for current temperature
+24:13.635	ID:3	P 1272143 22458744 31967 1574539 7840 155816 958 9906
+24:13.933	ID:4	t=23, h=252, therm_l=15, therm_h=17, therm_sw=1
+24:13.938	ID:4	HOOOOOOOOOT! -> switch off thermostat
+24:14.183	ID:3	thermostat low 15
+24:14.186	ID:3	thermostat high 17
+24:14.189	ID:3	thermostat switch0
+24:14.428	ID:4	Temperature got
+24:23.636	ID:3	P 1283351 22611193 32344 1587972 11206 152449 377 13433
+24:28.899	ID:4	Ask for current temperature
+24:29.436	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+24:29.932	ID:4	Temperature got
+24:33.636	ID:3	P 1294927 22763273 32776 1602211 11574 152080 432 14239
+24:43.634	ID:3	P 1297765 22924084 32776 1612464 2836 160811 0 10253
+24:44.493	ID:4	Ask for current temperature
+24:44.962	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+24:45.456	ID:4	Temperature got
+24:53.636	ID:3	P 1308822 23076686 32950 1623504 11055 152602 174 11040
+25:00.086	ID:4	Ask for current temperature
+25:00.464	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+25:00.958	ID:4	Temperature got
+25:03.636	ID:3	P 1319933 23229234 33096 1634274 11109 152548 146 10770
+25:13.634	ID:3	P 1322774 23390054 33096 1644395 2839 160820 0 10121
+25:15.680	ID:4	Ask for current temperature
+25:15.967	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+25:16.462	ID:4	Temperature got
+25:23.636	ID:3	P 1334126 23542374 33526 1658192 11350 152320 430 13797
+25:31.274	ID:4	Ask for current temperature
+25:31.720	ID:4	t=26, h=252, therm_l=15, therm_h=17, therm_sw=0
+25:32.225	ID:4	Temperature got
+25:33.636	ID:3	P 1345520 23694648 33688 1668678 11392 152274 162 10486
+25:39.094	ID:1	# [1024 bytes, no line ending]: ?P?P?P?P?P...
+25:43.634	ID:3	P 1348360 23855469 33688 1678799 2838 160821 0 10121
+25:46.867	ID:4	Ask for current temperature
+25:47.233	ID:4	t=15, h=252, therm_l=15, therm_h=17, therm_sw=0
+25:47.727	ID:4	Temperature got
+25:53.636	ID:3	P 1359903 24007593 34116 1692741 11541 152124 428 13942
+26:02.462	ID:4	Ask for current temperature
+26:02.975	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+26:03.479	ID:4	Temperature got
+26:03.636	ID:3	P 1371165 24159989 34264 1703477 11260 152396 148 10736
+26:13.635	ID:3	P 1379006 24315806 35222 1713265 7839 155817 958 9788
+26:18.055	ID:4	Ask for current temperature
+26:18.673	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+26:19.167	ID:4	Temperature got
+26:23.636	ID:3	P 1390217 24468254 35600 1726515 11209 152448 378 13250
+26:33.634	ID:3	P 1393052 24629068 35600 1736770 2833 160814 0 10255
+26:33.649	ID:4	Ask for current temperature
+26:34.164	ID:4	t=24, h=252, therm_l=15, therm_h=17, therm_sw=0
+26:34.648	ID:4	Temperature got
+26:43.636	ID:3	P 1403882 24781906 35717 1746995 10828 152838 117 10225
+26:49.242	ID:4	Ask for current temperature
+26:49.656	ID:4	t=19, h=252, therm_l=15, therm_h=17, therm_sw=0
+26:49.657	ID:4	LL New Day
+26:49.662	ID:4	STOP_OBSERVE Stopping observation
+26:49.666	ID:4	LL Stop motion observation
+26:49.672	ID:4	Removing obs_subject for /(null) [0x0000]
+26:49.676	ID:4	WORK_START Start working!
+26:49.678	ID:4	LL Start work
+26:49.900	ID:4	Temperature gotEvent data: 2;1;, Selected index: 2
+26:49.907	ID:4	Toggle periodic/motion with parameters: ?at_work=1;
+26:50.377	ID:3	At work flag is: 1;iled!!!!hermostat_high=17&thermostat_switch=0=0 from now on
+26:50.634	ID:4	TOGGLE WORKS!!!
+26:53.636	ID:3	P 1419115 24930360 36152 1760670 15231 148454 435 13675
+26:57.383	ID:4	
+27:03.636	ID:3	P 1426280 25086852 36515 1774216 7163 156492 363 13546
+27:04.836	ID:4	Ask for current temperature
+27:05.152	ID:4	t=12, h=252, therm_l=15, therm_h=17, therm_sw=0
+27:05.156	ID:4	COOOOOLD! -> switch on thermostat
+27:05.402	ID:3	thermostat low 19
+27:05.405	ID:3	thermostat high 25
+27:05.408	ID:3	thermostat switch1
+27:05.647	ID:4	Temperature got
+27:13.636	ID:3	P 1437455 25239341 36675 1785111 11172 152489 160 10892
+27:20.430	ID:4	Ask for current temperature
+27:20.904	ID:4	t=19, h=252, therm_l=19, therm_h=25, therm_sw=1
+27:21.409	ID:4	Temperature got
+27:23.636	ID:3	P 1448843 25391614 36836 1795968 11385 152273 161 10854
+27:33.635	ID:3	P 1451639 25552475 36836 1806001 2794 160861 0 10033
+27:36.024	ID:4	Ask for current temperature
+27:36.417	ID:4	t=14, h=252, therm_l=19, therm_h=25, therm_sw=1
+27:36.900	ID:4	Temperature got
+27:43.636	ID:3	P 1462856 25704908 36968 1816521 11215 152433 132 10520
+27:51.618	ID:4	Ask for current temperature
+27:51.930	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=1
+27:51.935	ID:4	HOOOOOOOOOT! -> switch off thermostat
+27:52.184	ID:3	thermostat low 19
+27:52.187	ID:3	thermostat high 25
+27:52.190	ID:3	thermostat switch0
+27:52.424	ID:4	Temperature got
+27:53.636	ID:3	P 1473930 25857480 37143 1827539 11072 152572 175 11018
+28:03.634	ID:3	P 1476737 26018320 37143 1837794 2805 160840 0 10255
+28:07.211	ID:4	Ask for current temperature
+28:07.682	ID:4	t=21, h=252, therm_l=19, therm_h=25, therm_sw=0
+28:08.177	ID:4	Temperature got
+28:13.636	ID:3	P 1492796 26165921 38244 1848245 16057 147601 1101 10451
+28:22.805	ID:4	Ask for current temperature
+28:23.185	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=0
+28:23.689	ID:4	Temperature got
+28:23.710	ID:3	P 1504103 26319479 38404 1859413 11305 153558 160 11168
+28:33.635	ID:3	P 1506872 26479142 38404 1869665 2767 159663 0 10250
+28:38.399	ID:4	Ask for current temperature
+28:38.719	ID:4	t=24, h=252, therm_l=19, therm_h=25, therm_sw=0
+28:39.213	ID:4	Temperature got
+28:43.636	ID:3	P 1518051 26631620 38579 1880317 11177 152478 175 10652
+28:53.634	ID:3	P 1520838 26792486 38579 1890444 2785 160866 0 10127
+28:53.992	ID:4	Ask for current temperature
+28:54.483	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=0
+28:54.977	ID:4	Temperature got
+29:03.636	ID:3	P 1532364 26944614 39024 1904563 11524 152128 445 14119
+29:09.586	ID:4	Ask for current temperature
+29:09.984	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=0
+29:10.479	ID:4	Temperature got
+29:13.636	ID:3	P 1543557 27097075 39175 1914984 11191 152461 151 10421
+29:23.634	ID:3	P 1546337 27257943 39175 1925239 2778 160868 0 10255
+29:25.180	ID:4	Ask for current temperature
+29:25.498	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=0
+29:25.992	ID:4	Temperature got
+29:33.636	ID:3	P 1557872 27410065 39623 1939260 11533 152122 448 14021
+29:40.774	ID:4	Ask for current temperature
+29:41.250	ID:4	t=21, h=252, therm_l=19, therm_h=25, therm_sw=0
+29:41.744	ID:4	Temperature got
+29:43.636	ID:3	P 1569058 27562546 39772 1949539 11184 152481 149 10279
+29:53.635	ID:3	P 1571855 27723405 39772 1959651 2795 160859 0 10112
+29:56.367	ID:4	Ask for current temperature
+29:56.763	ID:4	t=26, h=252, therm_l=19, therm_h=25, therm_sw=0
+29:57.258	ID:4	Temperature got
+30:03.636	ID:3	P 1583377 27875544 40218 1973633 11520 152139 446 13982
+30:11.961	ID:4	Ask for current temperature
+30:12.440	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=0
+30:12.945	ID:4	Temperature got
+30:13.636	ID:3	P 1599952 28022635 41555 1986572 16573 147091 1337 12939
+30:23.634	ID:3	P 1602750 28183488 41555 1996825 2796 160853 0 10253
+30:27.555	ID:4	Ask for current temperature
+30:27.964	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=0
+30:28.447	ID:4	Temperature got
+30:33.636	ID:3	P 1613751 28336145 41701 2007415 10999 152657 146 10590
+30:43.149	ID:4	Ask for current temperature
+30:43.467	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=0
+30:43.635	ID:3	P 1620848 28492708 41785 2018067 7095 156563 84 10652
+30:43.971	ID:4	Temperature got
+30:53.635	ID:3	P 1627902 28649310 41876 2028511 7052 156602 91 10444
+30:58.743	ID:4	Ask for current temperature
+30:59.229	ID:4	t=21, h=252, therm_l=19, therm_h=25, therm_sw=0
+30:59.712	ID:4	Temperature got
+31:03.636	ID:3	P 1639102 28801763 42010 2039080 11198 152453 134 10569
+31:13.634	ID:3	P 1641914 28962587 42010 2049333 2810 160824 0 10253
+31:14.336	ID:4	Ask for current temperature
+31:14.742	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=0
+31:15.226	ID:4	Temperature got
+31:15.979	ID:4	LIGHT VALUE: 0
+31:15.981	ID:4	LL Watch lights
+31:15.982	ID:4	LL dark
+31:15.988	ID:4	START_OBSERVE Starting observation with
+31:15.992	ID:4	LL Start motion observation
+31:15.999	ID:4	Adding obs_subject for /periodic/motion [0x0100]
+31:16.496	ID:4	handle_obs_registration_response(): server replied
+31:16.499	ID:4	Notification handler
+31:16.503	ID:4	Observee URI: periodic/motion
+31:16.505	ID:4	OBSERVE_OK: 1
+31:16.507	ID:4	New motion: 1
+31:16.515	ID:4	TOGGLE LIGHTSEvent data: 0;1;, Selected index: 0
+31:16.523	ID:4	Toggle actuators/light_bulb with parameters: ?light_value=1;
+31:16.983	ID:4	coap_handle_notification()
+31:16.985	ID:4	Getting token
+31:16.988	ID:4	Getting observee info
+31:16.992	ID:4	Looking for token 0x0100
+31:16.994	ID:4	server replied
+31:16.997	ID:4	Notification handler
+31:17.001	ID:4	Observee URI: periodic/motion
+31:17.004	ID:4	NOTIFICATION OK: 1
+31:18.223	ID:4	coap_handle_notification()
+31:18.225	ID:4	Getting token
+31:18.228	ID:4	Getting observee info
+31:18.232	ID:4	Looking for token 0x0100
+31:18.234	ID:4	server replied
+31:18.237	ID:4	Notification handler
+31:18.242	ID:4	Observee URI: periodic/motion
+31:18.244	ID:4	NOTIFICATION OK: 1
+31:19.746	ID:4	coap_handle_notification()
+31:19.748	ID:4	Getting token
+31:19.751	ID:4	Getting observee info
+31:19.755	ID:4	Looking for token 0x0100
+31:19.757	ID:4	server replied
+31:19.760	ID:4	Notification handler
+31:19.764	ID:4	Observee URI: periodic/motion
+31:19.767	ID:4	NOTIFICATION OK: 1
+31:19.997	ID:4	coap_handle_notification()
+31:19.999	ID:4	Getting token
+31:20.002	ID:4	Getting observee info
+31:20.006	ID:4	Looking for token 0x0100
+31:20.008	ID:4	server replied
+31:20.011	ID:4	Notification handler
+31:20.015	ID:4	Observee URI: periodic/motion
+31:20.018	ID:4	NOTIFICATION OK: 1
+31:20.498	ID:4	coap_handle_notification()
+31:20.500	ID:4	Getting token
+31:20.503	ID:4	Getting observee info
+31:20.507	ID:4	Looking for token 0x0100
+31:20.509	ID:4	server replied
+31:20.512	ID:4	Notification handler
+31:20.517	ID:4	Observee URI: periodic/motion
+31:20.519	ID:4	NOTIFICATION OK: 1
+31:21.999	ID:4	coap_handle_notification()
+31:22.001	ID:4	Getting token
+31:22.004	ID:4	Getting observee info
+31:22.008	ID:4	Looking for token 0x0100
+31:22.010	ID:4	server replied
+31:22.013	ID:4	Notification handler
+31:22.018	ID:4	Observee URI: periodic/motion
+31:22.020	ID:4	NOTIFICATION OK: 1
+31:22.740	ID:4	coap_handle_notification()
+31:22.742	ID:4	Getting token
+31:22.745	ID:4	Getting observee info
+31:22.748	ID:4	Looking for token 0x0100
+31:22.751	ID:4	server replied
+31:22.754	ID:4	Notification handler
+31:22.758	ID:4	Observee URI: periodic/motion
+31:22.761	ID:4	NOTIFICATION OK: 1
+31:23.012	ID:4	coap_handle_notification()
+31:23.014	ID:4	Getting token
+31:23.018	ID:4	Getting observee info
+31:23.021	ID:4	Looking for token 0x0100
+31:23.023	ID:4	server replied
+31:23.026	ID:4	Notification handler
+31:23.031	ID:4	Observee URI: periodic/motion
+31:23.033	ID:4	NOTIFICATION OK: 1
+31:23.514	ID:4	coap_handle_notification()
+31:23.516	ID:4	Getting token
+31:23.519	ID:4	Getting observee info
+31:23.522	ID:4	Looking for token 0x0100
+31:23.525	ID:4	server replied
+31:23.528	ID:4	Notification handler
+31:23.532	ID:4	Observee URI: periodic/motion
+31:23.535	ID:4	NOTIFICATION OK: 1
+31:23.636	ID:3	P 1686738 29081459 43329 2067752 44822 118872 1319 18419
+31:23.765	ID:4	coap_handle_notification()
+31:23.767	ID:4	Getting token
+31:23.770	ID:4	Getting observee info
+31:23.774	ID:4	Looking for token 0x0100
+31:23.776	ID:4	server replied
+31:23.779	ID:4	Notification handler
+31:23.783	ID:4	Observee URI: periodic/motion
+31:23.786	ID:4	NOTIFICATION OK: 1
+31:24.030	ID:3	Turn on lights
+31:24.286	ID:4	TOGGLE WORKS!!!
+31:25.789	ID:4	coap_handle_notification()
+31:25.791	ID:4	Getting token
+31:25.794	ID:4	Getting observee info
+31:25.798	ID:4	Looking for token 0x0100
+31:25.800	ID:4	server replied
+31:25.803	ID:4	Notification handler
+31:25.807	ID:4	Observee URI: periodic/motion
+31:25.810	ID:4	NOTIFICATION OK: 1
+31:29.562	ID:4	coap_handle_notification()
+31:29.564	ID:4	Getting token
+31:29.567	ID:4	Getting observee info
+31:29.571	ID:4	Looking for token 0x0100
+31:29.573	ID:4	server replied
+31:29.576	ID:4	Notification handler
+31:29.580	ID:4	Observee URI: periodic/motion
+31:29.583	ID:4	NOTIFICATION OK: 1
+31:29.802	ID:4	coap_handle_notification()
+31:29.804	ID:4	Getting token
+31:29.807	ID:4	Getting observee info
+31:29.811	ID:4	Looking for token 0x0100
+31:29.813	ID:4	server replied
+31:29.816	ID:4	Notification handler
+31:29.820	ID:4	Observee URI: periodic/motion
+31:29.823	ID:4	NOTIFICATION OK: 1
+31:29.930	ID:4	Ask for current temperature
+31:30.339	ID:4	t=14, h=252, therm_l=19, therm_h=25, therm_sw=0
+31:30.344	ID:4	COOOOOLD! -> switch on thermostat
+31:30.589	ID:3	thermostat low 19
+31:30.592	ID:3	thermostat high 25
+31:30.595	ID:3	thermostat switch1
+31:30.834	ID:4	Temperature got
+31:31.088	ID:4	coap_handle_notification()
+31:31.090	ID:4	Getting token
+31:31.093	ID:4	Getting observee info
+31:31.097	ID:4	Looking for token 0x0100
+31:31.099	ID:4	server replied
+31:31.102	ID:4	Notification handler
+31:31.107	ID:4	Observee URI: periodic/motion
+31:31.109	ID:4	NOTIFICATION OK: 1
+31:31.350	ID:4	coap_handle_notification()
+31:31.352	ID:4	Getting token
+31:31.355	ID:4	Getting observee info
+31:31.359	ID:4	Looking for token 0x0100
+31:31.361	ID:4	server replied
+31:31.364	ID:4	Notification handler
+31:31.368	ID:4	Observee URI: periodic/motion
+31:31.371	ID:4	NOTIFICATION OK: 1
+31:31.623	ID:4	coap_handle_notification()
+31:31.625	ID:4	Getting token
+31:31.628	ID:4	Getting observee info
+31:31.632	ID:4	Looking for token 0x0100
+31:31.634	ID:4	server replied
+31:31.637	ID:4	Notification handler
+31:31.641	ID:4	Observee URI: periodic/motion
+31:31.644	ID:4	NOTIFICATION OK: 1
+31:31.874	ID:4	coap_handle_notification()
+31:31.876	ID:4	Getting token
+31:31.879	ID:4	Getting observee info
+31:31.883	ID:4	Looking for token 0x0100
+31:31.885	ID:4	server replied
+31:31.888	ID:4	Notification handler
+31:31.892	ID:4	Observee URI: periodic/motion
+31:31.895	ID:4	NOTIFICATION OK: 1
+31:32.364	ID:4	coap_handle_notification()
+31:32.366	ID:4	Getting token
+31:32.369	ID:4	Getting observee info
+31:32.373	ID:4	Looking for token 0x0100
+31:32.375	ID:4	server replied
+31:32.378	ID:4	Notification handler
+31:32.383	ID:4	Observee URI: periodic/motion
+31:32.385	ID:4	NOTIFICATION OK: 1
+31:32.637	ID:4	coap_handle_notification()
+31:32.639	ID:4	Getting token
+31:32.642	ID:4	Getting observee info
+31:32.646	ID:4	Looking for token 0x0100
+31:32.648	ID:4	server replied
+31:32.651	ID:4	Notification handler
+31:32.656	ID:4	Observee URI: periodic/motion
+31:32.658	ID:4	NOTIFICATION OK: 1
+31:33.138	ID:4	coap_handle_notification()
+31:33.140	ID:4	Getting token
+31:33.144	ID:4	Getting observee info
+31:33.147	ID:4	Looking for token 0x0100
+31:33.600	ID:4	server replied
+31:33.603	ID:4	Notification handler
+31:33.607	ID:4	Observee URI: periodic/motion
+31:33.610	ID:4	NOTIFICATION OK: 1
+31:33.637	ID:3	P 1739923 29191986 44476 2083412 53183 110527 1147 15660
+31:34.118	ID:4	coap_handle_notification()
+31:34.120	ID:4	Getting token
+31:34.123	ID:4	Getting observee info
+31:34.127	ID:4	Looking for token 0x0100
+31:34.129	ID:4	server replied
+31:34.132	ID:4	Notification handler
+31:34.137	ID:4	Observee URI: periodic/motion
+31:34.139	ID:4	NOTIFICATION OK: 1
+31:34.630	ID:4	coap_handle_notification()
+31:34.632	ID:4	Getting token
+31:34.635	ID:4	Getting observee info
+31:34.639	ID:4	Looking for token 0x0100
+31:34.641	ID:4	server replied
+31:34.644	ID:4	Notification handler
+31:34.648	ID:4	Observee URI: periodic/motion
+31:34.651	ID:4	NOTIFICATION OK: 1
+31:35.153	ID:4	coap_handle_notification()
+31:35.155	ID:4	Getting token
+31:35.158	ID:4	Getting observee info
+31:35.162	ID:4	Looking for token 0x0100
+31:35.164	ID:4	server replied
+31:35.167	ID:4	Notification handler
+31:35.171	ID:4	Observee URI: periodic/motion
+31:35.174	ID:4	NOTIFICATION OK: 1
+31:35.404	ID:4	coap_handle_notification()
+31:35.406	ID:4	Getting token
+31:35.409	ID:4	Getting observee info
+31:35.413	ID:4	Looking for token 0x0100
+31:35.415	ID:4	server replied
+31:35.418	ID:4	Notification handler
+31:35.423	ID:4	Observee URI: periodic/motion
+31:35.425	ID:4	NOTIFICATION OK: 1
+31:36.155	ID:4	coap_handle_notification()
+31:36.157	ID:4	Getting token
+31:36.161	ID:4	Getting observee info
+31:36.164	ID:4	Looking for token 0x0100
+31:36.166	ID:4	server replied
+31:36.169	ID:4	Notification handler
+31:36.174	ID:4	Observee URI: periodic/motion
+31:36.176	ID:4	NOTIFICATION OK: 1
+31:36.646	ID:4	coap_handle_notification()
+31:36.648	ID:4	Getting token
+31:36.651	ID:4	Getting observee info
+31:36.654	ID:4	Looking for token 0x0100
+31:36.657	ID:4	server replied
+31:36.660	ID:4	Notification handler
+31:36.664	ID:4	Observee URI: periodic/motion
+31:36.667	ID:4	NOTIFICATION OK: 1
+31:36.919	ID:4	coap_handle_notification()
+31:36.921	ID:4	Getting token
+31:36.924	ID:4	Getting observee info
+31:36.927	ID:4	Looking for token 0x0100
+31:36.930	ID:4	server replied
+31:36.933	ID:4	Notification handler
+31:36.937	ID:4	Observee URI: periodic/motion
+31:36.940	ID:4	NOTIFICATION OK: 1
+31:37.420	ID:4	coap_handle_notification()
+31:37.422	ID:4	Getting token
+31:37.425	ID:4	Getting observee info
+31:37.428	ID:4	Looking for token 0x0100
+31:37.431	ID:4	server replied
+31:37.434	ID:4	Notification handler
+31:37.438	ID:4	Observee URI: periodic/motion
+31:37.441	ID:4	NOTIFICATION OK: 1
+31:38.171	ID:4	coap_handle_notification()
+31:38.173	ID:4	Getting token
+31:38.176	ID:4	Getting observee info
+31:38.180	ID:4	Looking for token 0x0100
+31:38.182	ID:4	server replied
+31:38.185	ID:4	Notification handler
+31:38.189	ID:4	Observee URI: periodic/motion
+31:38.192	ID:4	NOTIFICATION OK: 1
+31:38.911	ID:4	coap_handle_notification()
+31:38.913	ID:4	Getting token
+31:38.916	ID:4	Getting observee info
+31:38.920	ID:4	Looking for token 0x0100
+31:38.922	ID:4	server replied
+31:38.925	ID:4	Notification handler
+31:38.929	ID:4	Observee URI: periodic/motion
+31:38.932	ID:4	NOTIFICATION OK: 1
+31:39.184	ID:4	coap_handle_notification()
+31:39.186	ID:4	Getting token
+31:39.189	ID:4	Getting observee info
+31:39.193	ID:4	Looking for token 0x0100
+31:39.195	ID:4	server replied
+31:39.198	ID:4	Notification handler
+31:39.202	ID:4	Observee URI: periodic/motion
+31:39.205	ID:4	NOTIFICATION OK: 1
+31:41.185	ID:4	coap_handle_notification()
+31:41.187	ID:4	Getting token
+31:41.190	ID:4	Getting observee info
+31:41.194	ID:4	Looking for token 0x0100
+31:41.196	ID:4	server replied
+31:41.199	ID:4	Notification handler
+31:41.203	ID:4	Observee URI: periodic/motion
+31:41.206	ID:4	NOTIFICATION OK: 1
+31:41.436	ID:4	coap_handle_notification()
+31:41.438	ID:4	Getting token
+31:41.441	ID:4	Getting observee info
+31:41.445	ID:4	Looking for token 0x0100
+31:41.693	ID:4	server replied
+31:41.696	ID:4	Notification handler
+31:41.701	ID:4	Observee URI: periodic/motion
+31:41.703	ID:4	NOTIFICATION OK: 1
+31:42.959	ID:4	coap_handle_notification()
+31:42.961	ID:4	Getting token
+31:42.964	ID:4	Getting observee info
+31:42.968	ID:4	Looking for token 0x0100
+31:42.970	ID:4	server replied
+31:42.973	ID:4	Notification handler
+31:42.977	ID:4	Observee URI: periodic/motion
+31:42.980	ID:4	NOTIFICATION OK: 1
+31:43.732	ID:4	coap_handle_notification()
+31:43.734	ID:4	Getting token
+31:43.737	ID:4	Getting observee info
+31:43.741	ID:4	Looking for token 0x0100
+31:43.743	ID:4	server replied
+31:43.746	ID:4	Notification handler
+31:43.749	ID:3	P 1782009 29315416 45976 2103266 42084 123430 1500 19854
+31:43.750	ID:4	Observee URI: periodic/motion
+31:43.753	ID:4	NOTIFICATION OK: 1
+31:44.483	ID:4	coap_handle_notification()
+31:44.485	ID:4	Getting token
+31:44.488	ID:4	Getting observee info
+31:44.492	ID:4	Looking for token 0x0100
+31:44.494	ID:4	server replied
+31:44.497	ID:4	Notification handler
+31:44.501	ID:4	Observee URI: periodic/motion
+31:44.504	ID:4	NOTIFICATION OK: 1
+31:44.724	ID:4	coap_handle_notification()
+31:44.726	ID:4	Getting token
+31:44.729	ID:4	Getting observee info
+31:44.733	ID:4	Looking for token 0x0100
+31:44.735	ID:4	server replied
+31:44.738	ID:4	Notification handler
+31:44.742	ID:4	Observee URI: periodic/motion
+31:44.745	ID:4	NOTIFICATION OK: 1
+31:45.524	ID:4	Ask for current temperature
+31:46.000	ID:4	t=19, h=252, therm_l=19, therm_h=25, therm_sw=1
+31:46.494	ID:4	Temperature got
+31:46.749	ID:4	coap_handle_notification()
+31:46.751	ID:4	Getting token
+31:46.754	ID:4	Getting observee info
+31:46.757	ID:4	Looking for token 0x0100
+31:46.990	ID:4	server replied
+31:46.993	ID:4	Notification handler
+31:46.997	ID:4	Observee URI: periodic/motion
+31:47.000	ID:4	NOTIFICATION OK: 1
+31:47.761	ID:4	coap_handle_notification()
+31:47.763	ID:4	Getting token
+31:47.766	ID:4	Getting observee info
+31:47.770	ID:4	Looking for token 0x0100
+31:47.772	ID:4	server replied
+31:47.775	ID:4	Notification handler
+31:47.779	ID:4	Observee URI: periodic/motion
+31:47.782	ID:4	NOTIFICATION OK: 1
+31:48.262	ID:4	coap_handle_notification()
+31:48.264	ID:4	Getting token
+31:48.267	ID:4	Getting observee info
+31:48.271	ID:4	Looking for token 0x0100
+31:48.273	ID:4	server replied
+31:48.276	ID:4	Notification handler
+31:48.280	ID:4	Observee URI: periodic/motion
+31:48.283	ID:4	NOTIFICATION OK: 1
+31:48.513	ID:4	coap_handle_notification()
+31:48.515	ID:4	Getting token
+31:48.518	ID:4	Getting observee info
+31:48.522	ID:4	Looking for token 0x0100
+31:48.524	ID:4	server replied
+31:48.527	ID:4	Notification handler
+31:48.531	ID:4	Observee URI: periodic/motion
+31:48.534	ID:4	NOTIFICATION OK: 1
+31:50.514	ID:4	coap_handle_notification()
+31:50.516	ID:4	Getting token
+31:50.519	ID:4	Getting observee info
+31:50.523	ID:4	Looking for token 0x0100
+31:50.525	ID:4	server replied
+31:50.528	ID:4	Notification handler
+31:50.532	ID:4	Observee URI: periodic/motion
+31:50.535	ID:4	NOTIFICATION OK: 1
+31:50.755	ID:4	coap_handle_notification()
+31:50.757	ID:4	Getting token
+31:50.760	ID:4	Getting observee info
+31:50.763	ID:4	Looking for token 0x0100
+31:50.766	ID:4	server replied
+31:50.768	ID:4	Notification handler
+31:50.773	ID:4	Observee URI: periodic/motion
+31:50.775	ID:4	NOTIFICATION OK: 1
+31:51.277	ID:4	coap_handle_notification()
+31:51.279	ID:4	Getting token
+31:51.282	ID:4	Getting observee info
+31:51.286	ID:4	Looking for token 0x0100
+31:51.288	ID:4	server replied
+31:51.291	ID:4	Notification handler
+31:51.295	ID:4	Observee URI: periodic/motion
+31:51.298	ID:4	NOTIFICATION OK: 1
+31:51.528	ID:4	coap_handle_notification()
+31:51.530	ID:4	Getting token
+31:51.534	ID:4	Getting observee info
+31:51.537	ID:4	Looking for token 0x0100
+31:51.539	ID:4	server replied
+31:51.542	ID:4	Notification handler
+31:51.547	ID:4	Observee URI: periodic/motion
+31:51.549	ID:4	NOTIFICATION OK: 1
+31:52.279	ID:4	coap_handle_notification()
+31:52.281	ID:4	Getting token
+31:52.285	ID:4	Getting observee info
+31:52.288	ID:4	Looking for token 0x0100
+31:52.290	ID:4	server replied
+31:52.293	ID:4	Notification handler
+31:52.298	ID:4	Observee URI: periodic/motion
+31:52.300	ID:4	NOTIFICATION OK: 1
+31:53.636	ID:3	P 1822648 29436625 46978 2118546 40636 121209 1002 15278
+31:54.531	ID:4	coap_handle_notification()
+31:54.532	ID:4	Getting token
+31:54.536	ID:4	Getting observee info
+31:54.539	ID:4	Looking for token 0x0100
+31:54.542	ID:4	server replied
+31:54.544	ID:4	Notification handler
+31:54.549	ID:4	Observee URI: periodic/motion
+31:54.551	ID:4	NOTIFICATION OK: 1
+31:55.771	ID:4	coap_handle_notification()
+31:55.773	ID:4	Getting token
+31:55.776	ID:4	Getting observee info
+31:55.780	ID:4	Looking for token 0x0100
+31:55.782	ID:4	server replied
+31:55.785	ID:4	Notification handler
+31:55.789	ID:4	Observee URI: periodic/motion
+31:55.792	ID:4	NOTIFICATION OK: 1
+31:56.044	ID:4	coap_handle_notification()
+31:56.046	ID:4	Getting token
+31:56.049	ID:4	Getting observee info
+31:56.052	ID:4	Looking for token 0x0100
+31:56.055	ID:4	server replied
+31:56.058	ID:4	Notification handler
+31:56.062	ID:4	Observee URI: periodic/motion
+31:56.065	ID:4	NOTIFICATION OK: 1
+31:56.545	ID:4	coap_handle_notification()
+31:56.547	ID:4	Getting token
+31:56.550	ID:4	Getting observee info
+31:56.554	ID:4	Looking for token 0x0100
+31:56.556	ID:4	server replied
+31:56.559	ID:4	Notification handler
+31:56.563	ID:4	Observee URI: periodic/motion
+31:56.566	ID:4	NOTIFICATION OK: 1
+31:57.296	ID:4	coap_handle_notification()
+31:57.298	ID:4	Getting token
+31:57.301	ID:4	Getting observee info
+31:57.305	ID:4	Looking for token 0x0100
+31:57.307	ID:4	server replied
+31:57.310	ID:4	Notification handler
+31:57.314	ID:4	Observee URI: periodic/motion
+31:57.317	ID:4	NOTIFICATION OK: 1
+31:57.536	ID:4	coap_handle_notification()
+31:57.538	ID:4	Getting token
+31:57.541	ID:4	Getting observee info
+31:57.545	ID:4	Looking for token 0x0100
+31:57.547	ID:4	server replied
+31:57.550	ID:4	Notification handler
+31:57.554	ID:4	Observee URI: periodic/motion
+31:57.557	ID:4	NOTIFICATION OK: 1
+31:58.059	ID:4	coap_handle_notification()
+31:58.061	ID:4	Getting token
+31:58.064	ID:4	Getting observee info
+31:58.068	ID:4	Looking for token 0x0100
+31:58.070	ID:4	server replied
+31:58.073	ID:4	Notification handler
+31:58.077	ID:4	Observee URI: periodic/motion
+31:58.080	ID:4	NOTIFICATION OK: 1
+31:58.810	ID:4	coap_handle_notification()
+31:58.812	ID:4	Getting token
+31:58.815	ID:4	Getting observee info
+31:58.819	ID:4	Looking for token 0x0100
+31:58.821	ID:4	server replied
+31:58.824	ID:4	Notification handler
+31:58.828	ID:4	Observee URI: periodic/motion
+31:58.831	ID:4	NOTIFICATION OK: 1
+31:59.061	ID:4	coap_handle_notification()
+31:59.063	ID:4	Getting token
+31:59.066	ID:4	Getting observee info
+31:59.070	ID:4	Looking for token 0x0100
+31:59.072	ID:4	server replied
+31:59.075	ID:4	Notification handler
+31:59.079	ID:4	Observee URI: periodic/motion
+31:59.082	ID:4	NOTIFICATION OK: 1
+31:59.551	ID:4	coap_handle_notification()
+31:59.553	ID:4	Getting token
+31:59.556	ID:4	Getting observee info
+31:59.560	ID:4	Looking for token 0x0100
+31:59.562	ID:4	server replied
+31:59.565	ID:4	Notification handler
+31:59.570	ID:4	Observee URI: periodic/motion
+31:59.572	ID:4	NOTIFICATION OK: 1
+31:59.824	ID:4	coap_handle_notification()
+31:59.826	ID:4	Getting token
+31:59.829	ID:4	Getting observee info
+31:59.833	ID:4	Looking for token 0x0100
+32:00.089	ID:4	server replied
+32:00.092	ID:4	Notification handler
+32:00.096	ID:4	Observee URI: periodic/motion
+32:00.099	ID:4	NOTIFICATION OK: 1
+32:00.369	ID:4	coap_handle_notification()
+32:00.371	ID:4	Getting token
+32:00.374	ID:4	Getting observee info
+32:00.378	ID:4	Looking for token 0x0100
+32:00.380	ID:4	server replied
+32:00.383	ID:4	Notification handler
+32:00.387	ID:4	Observee URI: periodic/motion
+32:00.390	ID:4	NOTIFICATION OK: 1
+32:01.118	ID:4	Ask for current temperature
+32:01.612	ID:4	t=24, h=252, therm_l=19, therm_h=25, therm_sw=1
+32:02.118	ID:4	Temperature got
+32:02.372	ID:4	coap_handle_notification()
+32:02.374	ID:4	Getting token
+32:02.377	ID:4	Getting observee info
+32:02.381	ID:4	Looking for token 0x0100
+32:02.383	ID:4	server replied
+32:02.386	ID:4	Notification handler
+32:02.390	ID:4	Observee URI: periodic/motion
+32:02.393	ID:4	NOTIFICATION OK: 1
+32:02.623	ID:4	coap_handle_notification()
+32:02.625	ID:4	Getting token
+32:02.628	ID:4	Getting observee info
+32:02.632	ID:4	Looking for token 0x0100
+32:02.634	ID:4	server replied
+32:02.637	ID:4	Notification handler
+32:02.642	ID:4	Observee URI: periodic/motion
+32:02.644	ID:4	NOTIFICATION OK: 1
+32:03.624	ID:4	coap_handle_notification()
+32:03.626	ID:4	Getting token
+32:03.630	ID:4	Getting observee info
+32:03.633	ID:4	Looking for token 0x0100
+32:03.635	ID:4	server replied
+32:03.638	ID:4	Notification handler
+32:03.642	ID:3	P 1879342 29543720 48322 2135299 56692 107095 1344 16753
+32:03.643	ID:4	Observee URI: periodic/motion
+32:03.645	ID:4	NOTIFICATION OK: 1
+32:04.615	ID:4	coap_handle_notification()
+32:04.617	ID:4	Getting token
+32:04.620	ID:4	Getting observee info
+32:04.623	ID:4	Looking for token 0x0100
+32:04.626	ID:4	server replied
+32:04.629	ID:4	Notification handler
+32:04.633	ID:4	Observee URI: periodic/motion
+32:04.636	ID:4	NOTIFICATION OK: 1
+32:06.138	ID:4	coap_handle_notification()
+32:06.140	ID:4	Getting token
+32:06.143	ID:4	Getting observee info
+32:06.146	ID:4	Looking for token 0x0100
+32:06.149	ID:4	server replied
+32:06.152	ID:4	Notification handler
+32:06.156	ID:4	Observee URI: periodic/motion
+32:06.159	ID:4	NOTIFICATION OK: 1
+32:06.389	ID:4	coap_handle_notification()
+32:06.391	ID:4	Getting token
+32:06.394	ID:4	Getting observee info
+32:06.397	ID:4	Looking for token 0x0100
+32:06.400	ID:4	server replied
+32:06.403	ID:4	Notification handler
+32:06.407	ID:4	Observee URI: periodic/motion
+32:06.410	ID:4	NOTIFICATION OK: 1
+32:06.890	ID:4	coap_handle_notification()
+32:06.892	ID:4	Getting token
+32:06.895	ID:4	Getting observee info
+32:06.898	ID:4	Looking for token 0x0100
+32:06.901	ID:4	server replied
+32:06.904	ID:4	Notification handler
+32:06.908	ID:4	Observee URI: periodic/motion
+32:06.911	ID:4	NOTIFICATION OK: 1
+32:07.391	ID:4	coap_handle_notification()
+32:07.393	ID:4	Getting token
+32:07.396	ID:4	Getting observee info
+32:07.400	ID:4	Looking for token 0x0100
+32:07.402	ID:4	server replied
+32:07.405	ID:4	Notification handler
+32:07.409	ID:4	Observee URI: periodic/motion
+32:07.412	ID:4	NOTIFICATION OK: 1
+32:07.631	ID:4	coap_handle_notification()
+32:07.633	ID:4	Getting token
+32:07.636	ID:4	Getting observee info
+32:07.640	ID:4	Looking for token 0x0100
+32:07.642	ID:4	server replied
+32:07.645	ID:4	Notification handler
+32:07.649	ID:4	Observee URI: periodic/motion
+32:07.652	ID:4	NOTIFICATION OK: 1
+32:08.154	ID:4	coap_handle_notification()
+32:08.156	ID:4	Getting token
+32:08.159	ID:4	Getting observee info
+32:08.163	ID:4	Looking for token 0x0100
+32:08.165	ID:4	server replied
+32:08.168	ID:4	Notification handler
+32:08.172	ID:4	Observee URI: periodic/motion
+32:08.175	ID:4	NOTIFICATION OK: 1
+32:08.905	ID:4	coap_handle_notification()
+32:08.907	ID:4	Getting token
+32:08.910	ID:4	Getting observee info
+32:08.914	ID:4	Looking for token 0x0100
+32:08.916	ID:4	server replied
+32:08.919	ID:4	Notification handler
+32:08.923	ID:4	Observee URI: periodic/motion
+32:08.926	ID:4	NOTIFICATION OK: 1
+32:09.156	ID:4	coap_handle_notification()
+32:09.158	ID:4	Getting token
+32:09.161	ID:4	Getting observee info
+32:09.165	ID:4	Looking for token 0x0100
+32:09.167	ID:4	server replied
+32:09.170	ID:4	Notification handler
+32:09.174	ID:4	Observee URI: periodic/motion
+32:09.177	ID:4	NOTIFICATION OK: 1
+32:10.396	ID:4	coap_handle_notification()
+32:10.398	ID:4	Getting token
+32:10.401	ID:4	Getting observee info
+32:10.405	ID:4	Looking for token 0x0100
+32:10.407	ID:4	server replied
+32:10.410	ID:4	Notification handler
+32:10.414	ID:4	Observee URI: periodic/motion
+32:10.417	ID:4	NOTIFICATION OK: 1
+32:10.669	ID:4	coap_handle_notification()
+32:10.671	ID:4	Getting token
+32:10.674	ID:4	Getting observee info
+32:10.678	ID:4	Looking for token 0x0100
+32:10.680	ID:4	server replied
+32:10.683	ID:4	Notification handler
+32:10.687	ID:4	Observee URI: periodic/motion
+32:10.690	ID:4	NOTIFICATION OK: 1
+32:11.170	ID:4	coap_handle_notification()
+32:11.172	ID:4	Getting token
+32:11.175	ID:4	Getting observee info
+32:11.179	ID:4	Looking for token 0x0100
+32:11.181	ID:4	server replied
+32:11.184	ID:4	Notification handler
+32:11.188	ID:4	Observee URI: periodic/motion
+32:11.191	ID:4	NOTIFICATION OK: 1
+32:11.421	ID:4	coap_handle_notification()
+32:11.423	ID:4	Getting token
+32:11.426	ID:4	Getting observee info
+32:11.430	ID:4	Looking for token 0x0100
+32:11.432	ID:4	server replied
+32:11.435	ID:4	Notification handler
+32:11.439	ID:4	Observee URI: periodic/motion
+32:11.442	ID:4	NOTIFICATION OK: 1
+32:12.911	ID:4	coap_handle_notification()
+32:12.913	ID:4	Getting token
+32:12.916	ID:4	Getting observee info
+32:12.920	ID:4	Looking for token 0x0100
+32:12.922	ID:4	server replied
+32:12.925	ID:4	Notification handler
+32:12.929	ID:4	Observee URI: periodic/motion
+32:12.932	ID:4	NOTIFICATION OK: 1
+32:13.684	ID:4	coap_handle_notification()
+32:13.686	ID:4	Getting token
+32:13.689	ID:4	Getting observee info
+32:13.693	ID:4	Looking for token 0x0100
+32:13.701	ID:3	P 1921816 29665915 50379 2151200 42472 122195 2057 15898
+32:13.940	ID:4	server replied
+32:13.943	ID:4	Notification handler
+32:13.948	ID:4	Observee URI: periodic/motion
+32:13.950	ID:4	NOTIFICATION OK: 1
+32:14.968	ID:4	coap_handle_notification()
+32:14.970	ID:4	Getting token
+32:14.973	ID:4	Getting observee info
+32:14.977	ID:4	Looking for token 0x0100
+32:14.979	ID:4	server replied
+32:14.982	ID:4	Notification handler
+32:14.986	ID:4	Observee URI: periodic/motion
+32:14.989	ID:4	NOTIFICATION OK: 1
+32:16.712	ID:4	Ask for current temperature
+32:17.244	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=1
+32:17.249	ID:4	HOOOOOOOOOT! -> switch off thermostat
+32:17.481	ID:3	thermostat low 19
+32:17.484	ID:3	thermostat high 25
+32:17.487	ID:3	thermostat switch0
+32:17.727	ID:4	Temperature got
+32:18.474	ID:4	coap_handle_notification()
+32:18.476	ID:4	Getting token
+32:18.479	ID:4	Getting observee info
+32:18.483	ID:4	Looking for token 0x0100
+32:18.485	ID:4	server replied
+32:18.488	ID:4	Notification handler
+32:18.492	ID:4	Observee URI: periodic/motion
+32:18.495	ID:4	NOTIFICATION OK: 1
+32:19.246	ID:4	coap_handle_notification()
+32:19.248	ID:4	Getting token
+32:19.251	ID:4	Getting observee info
+32:19.255	ID:4	Looking for token 0x0100
+32:19.257	ID:4	server replied
+32:19.260	ID:4	Notification handler
+32:19.264	ID:4	Observee URI: periodic/motion
+32:19.267	ID:4	NOTIFICATION OK: 1
+32:19.997	ID:4	coap_handle_notification()
+32:19.999	ID:4	Getting token
+32:20.002	ID:4	Getting observee info
+32:20.005	ID:4	Looking for token 0x0100
+32:20.008	ID:4	server replied
+32:20.011	ID:4	Notification handler
+32:20.015	ID:4	Observee URI: periodic/motion
+32:20.018	ID:4	NOTIFICATION OK: 1
+32:20.498	ID:4	coap_handle_notification()
+32:20.500	ID:4	Getting token
+32:20.503	ID:4	Getting observee info
+32:20.507	ID:4	Looking for token 0x0100
+32:20.509	ID:4	server replied
+32:20.512	ID:4	Notification handler
+32:20.516	ID:4	Observee URI: periodic/motion
+32:20.519	ID:4	NOTIFICATION OK: 1
+32:20.749	ID:4	coap_handle_notification()
+32:20.751	ID:4	Getting token
+32:20.754	ID:4	Getting observee info
+32:20.758	ID:4	Looking for token 0x0100
+32:20.760	ID:4	server replied
+32:20.763	ID:4	Notification handler
+32:20.767	ID:4	Observee URI: periodic/motion
+32:20.770	ID:4	NOTIFICATION OK: 1
+32:22.239	ID:4	coap_handle_notification()
+32:22.241	ID:4	Getting token
+32:22.244	ID:4	Getting observee info
+32:22.248	ID:4	Looking for token 0x0100
+32:22.250	ID:4	server replied
+32:22.253	ID:4	Notification handler
+32:22.257	ID:4	Observee URI: periodic/motion
+32:22.260	ID:4	NOTIFICATION OK: 1
+32:22.762	ID:4	coap_handle_notification()
+32:22.764	ID:4	Getting token
+32:22.767	ID:4	Getting observee info
+32:22.771	ID:4	Looking for token 0x0100
+32:22.773	ID:4	server replied
+32:22.776	ID:4	Notification handler
+32:22.780	ID:4	Observee URI: periodic/motion
+32:22.783	ID:4	NOTIFICATION OK: 1
+32:23.513	ID:4	coap_handle_notification()
+32:23.515	ID:4	Getting token
+32:23.518	ID:4	Getting observee info
+32:23.522	ID:4	Looking for token 0x0100
+32:23.524	ID:4	server replied
+32:23.527	ID:4	Notification handler
+32:23.531	ID:4	Observee URI: periodic/motion
+32:23.534	ID:4	NOTIFICATION OK: 1
+32:23.636	ID:3	P 1946794 29803556 51259 2165879 24976 137641 880 14677
+32:23.764	ID:4	coap_handle_notification()
+32:23.766	ID:4	Getting token
+32:23.769	ID:4	Getting observee info
+32:23.773	ID:4	Looking for token 0x0100
+32:23.775	ID:4	server replied
+32:23.778	ID:4	Notification handler
+32:23.782	ID:4	Observee URI: periodic/motion
+32:23.785	ID:4	NOTIFICATION OK: 1
+32:24.265	ID:4	coap_handle_notification()
+32:24.267	ID:4	Getting token
+32:24.270	ID:4	Getting observee info
+32:24.274	ID:4	Looking for token 0x0100
+32:24.276	ID:4	server replied
+32:24.279	ID:4	Notification handler
+32:24.283	ID:4	Observee URI: periodic/motion
+32:24.286	ID:4	NOTIFICATION OK: 1
+32:24.505	ID:4	coap_handle_notification()
+32:24.507	ID:4	Getting token
+32:24.511	ID:4	Getting observee info
+32:24.514	ID:4	Looking for token 0x0100
+32:24.516	ID:4	server replied
+32:24.519	ID:4	Notification handler
+32:24.524	ID:4	Observee URI: periodic/motion
+32:24.526	ID:4	NOTIFICATION OK: 1
+32:25.028	ID:4	coap_handle_notification()
+32:25.030	ID:4	Getting token
+32:25.033	ID:4	Getting observee info
+32:25.037	ID:4	Looking for token 0x0100
+32:25.039	ID:4	server replied
+32:25.042	ID:4	Notification handler
+32:25.046	ID:4	Observee URI: periodic/motion
+32:25.049	ID:4	NOTIFICATION OK: 1
+32:25.779	ID:4	coap_handle_notification()
+32:25.781	ID:4	Getting token
+32:25.784	ID:4	Getting observee info
+32:25.788	ID:4	Looking for token 0x0100
+32:25.790	ID:4	server replied
+32:25.793	ID:4	Notification handler
+32:25.797	ID:4	Observee URI: periodic/motion
+32:25.800	ID:4	NOTIFICATION OK: 1
+32:26.030	ID:4	coap_handle_notification()
+32:26.032	ID:4	Getting token
+32:26.036	ID:4	Getting observee info
+32:26.039	ID:4	Looking for token 0x0100
+32:26.041	ID:4	server replied
+32:26.044	ID:4	Notification handler
+32:26.049	ID:4	Observee URI: periodic/motion
+32:26.051	ID:4	NOTIFICATION OK: 1
+32:29.521	ID:4	coap_handle_notification()
+32:29.523	ID:4	Getting token
+32:29.526	ID:4	Getting observee info
+32:29.529	ID:4	Looking for token 0x0100
+32:29.531	ID:4	server replied
+32:29.534	ID:4	Notification handler
+32:29.539	ID:4	Observee URI: periodic/motion
+32:29.542	ID:4	NOTIFICATION OK: 1
+32:30.293	ID:4	coap_handle_notification()
+32:30.295	ID:4	Getting token
+32:30.299	ID:4	Getting observee info
+32:30.302	ID:4	Looking for token 0x0100
+32:30.304	ID:4	server replied
+32:30.307	ID:4	Notification handler
+32:30.312	ID:4	Observee URI: periodic/motion
+32:30.314	ID:4	NOTIFICATION OK: 1
+32:30.544	ID:4	coap_handle_notification()
+32:30.546	ID:4	Getting token
+32:30.550	ID:4	Getting observee info
+32:30.553	ID:4	Looking for token 0x0100
+32:30.555	ID:4	server replied
+32:30.558	ID:4	Notification handler
+32:30.563	ID:4	Observee URI: periodic/motion
+32:30.565	ID:4	NOTIFICATION OK: 1
+32:31.046	ID:4	coap_handle_notification()
+32:31.048	ID:4	Getting token
+32:31.051	ID:4	Getting observee info
+32:31.054	ID:4	Looking for token 0x0100
+32:31.056	ID:4	server replied
+32:31.059	ID:4	Notification handler
+32:31.064	ID:4	Observee URI: periodic/motion
+32:31.066	ID:4	NOTIFICATION OK: 1
+32:31.786	ID:4	coap_handle_notification()
+32:31.788	ID:4	Getting token
+32:31.791	ID:4	Getting observee info
+32:31.795	ID:4	Looking for token 0x0100
+32:32.031	ID:4	server replied
+32:32.034	ID:4	Notification handler
+32:32.038	ID:4	Observee URI: periodic/motion
+32:32.041	ID:4	NOTIFICATION OK: 1
+32:32.287	ID:4	coap_handle_notification()
+32:32.289	ID:4	Getting token
+32:32.292	ID:4	Getting observee info
+32:32.296	ID:4	Looking for token 0x0100
+32:32.298	ID:4	server replied
+32:32.301	ID:4	Notification handler
+32:32.305	ID:4	Observee URI: periodic/motion
+32:32.308	ID:4	NOTIFICATION OK: 1
+32:32.313	ID:4	Ask for current temperature
+32:32.813	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=0
+32:33.318	ID:4	Temperature got
+32:33.636	ID:3	P 1992880 29921159 52341 2181603 46084 117603 1082 15724
+32:35.573	ID:4	coap_handle_notification()
+32:35.575	ID:4	Getting token
+32:35.578	ID:4	Getting observee info
+32:35.582	ID:4	Looking for token 0x0100
+32:35.584	ID:4	server replied
+32:35.587	ID:4	Notification handler
+32:35.591	ID:4	Observee URI: periodic/motion
+32:35.594	ID:4	NOTIFICATION OK: 1
+32:37.335	ID:4	coap_handle_notification()
+32:37.337	ID:4	Getting token
+32:37.340	ID:4	Getting observee info
+32:37.344	ID:4	Looking for token 0x0100
+32:37.346	ID:4	server replied
+32:37.349	ID:4	Notification handler
+32:37.353	ID:4	Observee URI: periodic/motion
+32:37.356	ID:4	NOTIFICATION OK: 1
+32:37.599	ID:4	coap_handle_notification()
+32:37.601	ID:4	Getting token
+32:37.604	ID:4	Getting observee info
+32:37.608	ID:4	Looking for token 0x0100
+32:37.610	ID:4	server replied
+32:37.613	ID:4	Notification handler
+32:37.617	ID:4	Observee URI: periodic/motion
+32:37.620	ID:4	NOTIFICATION OK: 1
+32:38.122	ID:4	coap_handle_notification()
+32:38.124	ID:4	Getting token
+32:38.127	ID:4	Getting observee info
+32:38.131	ID:4	Looking for token 0x0100
+32:38.133	ID:4	server replied
+32:38.136	ID:4	Notification handler
+32:38.140	ID:4	Observee URI: periodic/motion
+32:38.143	ID:4	NOTIFICATION OK: 1
+32:39.123	ID:4	coap_handle_notification()
+32:39.125	ID:4	Getting token
+32:39.128	ID:4	Getting observee info
+32:39.132	ID:4	Looking for token 0x0100
+32:39.134	ID:4	server replied
+32:39.137	ID:4	Notification handler
+32:39.141	ID:4	Observee URI: periodic/motion
+32:39.144	ID:4	NOTIFICATION OK: 1
+32:40.374	ID:4	coap_handle_notification()
+32:40.376	ID:4	Getting token
+32:40.379	ID:4	Getting observee info
+32:40.383	ID:4	Looking for token 0x0100
+32:40.385	ID:4	server replied
+32:40.388	ID:4	Notification handler
+32:40.392	ID:4	Observee URI: periodic/motion
+32:40.395	ID:4	NOTIFICATION OK: 1
+32:41.114	ID:4	coap_handle_notification()
+32:41.116	ID:4	Getting token
+32:41.119	ID:4	Getting observee info
+32:41.123	ID:4	Looking for token 0x0100
+32:41.125	ID:4	server replied
+32:41.128	ID:4	Notification handler
+32:41.132	ID:4	Observee URI: periodic/motion
+32:41.135	ID:4	NOTIFICATION OK: 1
+32:43.387	ID:4	coap_handle_notification()
+32:43.389	ID:4	Getting token
+32:43.392	ID:4	Getting observee info
+32:43.396	ID:4	Looking for token 0x0100
+32:43.398	ID:4	server replied
+32:43.401	ID:4	Notification handler
+32:43.405	ID:4	Observee URI: periodic/motion
+32:43.408	ID:4	NOTIFICATION OK: 1
+32:43.638	ID:4	coap_handle_notification()
+32:43.640	ID:4	Getting token
+32:43.643	ID:4	Getting observee info
+32:43.647	ID:4	Looking for token 0x0100
+32:43.649	ID:4	server replied
+32:43.652	ID:4	Notification handler
+32:43.654	ID:3	P 2015601 30062422 53033 2195283 22719 141263 692 13680
+32:43.656	ID:4	Observee URI: periodic/motion
+32:43.659	ID:4	NOTIFICATION OK: 1
+32:45.139	ID:4	coap_handle_notification()
+32:45.141	ID:4	Getting token
+32:45.144	ID:4	Getting observee info
+32:45.148	ID:4	Looking for token 0x0100
+32:45.150	ID:4	server replied
+32:45.153	ID:4	Notification handler
+32:45.157	ID:4	Observee URI: periodic/motion
+32:45.160	ID:4	NOTIFICATION OK: 1
+32:45.640	ID:4	coap_handle_notification()
+32:45.642	ID:4	Getting token
+32:45.646	ID:4	Getting observee info
+32:45.649	ID:4	Looking for token 0x0100
+32:45.651	ID:4	server replied
+32:45.654	ID:4	Notification handler
+32:45.659	ID:4	Observee URI: periodic/motion
+32:45.661	ID:4	NOTIFICATION OK: 1
+32:45.881	ID:4	coap_handle_notification()
+32:45.883	ID:4	Getting token
+32:45.886	ID:4	Getting observee info
+32:45.890	ID:4	Looking for token 0x0100
+32:45.892	ID:4	server replied
+32:45.895	ID:4	Notification handler
+32:45.899	ID:4	Observee URI: periodic/motion
+32:45.902	ID:4	NOTIFICATION OK: 1
+32:46.404	ID:4	coap_handle_notification()
+32:46.406	ID:4	Getting token
+32:46.409	ID:4	Getting observee info
+32:46.412	ID:4	Looking for token 0x0100
+32:46.415	ID:4	server replied
+32:46.418	ID:4	Notification handler
+32:46.422	ID:4	Observee URI: periodic/motion
+32:46.425	ID:4	NOTIFICATION OK: 1
+32:47.405	ID:4	coap_handle_notification()
+32:47.407	ID:4	Getting token
+32:47.410	ID:4	Getting observee info
+32:47.414	ID:4	Looking for token 0x0100
+32:47.416	ID:4	server replied
+32:47.419	ID:4	Notification handler
+32:47.423	ID:4	Observee URI: periodic/motion
+32:47.426	ID:4	NOTIFICATION OK: 1
+32:47.899	ID:4	Ask for current temperature
+32:48.431	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=0
+32:48.914	ID:4	Temperature got
+32:49.169	ID:4	coap_handle_notification()
+32:49.171	ID:4	Getting token
+32:49.174	ID:4	Getting observee info
+32:49.178	ID:4	Looking for token 0x0100
+32:49.180	ID:4	server replied
+32:49.183	ID:4	Notification handler
+32:49.187	ID:4	Observee URI: periodic/motion
+32:49.190	ID:4	NOTIFICATION OK: 1
+32:49.411	ID:4	coap_handle_notification()
+32:49.413	ID:4	Getting token
+32:49.416	ID:4	Getting observee info
+32:49.420	ID:4	Looking for token 0x0100
+32:49.678	ID:4	server replied
+32:49.681	ID:4	Notification handler
+32:49.686	ID:4	Observee URI: periodic/motion
+32:49.688	ID:4	NOTIFICATION OK: 1
+32:50.184	ID:4	coap_handle_notification()
+32:50.186	ID:4	Getting token
+32:50.189	ID:4	Getting observee info
+32:50.193	ID:4	Looking for token 0x0100
+32:50.195	ID:4	server replied
+32:50.198	ID:4	Notification handler
+32:50.202	ID:4	Observee URI: periodic/motion
+32:50.205	ID:4	NOTIFICATION OK: 1
+32:50.435	ID:4	coap_handle_notification()
+32:50.437	ID:4	Getting token
+32:50.440	ID:4	Getting observee info
+32:50.444	ID:4	Looking for token 0x0100
+32:50.446	ID:4	server replied
+32:50.449	ID:4	Notification handler
+32:50.453	ID:4	Observee URI: periodic/motion
+32:50.456	ID:4	NOTIFICATION OK: 1
+32:51.186	ID:4	coap_handle_notification()
+32:51.188	ID:4	Getting token
+32:51.191	ID:4	Getting observee info
+32:51.195	ID:4	Looking for token 0x0100
+32:51.197	ID:4	server replied
+32:51.200	ID:4	Notification handler
+32:51.204	ID:4	Observee URI: periodic/motion
+32:51.207	ID:4	NOTIFICATION OK: 1
+32:52.676	ID:4	coap_handle_notification()
+32:52.678	ID:4	Getting token
+32:52.682	ID:4	Getting observee info
+32:52.685	ID:4	Looking for token 0x0100
+32:52.687	ID:4	server replied
+32:52.690	ID:4	Notification handler
+32:52.695	ID:4	Observee URI: periodic/motion
+32:52.697	ID:4	NOTIFICATION OK: 1
+32:53.199	ID:4	coap_handle_notification()
+32:53.201	ID:4	Getting token
+32:53.204	ID:4	Getting observee info
+32:53.208	ID:4	Looking for token 0x0100
+32:53.210	ID:4	server replied
+32:53.213	ID:4	Notification handler
+32:53.218	ID:4	Observee URI: periodic/motion
+32:53.220	ID:4	NOTIFICATION OK: 1
+32:53.636	ID:3	P 2053975 30187425 54117 2211527 38372 125003 1084 16241
+32:54.700	ID:4	coap_handle_notification()
+32:54.702	ID:4	Getting token
+32:54.706	ID:4	Getting observee info
+32:54.709	ID:4	Looking for token 0x0100
+32:54.711	ID:4	server replied
+32:54.714	ID:4	Notification handler
+32:54.719	ID:4	Observee URI: periodic/motion
+32:54.721	ID:4	NOTIFICATION OK: 1
+32:55.451	ID:4	coap_handle_notification()
+32:55.453	ID:4	Getting token
+32:55.457	ID:4	Getting observee info
+32:55.460	ID:4	Looking for token 0x0100
+32:55.462	ID:4	server replied
+32:55.465	ID:4	Notification handler
+32:55.470	ID:4	Observee URI: periodic/motion
+32:55.472	ID:4	NOTIFICATION OK: 1
+32:56.203	ID:4	coap_handle_notification()
+32:56.205	ID:4	Getting token
+32:56.208	ID:4	Getting observee info
+32:56.211	ID:4	Looking for token 0x0100
+32:56.214	ID:4	server replied
+32:56.217	ID:4	Notification handler
+32:56.221	ID:4	Observee URI: periodic/motion
+32:56.223	ID:4	NOTIFICATION OK: 1
+32:56.443	ID:4	coap_handle_notification()
+32:56.445	ID:4	Getting token
+32:56.448	ID:4	Getting observee info
+32:56.452	ID:4	Looking for token 0x0100
+32:56.454	ID:4	server replied
+32:56.457	ID:4	Notification handler
+32:56.461	ID:4	Observee URI: periodic/motion
+32:56.464	ID:4	NOTIFICATION OK: 1
+32:56.966	ID:4	coap_handle_notification()
+32:56.968	ID:4	Getting token
+32:56.971	ID:4	Getting observee info
+32:56.974	ID:4	Looking for token 0x0100
+32:56.977	ID:4	server replied
+32:56.980	ID:4	Notification handler
+32:56.984	ID:4	Observee URI: periodic/motion
+32:56.987	ID:4	NOTIFICATION OK: 1
+32:57.713	ID:4	coap_handle_notification()
+32:57.715	ID:4	Getting token
+32:57.718	ID:4	Getting observee info
+32:57.722	ID:4	Looking for token 0x0100
+32:57.724	ID:4	server replied
+32:57.727	ID:4	Notification handler
+32:57.732	ID:4	Observee URI: periodic/motion
+32:57.734	ID:4	NOTIFICATION OK: 1
+32:58.725	ID:4	coap_handle_notification()
+32:58.727	ID:4	Getting token
+32:58.730	ID:4	Getting observee info
+32:58.734	ID:4	Looking for token 0x0100
+32:58.736	ID:4	server replied
+32:58.739	ID:4	Notification handler
+32:58.744	ID:4	Observee URI: periodic/motion
+32:58.746	ID:4	NOTIFICATION OK: 1
+32:59.746	ID:4	coap_handle_notification()
+32:59.748	ID:4	Getting token
+32:59.751	ID:4	Getting observee info
+32:59.755	ID:4	Looking for token 0x0100
+32:59.757	ID:4	server replied
+32:59.760	ID:4	Notification handler
+32:59.764	ID:4	Observee URI: periodic/motion
+32:59.767	ID:4	NOTIFICATION OK: 1
+33:03.493	ID:4	Ask for current temperature
+33:03.502	ID:4	coap_handle_notification()
+33:03.504	ID:4	Getting token
+33:03.507	ID:4	Getting observee info
+33:03.511	ID:4	Looking for token 0x0100
+33:03.513	ID:4	server replied
+33:03.516	ID:4	Notification handler
+33:03.520	ID:4	Observee URI: periodic/motion
+33:03.523	ID:4	NOTIFICATION OK: 1
+33:03.636	ID:3	P 2083611 30321469 55090 2227784 29634 134044 973 16257
+33:04.248	ID:4	coap_handle_notification()
+33:04.250	ID:4	Getting token
+33:04.253	ID:4	Getting observee info
+33:04.257	ID:4	Looking for token 0x0100
+33:04.259	ID:4	server replied
+33:04.262	ID:4	Notification handler
+33:04.266	ID:4	Observee URI: periodic/motion
+33:04.269	ID:4	NOTIFICATION OK: 1
+33:05.499	ID:4	coap_handle_notification()
+33:05.501	ID:4	Getting token
+33:05.504	ID:4	Getting observee info
+33:05.508	ID:4	Looking for token 0x0100
+33:05.510	ID:4	server replied
+33:05.513	ID:4	Notification handler
+33:05.517	ID:4	Observee URI: periodic/motion
+33:05.520	ID:4	NOTIFICATION OK: 1
+33:06.239	ID:4	coap_handle_notification()
+33:06.241	ID:4	Getting token
+33:06.244	ID:4	Getting observee info
+33:06.248	ID:4	Looking for token 0x0100
+33:06.250	ID:4	server replied
+33:06.253	ID:4	Notification handler
+33:06.257	ID:4	Observee URI: periodic/motion
+33:06.260	ID:4	NOTIFICATION OK: 1
+33:07.012	ID:4	coap_handle_notification()
+33:07.014	ID:4	Getting token
+33:07.017	ID:4	Getting observee info
+33:07.021	ID:4	Looking for token 0x0100
+33:07.023	ID:4	server replied
+33:07.026	ID:4	Notification handler
+33:07.030	ID:4	Observee URI: periodic/motion
+33:07.033	ID:4	NOTIFICATION OK: 1
+33:08.513	ID:4	coap_handle_notification()
+33:08.515	ID:4	Getting token
+33:08.518	ID:4	Getting observee info
+33:08.522	ID:4	Looking for token 0x0100
+33:08.524	ID:4	server replied
+33:08.527	ID:4	Notification handler
+33:08.531	ID:4	Observee URI: periodic/motion
+33:08.534	ID:4	NOTIFICATION OK: 1
+33:08.764	ID:4	coap_handle_notification()
+33:08.766	ID:4	Getting token
+33:08.769	ID:4	Getting observee info
+33:08.773	ID:4	Looking for token 0x0100
+33:09.028	ID:4	server replied
+33:09.031	ID:4	Notification handler
+33:09.035	ID:4	Observee URI: periodic/motion
+33:09.038	ID:4	NOTIFICATION OK: 1
+33:09.559	ID:4	coap_handle_notification()
+33:09.561	ID:4	Getting token
+33:09.564	ID:4	Getting observee info
+33:09.568	ID:4	Looking for token 0x0100
+33:09.570	ID:4	server replied
+33:09.573	ID:4	Notification handler
+33:09.577	ID:4	Observee URI: periodic/motion
+33:09.580	ID:4	NOTIFICATION OK: 1
+33:09.810	ID:4	coap_handle_notification()
+33:09.812	ID:4	Getting token
+33:09.815	ID:4	Getting observee info
+33:09.819	ID:4	Looking for token 0x0100
+33:09.821	ID:4	server replied
+33:09.824	ID:4	Notification handler
+33:09.828	ID:4	Observee URI: periodic/motion
+33:09.831	ID:4	NOTIFICATION OK: 1
+33:10.061	ID:4	coap_handle_notification()
+33:10.063	ID:4	Getting token
+33:10.066	ID:4	Getting observee info
+33:10.070	ID:4	Looking for token 0x0100
+33:10.072	ID:4	server replied
+33:10.075	ID:4	Notification handler
+33:10.080	ID:4	Observee URI: periodic/motion
+33:10.082	ID:4	NOTIFICATION OK: 1
+33:11.302	ID:4	coap_handle_notification()
+33:11.304	ID:4	Getting token
+33:11.307	ID:4	Getting observee info
+33:11.310	ID:4	Looking for token 0x0100
+33:11.313	ID:4	server replied
+33:11.316	ID:4	Notification handler
+33:11.320	ID:4	Observee URI: periodic/motion
+33:11.322	ID:4	NOTIFICATION OK: 1
+33:13.304	ID:4	coap_handle_notification()
+33:13.306	ID:4	Getting token
+33:13.309	ID:4	Getting observee info
+33:13.313	ID:4	Looking for token 0x0100
+33:13.315	ID:4	server replied
+33:13.318	ID:4	Notification handler
+33:13.323	ID:4	Observee URI: periodic/motion
+33:13.325	ID:4	NOTIFICATION OK: 1
+33:13.636	ID:3	P 2131276 30437503 56693 2250579 47663 116034 1603 22795
+33:13.827	ID:4	coap_handle_notification()
+33:13.829	ID:4	Getting token
+33:13.832	ID:4	Getting observee info
+33:13.836	ID:4	Looking for token 0x0100
+33:13.838	ID:4	server replied
+33:13.841	ID:4	Notification handler
+33:13.845	ID:4	Observee URI: periodic/motion
+33:13.848	ID:4	NOTIFICATION OK: 1
+33:15.318	ID:4	coap_handle_notification()
+33:15.319	ID:4	Getting token
+33:15.323	ID:4	Getting observee info
+33:15.326	ID:4	Looking for token 0x0100
+33:15.328	ID:4	server replied
+33:15.331	ID:4	Notification handler
+33:15.336	ID:4	Observee URI: periodic/motion
+33:15.338	ID:4	NOTIFICATION OK: 1
+33:16.590	ID:4	coap_handle_notification()
+33:16.592	ID:4	Getting token
+33:16.595	ID:4	Getting observee info
+33:16.599	ID:4	Looking for token 0x0100
+33:16.601	ID:4	server replied
+33:16.604	ID:4	Notification handler
+33:16.609	ID:4	Observee URI: periodic/motion
+33:16.611	ID:4	NOTIFICATION OK: 1
+33:16.841	ID:4	coap_handle_notification()
+33:16.843	ID:4	Getting token
+33:16.846	ID:4	Getting observee info
+33:16.850	ID:4	Looking for token 0x0100
+33:16.852	ID:4	server replied
+33:16.855	ID:4	Notification handler
+33:16.860	ID:4	Observee URI: periodic/motion
+33:16.862	ID:4	NOTIFICATION OK: 1
+33:18.092	ID:4	coap_handle_notification()
+33:18.094	ID:4	Getting token
+33:18.098	ID:4	Getting observee info
+33:18.101	ID:4	Looking for token 0x0100
+33:18.103	ID:4	server replied
+33:18.106	ID:4	Notification handler
+33:18.111	ID:4	Observee URI: periodic/motion
+33:18.113	ID:4	NOTIFICATION OK: 1
+33:20.333	ID:4	coap_handle_notification()
+33:20.335	ID:4	Getting token
+33:20.338	ID:4	Getting observee info
+33:20.342	ID:4	Looking for token 0x0100
+33:20.344	ID:4	server replied
+33:20.347	ID:4	Notification handler
+33:20.351	ID:4	Observee URI: periodic/motion
+33:20.354	ID:4	NOTIFICATION OK: 1
+33:20.605	ID:4	coap_handle_notification()
+33:20.607	ID:4	Getting token
+33:20.611	ID:4	Getting observee info
+33:20.614	ID:4	Looking for token 0x0100
+33:20.617	ID:4	server replied
+33:20.619	ID:4	Notification handler
+33:20.624	ID:4	Observee URI: periodic/motion
+33:20.626	ID:4	NOTIFICATION OK: 1
+33:21.106	ID:4	coap_handle_notification()
+33:21.108	ID:4	Getting token
+33:21.112	ID:4	Getting observee info
+33:21.115	ID:4	Looking for token 0x0100
+33:21.118	ID:4	server replied
+33:21.120	ID:4	Notification handler
+33:21.125	ID:4	Observee URI: periodic/motion
+33:21.127	ID:4	NOTIFICATION OK: 1
+33:21.358	ID:4	coap_handle_notification()
+33:21.360	ID:4	Getting token
+33:21.363	ID:4	Getting observee info
+33:21.366	ID:4	Looking for token 0x0100
+33:21.368	ID:4	server replied
+33:21.371	ID:4	Notification handler
+33:21.376	ID:4	Observee URI: periodic/motion
+33:21.378	ID:4	NOTIFICATION OK: 1
+33:22.522	ID:4	coap_handle_notification()
+33:22.524	ID:4	Getting token
+33:22.527	ID:4	Getting observee info
+33:22.531	ID:4	Looking for token 0x0100
+33:22.759	ID:4	server replied
+33:22.762	ID:4	Notification handler
+33:22.766	ID:4	Observee URI: periodic/motion
+33:22.769	ID:4	NOTIFICATION OK: 1
+33:23.024	ID:4	coap_handle_notification()
+33:23.026	ID:4	Getting token
+33:23.029	ID:4	Getting observee info
+33:23.033	ID:4	Looking for token 0x0100
+33:23.035	ID:4	server replied
+33:23.038	ID:4	Notification handler
+33:23.043	ID:4	Observee URI: periodic/motion
+33:23.045	ID:4	NOTIFICATION OK: 1
+33:23.536	ID:4	coap_handle_notification()
+33:23.538	ID:4	Getting token
+33:23.541	ID:4	Getting observee info
+33:23.545	ID:4	Looking for token 0x0100
+33:23.547	ID:4	server replied
+33:23.550	ID:4	Notification handler
+33:23.555	ID:4	Observee URI: periodic/motion
+33:23.557	ID:4	NOTIFICATION OK: 1
+33:23.636	ID:3	P 2179081 30553374 58509 2275396 47803 115871 1816 24817
+33:24.309	ID:4	coap_handle_notification()
+33:24.311	ID:4	Getting token
+33:24.314	ID:4	Getting observee info
+33:24.318	ID:4	Looking for token 0x0100
+33:24.320	ID:4	server replied
+33:24.323	ID:4	Notification handler
+33:24.327	ID:4	Observee URI: periodic/motion
+33:24.330	ID:4	NOTIFICATION OK: 1
+33:24.560	ID:4	coap_handle_notification()
+33:24.562	ID:4	Getting token
+33:24.565	ID:4	Getting observee info
+33:24.569	ID:4	Looking for token 0x0100
+33:24.571	ID:4	server replied
+33:24.574	ID:4	Notification handler
+33:24.579	ID:4	Observee URI: periodic/motion
+33:24.581	ID:4	NOTIFICATION OK: 1
+33:25.311	ID:4	coap_handle_notification()
+33:25.313	ID:4	Getting token
+33:25.316	ID:4	Getting observee info
+33:25.320	ID:4	Looking for token 0x0100
+33:25.322	ID:4	server replied
+33:25.325	ID:4	Notification handler
+33:25.330	ID:4	Observee URI: periodic/motion
+33:25.332	ID:4	NOTIFICATION OK: 1
+33:25.802	ID:4	coap_handle_notification()
+33:25.804	ID:4	Getting token
+33:25.807	ID:4	Getting observee info
+33:25.810	ID:4	Looking for token 0x0100
+33:25.813	ID:4	server replied
+33:25.816	ID:4	Notification handler
+33:25.820	ID:4	Observee URI: periodic/motion
+33:25.823	ID:4	NOTIFICATION OK: 1
+33:26.574	ID:4	coap_handle_notification()
+33:26.576	ID:4	Getting token
+33:26.580	ID:4	Getting observee info
+33:26.583	ID:4	Looking for token 0x0100
+33:26.585	ID:4	server replied
+33:26.588	ID:4	Notification handler
+33:26.593	ID:4	Observee URI: periodic/motion
+33:26.595	ID:4	NOTIFICATION OK: 1
+33:27.325	ID:4	coap_handle_notification()
+33:27.327	ID:4	Getting token
+33:27.331	ID:4	Getting observee info
+33:27.334	ID:4	Looking for token 0x0100
+33:27.336	ID:4	server replied
+33:27.339	ID:4	Notification handler
+33:27.344	ID:4	Observee URI: periodic/motion
+33:27.346	ID:4	NOTIFICATION OK: 1
+33:27.577	ID:4	coap_handle_notification()
+33:27.579	ID:4	Getting token
+33:27.582	ID:4	Getting observee info
+33:27.585	ID:4	Looking for token 0x0100
+33:27.588	ID:4	server replied
+33:27.591	ID:4	Notification handler
+33:27.595	ID:4	Observee URI: periodic/motion
+33:27.597	ID:4	NOTIFICATION OK: 1
+33:28.342	ID:4	t=13, h=252, therm_l=19, therm_h=25, therm_sw=0
+33:28.347	ID:4	COOOOOLD! -> switch on thermostat
+33:28.842	ID:3	thermostat low 19
+33:28.845	ID:3	thermostat high 25
+33:28.848	ID:3	thermostat switch1
+33:29.097	ID:4	Temperature got
+33:29.101	ID:4	Ask for current temperature
+33:29.811	ID:4	t=22, h=252, therm_l=19, therm_h=25, therm_sw=1
+33:30.539	ID:4	Temperature got
+33:30.794	ID:4	coap_handle_notification()
+33:30.796	ID:4	Getting token
+33:30.799	ID:4	Getting observee info
+33:30.803	ID:4	Looking for token 0x0100
+33:30.805	ID:4	server replied
+33:30.808	ID:4	Notification handler
+33:30.813	ID:4	Observee URI: periodic/motion
+33:30.815	ID:4	NOTIFICATION OK: 1
+33:31.045	ID:4	coap_handle_notification()
+33:31.047	ID:4	Getting token
+33:31.051	ID:4	Getting observee info
+33:31.054	ID:4	Looking for token 0x0100
+33:31.056	ID:4	server replied
+33:31.059	ID:4	Notification handler
+33:31.064	ID:4	Observee URI: periodic/motion
+33:31.066	ID:4	NOTIFICATION OK: 1
+33:31.786	ID:4	coap_handle_notification()
+33:31.788	ID:4	Getting token
+33:31.791	ID:4	Getting observee info
+33:31.795	ID:4	Looking for token 0x0100
+33:31.797	ID:4	server replied
+33:31.800	ID:4	Notification handler
+33:31.804	ID:4	Observee URI: periodic/motion
+33:31.807	ID:4	NOTIFICATION OK: 1
+33:32.842	ID:4	coap_handle_notification()
+33:32.844	ID:4	Getting token
+33:32.847	ID:4	Getting observee info
+33:32.851	ID:4	Looking for token 0x0100
+33:32.853	ID:4	server replied
+33:32.856	ID:4	Notification handler
+33:32.860	ID:4	Observee URI: periodic/motion
+33:32.863	ID:4	NOTIFICATION OK: 1
+33:33.593	ID:4	coap_handle_notification()
+33:33.595	ID:4	Getting token
+33:33.598	ID:4	Getting observee info
+33:33.602	ID:4	Looking for token 0x0100
+33:33.604	ID:4	server replied
+33:33.607	ID:4	Notification handler
+33:33.612	ID:4	Observee URI: periodic/motion
+33:33.614	ID:4	NOTIFICATION OK: 1
+33:33.636	ID:3	P 2247167 30648998 60387 2298789 68084 95624 1878 23393
+33:34.680	ID:4	Ask for current temperature
+33:34.838	ID:4	coap_handle_notification()
+33:34.840	ID:4	Getting token
+33:34.844	ID:4	Getting observee info
+33:34.847	ID:4	Looking for token 0x0100
+33:34.849	ID:4	server replied
+33:34.852	ID:4	Notification handler
+33:34.857	ID:4	Observee URI: periodic/motion
+33:34.859	ID:4	NOTIFICATION OK: 1
+33:35.349	ID:4	coap_handle_notification()
+33:35.351	ID:4	Getting token
+33:35.354	ID:4	Getting observee info
+33:35.358	ID:4	Looking for token 0x0100
+33:35.602	ID:4	server replied
+33:35.605	ID:4	Notification handler
+33:35.609	ID:4	Observee URI: periodic/motion
+33:35.612	ID:4	NOTIFICATION OK: 1
+33:36.100	ID:4	coap_handle_notification()
+33:36.102	ID:4	Getting token
+33:36.105	ID:4	Getting observee info
+33:36.109	ID:4	Looking for token 0x0100
+33:36.111	ID:4	server replied
+33:36.114	ID:4	Notification handler
+33:36.118	ID:4	Observee URI: periodic/motion
+33:36.121	ID:4	NOTIFICATION OK: 1
+33:36.373	ID:4	coap_handle_notification()
+33:36.375	ID:4	Getting token
+33:36.378	ID:4	Getting observee info
+33:36.381	ID:4	Looking for token 0x0100
+33:36.384	ID:4	server replied
+33:36.387	ID:4	Notification handler
+33:36.391	ID:4	Observee URI: periodic/motion
+33:36.394	ID:4	NOTIFICATION OK: 1
+33:37.624	ID:4	coap_handle_notification()
+33:37.626	ID:4	Getting token
+33:37.629	ID:4	Getting observee info
+33:37.633	ID:4	Looking for token 0x0100
+33:37.635	ID:4	server replied
+33:37.638	ID:4	Notification handler
+33:37.642	ID:4	Observee URI: periodic/motion
+33:37.645	ID:4	NOTIFICATION OK: 1
+33:38.364	ID:4	coap_handle_notification()
+33:38.366	ID:4	Getting token
+33:38.369	ID:4	Getting observee info
+33:38.373	ID:4	Looking for token 0x0100
+33:38.375	ID:4	server replied
+33:38.378	ID:4	Notification handler
+33:38.382	ID:4	Observee URI: periodic/motion
+33:38.385	ID:4	NOTIFICATION OK: 1
+33:38.637	ID:4	coap_handle_notification()
+33:38.639	ID:4	Getting token
+33:38.642	ID:4	Getting observee info
+33:38.646	ID:4	Looking for token 0x0100
+33:38.648	ID:4	server replied
+33:38.651	ID:4	Notification handler
+33:38.655	ID:4	Observee URI: periodic/motion
+33:38.658	ID:4	NOTIFICATION OK: 1
+33:40.638	ID:4	coap_handle_notification()
+33:40.640	ID:4	Getting token
+33:40.643	ID:4	Getting observee info
+33:40.647	ID:4	Looking for token 0x0100
+33:40.649	ID:4	server replied
+33:40.652	ID:4	Notification handler
+33:40.656	ID:4	Observee URI: periodic/motion
+33:40.659	ID:4	NOTIFICATION OK: 1
+33:42.352	ID:4	coap_handle_notification()
+33:42.354	ID:4	Getting token
+33:42.357	ID:4	Getting observee info
+33:42.360	ID:4	Looking for token 0x0100
+33:42.363	ID:4	server replied
+33:42.366	ID:4	Notification handler
+33:42.370	ID:4	Observee URI: periodic/motion
+33:42.373	ID:4	NOTIFICATION OK: 1
+33:42.624	ID:4	coap_handle_notification()
+33:42.626	ID:4	Getting token
+33:42.630	ID:4	Getting observee info
+33:42.633	ID:4	Looking for token 0x0100
+33:42.865	ID:4	server replied
+33:42.868	ID:4	Notification handler
+33:42.872	ID:4	Observee URI: periodic/motion
+33:42.875	ID:4	NOTIFICATION OK: 1
+33:43.136	ID:4	coap_handle_notification()
+33:43.138	ID:4	Getting token
+33:43.141	ID:4	Getting observee info
+33:43.145	ID:4	Looking for token 0x0100
+33:43.147	ID:4	server replied
+33:43.150	ID:4	Notification handler
+33:43.155	ID:4	Observee URI: periodic/motion
+33:43.157	ID:4	NOTIFICATION OK: 1
+33:43.636	ID:3	P 2298477 30761378 61876 2319114 51308 112380 1489 20325
+33:44.387	ID:4	coap_handle_notification()
+33:44.389	ID:4	Getting token
+33:44.392	ID:4	Getting observee info
+33:44.396	ID:4	Looking for token 0x0100
+33:44.398	ID:4	server replied
+33:44.401	ID:4	Notification handler
+33:44.406	ID:4	Observee URI: periodic/motion
+33:44.408	ID:4	NOTIFICATION OK: 1
+33:45.888	ID:4	coap_handle_notification()
+33:45.890	ID:4	Getting token
+33:45.893	ID:4	Getting observee info
+33:45.897	ID:4	Looking for token 0x0100
+33:45.899	ID:4	server replied
+33:45.902	ID:4	Notification handler
+33:45.907	ID:4	Observee URI: periodic/motion
+33:45.909	ID:4	NOTIFICATION OK: 1
+33:46.140	ID:4	coap_handle_notification()
+33:46.141	ID:4	Getting token
+33:46.145	ID:4	Getting observee info
+33:46.148	ID:4	Looking for token 0x0100
+33:46.150	ID:4	server replied
+33:46.153	ID:4	Notification handler
+33:46.158	ID:4	Observee URI: periodic/motion
+33:46.160	ID:4	NOTIFICATION OK: 1
+33:47.380	ID:4	coap_handle_notification()
+33:47.382	ID:4	Getting token
+33:47.385	ID:4	Getting observee info
+33:47.389	ID:4	Looking for token 0x0100
+33:47.391	ID:4	server replied
+33:47.394	ID:4	Notification handler
+33:47.398	ID:4	Observee URI: periodic/motion
+33:47.401	ID:4	NOTIFICATION OK: 1
+33:48.403	ID:4	coap_handle_notification()
+33:48.405	ID:4	Getting token
+33:48.408	ID:4	Getting observee info
+33:48.411	ID:4	Looking for token 0x0100
+33:48.414	ID:4	server replied
+33:48.417	ID:4	Notification handler
+33:48.421	ID:4	Observee URI: periodic/motion
+33:48.424	ID:4	NOTIFICATION OK: 1
+33:49.154	ID:4	coap_handle_notification()
+33:49.156	ID:4	Getting token
+33:49.159	ID:4	Getting observee info
+33:49.163	ID:4	Looking for token 0x0100
+33:49.165	ID:4	server replied
+33:49.168	ID:4	Notification handler
+33:49.172	ID:4	Observee URI: periodic/motion
+33:49.175	ID:4	NOTIFICATION OK: 1
+33:49.652	ID:4	coap_handle_notification()
+33:49.654	ID:4	Getting token
+33:49.657	ID:4	Getting observee info
+33:49.660	ID:4	Looking for token 0x0100
+33:49.663	ID:4	server replied
+33:49.666	ID:4	Notification handler
+33:49.670	ID:4	Observee URI: periodic/motion
+33:49.673	ID:4	NOTIFICATION OK: 1
+33:51.402	ID:4	coap_handle_notification()
+33:51.404	ID:4	Getting token
+33:51.407	ID:4	Getting observee info
+33:51.411	ID:4	Looking for token 0x0100
+33:51.660	ID:4	server replied
+33:51.663	ID:4	Notification handler
+33:51.667	ID:4	Observee URI: periodic/motion
+33:51.670	ID:4	NOTIFICATION OK: 1
+33:51.936	ID:4	coap_handle_notification()
+33:51.938	ID:4	Getting token
+33:51.941	ID:4	Getting observee info
+33:51.945	ID:4	Looking for token 0x0100
+33:51.947	ID:4	server replied
+33:51.950	ID:4	Notification handler
+33:51.954	ID:4	Observee URI: periodic/motion
+33:51.957	ID:4	NOTIFICATION OK: 1
+33:52.426	ID:4	coap_handle_notification()
+33:52.428	ID:4	Getting token
+33:52.431	ID:4	Getting observee info
+33:52.435	ID:4	Looking for token 0x0100
+33:52.437	ID:4	server replied
+33:52.440	ID:4	Notification handler
+33:52.445	ID:4	Observee URI: periodic/motion
+33:52.447	ID:4	NOTIFICATION OK: 1
+33:53.199	ID:4	coap_handle_notification()
+33:53.201	ID:4	Getting token
+33:53.204	ID:4	Getting observee info
+33:53.208	ID:4	Looking for token 0x0100
+33:53.210	ID:4	server replied
+33:53.213	ID:4	Notification handler
+33:53.217	ID:4	Observee URI: periodic/motion
+33:53.220	ID:4	NOTIFICATION OK: 1
+33:53.636	ID:3	P 2339383 30884155 63037 2336763 40904 122777 1161 17649
+33:54.200	ID:4	coap_handle_notification()
+33:54.202	ID:4	Getting token
+33:54.205	ID:4	Getting observee info
+33:54.209	ID:4	Looking for token 0x0100
+33:54.211	ID:4	server replied
+33:54.214	ID:4	Notification handler
+33:54.218	ID:4	Observee URI: periodic/motion
+33:54.221	ID:4	NOTIFICATION OK: 1
+33:56.191	ID:4	coap_handle_notification()
+33:56.193	ID:4	Getting token
+33:56.196	ID:4	Getting observee info
+33:56.200	ID:4	Looking for token 0x0100
+33:56.202	ID:4	server replied
+33:56.205	ID:4	Notification handler
+33:56.209	ID:4	Observee URI: periodic/motion
+33:56.212	ID:4	NOTIFICATION OK: 1
+33:56.431	ID:4	coap_handle_notification()
+33:56.433	ID:4	Getting token
+33:56.437	ID:4	Getting observee info
+33:56.440	ID:4	Looking for token 0x0100
+33:56.442	ID:4	server replied
+33:56.445	ID:4	Notification handler
+33:56.450	ID:4	Observee URI: periodic/motion
+33:56.452	ID:4	NOTIFICATION OK: 1
+33:57.193	ID:4	coap_handle_notification()
+33:57.195	ID:4	Getting token
+33:57.199	ID:4	Getting observee info
+33:57.202	ID:4	Looking for token 0x0100
+33:57.204	ID:4	server replied
+33:57.207	ID:4	Notification handler
+33:57.212	ID:4	Observee URI: periodic/motion
+33:57.214	ID:4	NOTIFICATION OK: 1
+33:59.466	ID:4	coap_handle_notification()
+33:59.468	ID:4	Getting token
+33:59.471	ID:4	Getting observee info
+33:59.475	ID:4	Looking for token 0x0100
+33:59.477	ID:4	server replied
+33:59.480	ID:4	Notification handler
+33:59.484	ID:4	Observee URI: periodic/motion
+33:59.487	ID:4	NOTIFICATION OK: 1
+33:59.963	ID:4	coap_handle_notification()
+33:59.965	ID:4	Getting token
+33:59.969	ID:4	Getting observee info
+33:59.972	ID:4	Looking for token 0x0100
+33:59.974	ID:4	server replied
+33:59.977	ID:4	Notification handler
+33:59.982	ID:4	Observee URI: periodic/motion
+33:59.984	ID:4	NOTIFICATION OK: 1
+34:02.724	ID:4	coap_handle_notification()
+34:02.726	ID:4	Getting token
+34:02.729	ID:4	Getting observee info
+34:02.733	ID:4	Looking for token 0x0100
+34:02.735	ID:4	server replied
+34:02.738	ID:4	Notification handler
+34:02.742	ID:4	Observee URI: periodic/motion
+34:02.745	ID:4	NOTIFICATION OK: 1
+34:03.636	ID:3	P 2362715 31024492 63838 2356092 23330 140337 801 19329
+34:03.997	ID:4	coap_handle_notification()
+34:03.999	ID:4	Getting token
+34:04.002	ID:4	Getting observee info
+34:04.005	ID:4	Looking for token 0x0100
+34:04.008	ID:4	server replied
+34:04.011	ID:4	Notification handler
+34:04.015	ID:4	Observee URI: periodic/motion
+34:04.018	ID:4	NOTIFICATION OK: 1
+34:05.498	ID:4	coap_handle_notification()
+34:05.500	ID:4	Getting token
+34:05.503	ID:4	Getting observee info
+34:05.506	ID:4	Looking for token 0x0100
+34:05.509	ID:4	server replied
+34:05.512	ID:4	Notification handler
+34:05.516	ID:4	Observee URI: periodic/motion
+34:05.519	ID:4	NOTIFICATION OK: 1
+34:05.999	ID:4	coap_handle_notification()
+34:06.001	ID:4	Getting token
+34:06.004	ID:4	Getting observee info
+34:06.007	ID:4	Looking for token 0x0100
+34:06.010	ID:4	server replied
+34:06.013	ID:4	Notification handler
+34:06.017	ID:4	Observee URI: periodic/motion
+34:06.020	ID:4	NOTIFICATION OK: 1
+34:06.489	ID:4	coap_handle_notification()
+34:06.491	ID:4	Getting token
+34:06.494	ID:4	Getting observee info
+34:06.498	ID:4	Looking for token 0x0100
+34:06.500	ID:4	server replied
+34:06.503	ID:4	Notification handler
+34:06.507	ID:4	Observee URI: periodic/motion
+34:06.510	ID:4	NOTIFICATION OK: 1
+34:08.012	ID:4	coap_handle_notification()
+34:08.014	ID:4	Getting token
+34:08.017	ID:4	Getting observee info
+34:08.021	ID:4	Looking for token 0x0100
+34:08.023	ID:4	server replied
+34:08.026	ID:4	Notification handler
+34:08.030	ID:4	Observee URI: periodic/motion
+34:08.033	ID:4	NOTIFICATION OK: 1
+34:08.513	ID:4	coap_handle_notification()
+34:08.515	ID:4	Getting token
+34:08.518	ID:4	Getting observee info
+34:08.522	ID:4	Looking for token 0x0100
+34:08.524	ID:4	server replied
+34:08.527	ID:4	Notification handler
+34:08.531	ID:4	Observee URI: periodic/motion
+34:08.534	ID:4	NOTIFICATION OK: 1
+34:08.764	ID:4	coap_handle_notification()
+34:08.766	ID:4	Getting token
+34:08.769	ID:4	Getting observee info
+34:08.773	ID:4	Looking for token 0x0100
+34:08.775	ID:4	server replied
+34:08.778	ID:4	Notification handler
+34:08.782	ID:4	Observee URI: periodic/motion
+34:08.785	ID:4	NOTIFICATION OK: 1
+34:09.515	ID:4	coap_handle_notification()
+34:09.517	ID:4	Getting token
+34:09.520	ID:4	Getting observee info
+34:09.524	ID:4	Looking for token 0x0100
+34:09.770	ID:4	server replied
+34:09.773	ID:4	Notification handler
+34:09.777	ID:4	Observee URI: periodic/motion
+34:09.780	ID:4	NOTIFICATION OK: 1
+34:10.288	ID:4	coap_handle_notification()
+34:10.290	ID:4	Getting token
+34:10.293	ID:4	Getting observee info
+34:10.297	ID:4	Looking for token 0x0100
+34:10.299	ID:4	server replied
+34:10.302	ID:4	Notification handler
+34:10.306	ID:4	Observee URI: periodic/motion
+34:10.309	ID:4	NOTIFICATION OK: 1
+34:10.561	ID:4	coap_handle_notification()
+34:10.563	ID:4	Getting token
+34:10.566	ID:4	Getting observee info
+34:10.570	ID:4	Looking for token 0x0100
+34:10.572	ID:4	server replied
+34:10.575	ID:4	Notification handler
+34:10.579	ID:4	Observee URI: periodic/motion
+34:10.582	ID:4	NOTIFICATION OK: 1
+34:10.812	ID:4	coap_handle_notification()
+34:10.814	ID:4	Getting token
+34:10.817	ID:4	Getting observee info
+34:10.821	ID:4	Looking for token 0x0100
+34:10.823	ID:4	server replied
+34:10.826	ID:4	Notification handler
+34:10.830	ID:4	Observee URI: periodic/motion
+34:10.833	ID:4	NOTIFICATION OK: 1
+34:11.094	ID:1	# [1024 bytes, no line ending]: P?P?P?P?P?...
+34:11.302	ID:4	coap_handle_notification()
+34:11.304	ID:4	Getting token
+34:11.307	ID:4	Getting observee info
+34:11.311	ID:4	Looking for token 0x0100
+34:11.313	ID:4	server replied
+34:11.316	ID:4	Notification handler
+34:11.320	ID:4	Observee URI: periodic/motion
+34:11.323	ID:4	NOTIFICATION OK: 1
+34:11.575	ID:4	coap_handle_notification()
+34:11.577	ID:4	Getting token
+34:11.580	ID:4	Getting observee info
+34:11.584	ID:4	Looking for token 0x0100
+34:11.586	ID:4	server replied
+34:11.589	ID:4	Notification handler
+34:11.593	ID:4	Observee URI: periodic/motion
+34:11.596	ID:4	NOTIFICATION OK: 1
+34:12.326	ID:4	coap_handle_notification()
+34:12.328	ID:4	Getting token
+34:12.331	ID:4	Getting observee info
+34:12.335	ID:4	Looking for token 0x0100
+34:12.337	ID:4	server replied
+34:12.340	ID:4	Notification handler
+34:12.344	ID:4	Observee URI: periodic/motion
+34:12.347	ID:4	NOTIFICATION OK: 1
+34:13.077	ID:4	coap_handle_notification()
+34:13.079	ID:4	Getting token
+34:13.082	ID:4	Getting observee info
+34:13.086	ID:4	Looking for token 0x0100
+34:13.088	ID:4	server replied
+34:13.091	ID:4	Notification handler
+34:13.095	ID:4	Observee URI: periodic/motion
+34:13.098	ID:4	NOTIFICATION OK: 1
+34:13.636	ID:3	P 2398557 31152334 66018 2372602 35840 127842 2180 16510
+34:15.828	ID:4	coap_handle_notification()
+34:15.830	ID:4	Getting token
+34:15.834	ID:4	Getting observee info
+34:15.837	ID:4	Looking for token 0x0100
+34:15.840	ID:4	server replied
+34:15.842	ID:4	Notification handler
+34:15.847	ID:4	Observee URI: periodic/motion
+34:15.849	ID:4	NOTIFICATION OK: 1
+34:16.569	ID:4	coap_handle_notification()
+34:16.571	ID:4	Getting token
+34:16.574	ID:4	Getting observee info
+34:16.577	ID:4	Looking for token 0x0100
+34:16.580	ID:4	server replied
+34:16.583	ID:4	Notification handler
+34:16.587	ID:4	Observee URI: periodic/motion
+34:16.590	ID:4	NOTIFICATION OK: 1
+34:17.591	ID:4	coap_handle_notification()
+34:17.593	ID:4	Getting token
+34:17.597	ID:4	Getting observee info
+34:17.600	ID:4	Looking for token 0x0100
+34:17.602	ID:4	server replied
+34:17.605	ID:4	Notification handler
+34:17.610	ID:4	Observee URI: periodic/motion
+34:17.612	ID:4	NOTIFICATION OK: 1
+34:19.593	ID:4	coap_handle_notification()
+34:19.595	ID:4	Getting token
+34:19.598	ID:4	Getting observee info
+34:19.601	ID:4	Looking for token 0x0100
+34:19.604	ID:4	server replied
+34:19.607	ID:4	Notification handler
+34:19.611	ID:4	Observee URI: periodic/motion
+34:19.614	ID:4	NOTIFICATION OK: 1
+34:19.833	ID:4	coap_handle_notification()
+34:19.835	ID:4	Getting token
+34:19.838	ID:4	Getting observee info
+34:19.842	ID:4	Looking for token 0x0100
+34:19.844	ID:4	server replied
+34:19.847	ID:4	Notification handler
+34:19.851	ID:4	Observee URI: periodic/motion
+34:19.854	ID:4	NOTIFICATION OK: 1
+34:20.356	ID:4	coap_handle_notification()
+34:20.358	ID:4	Getting token
+34:20.361	ID:4	Getting observee info
+34:20.365	ID:4	Looking for token 0x0100
+34:20.367	ID:4	server replied
+34:20.370	ID:4	Notification handler
+34:20.374	ID:4	Observee URI: periodic/motion
+34:20.377	ID:4	NOTIFICATION OK: 1
+34:21.393	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=1
+34:21.398	ID:4	HOOOOOOOOOT! -> switch off thermostat
+34:21.659	ID:3	thermostat low 19
+34:21.662	ID:3	thermostat high 25
+34:21.665	ID:3	thermostat switch0
+34:21.909	ID:4	Temperature got
+34:21.913	ID:4	Ask for current temperature
+34:22.640	ID:4	t=19, h=252, therm_l=19, therm_h=25, therm_sw=0
+34:23.139	ID:4	Temperature gotcoap_handle_notification()
+34:23.141	ID:4	Getting token
+34:23.144	ID:4	Getting observee info
+34:23.148	ID:4	Looking for token 0x0100
+34:23.150	ID:4	server replied
+34:23.153	ID:4	Notification handler
+34:23.157	ID:4	Observee URI: periodic/motion
+34:23.160	ID:4	NOTIFICATION OK: 1
+34:23.390	ID:4	coap_handle_notification()
+34:23.392	ID:4	Getting token
+34:23.395	ID:4	Getting observee info
+34:23.399	ID:4	Looking for token 0x0100
+34:23.401	ID:4	server replied
+34:23.404	ID:4	Notification handler
+34:23.408	ID:4	Observee URI: periodic/motion
+34:23.411	ID:4	NOTIFICATION OK: 1
+34:23.637	ID:3	P 2445422 31269170 67475 2393859 46863 116836 1457 21257
+34:24.880	ID:4	coap_handle_notification()
+34:24.882	ID:4	Getting token
+34:24.885	ID:4	Getting observee info
+34:24.889	ID:4	Looking for token 0x0100
+34:24.891	ID:4	server replied
+34:24.894	ID:4	Notification handler
+34:24.898	ID:4	Observee URI: periodic/motion
+34:24.901	ID:4	NOTIFICATION OK: 1
+34:25.653	ID:4	coap_handle_notification()
+34:25.655	ID:4	Getting token
+34:25.658	ID:4	Getting observee info
+34:25.662	ID:4	Looking for token 0x0100
+34:25.664	ID:4	server replied
+34:25.667	ID:4	Notification handler
+34:25.671	ID:4	Observee URI: periodic/motion
+34:25.674	ID:4	NOTIFICATION OK: 1
+34:26.401	ID:4	coap_handle_notification()
+34:26.403	ID:4	Getting token
+34:26.406	ID:4	Getting observee info
+34:26.410	ID:4	Looking for token 0x0100
+34:26.412	ID:4	server replied
+34:26.415	ID:4	Notification handler
+34:26.419	ID:4	Observee URI: periodic/motion
+34:26.422	ID:4	NOTIFICATION OK: 1
+34:27.413	ID:4	coap_handle_notification()
+34:27.415	ID:4	Getting token
+34:27.418	ID:4	Getting observee info
+34:27.422	ID:4	Looking for token 0x0100
+34:27.667	ID:4	server replied
+34:27.670	ID:4	Notification handler
+34:27.674	ID:4	Observee URI: periodic/motion
+34:27.677	ID:4	NOTIFICATION OK: 1
+34:27.936	ID:4	coap_handle_notification()
+34:27.938	ID:4	Getting token
+34:27.941	ID:4	Getting observee info
+34:27.945	ID:4	Looking for token 0x0100
+34:27.947	ID:4	server replied
+34:27.950	ID:4	Notification handler
+34:27.954	ID:4	Observee URI: periodic/motion
+34:27.957	ID:4	NOTIFICATION OK: 1
+34:29.426	ID:4	coap_handle_notification()
+34:29.428	ID:4	Getting token
+34:29.431	ID:4	Getting observee info
+34:29.435	ID:4	Looking for token 0x0100
+34:29.437	ID:4	server replied
+34:29.440	ID:4	Notification handler
+34:29.445	ID:4	Observee URI: periodic/motion
+34:29.447	ID:4	NOTIFICATION OK: 1
+34:30.199	ID:4	coap_handle_notification()
+34:30.201	ID:4	Getting token
+34:30.204	ID:4	Getting observee info
+34:30.208	ID:4	Looking for token 0x0100
+34:30.210	ID:4	server replied
+34:30.213	ID:4	Notification handler
+34:30.218	ID:4	Observee URI: periodic/motion
+34:30.220	ID:4	NOTIFICATION OK: 1
+34:30.700	ID:4	coap_handle_notification()
+34:30.702	ID:4	Getting token
+34:30.705	ID:4	Getting observee info
+34:30.709	ID:4	Looking for token 0x0100
+34:30.711	ID:4	server replied
+34:30.714	ID:4	Notification handler
+34:30.719	ID:4	Observee URI: periodic/motion
+34:30.721	ID:4	NOTIFICATION OK: 1
+34:30.951	ID:4	coap_handle_notification()
+34:30.953	ID:4	Getting token
+34:30.956	ID:4	Getting observee info
+34:30.960	ID:4	Looking for token 0x0100
+34:30.962	ID:4	server replied
+34:30.965	ID:4	Notification handler
+34:30.970	ID:4	Observee URI: periodic/motion
+34:30.972	ID:4	NOTIFICATION OK: 1
+34:31.471	ID:4	
+34:31.475	ID:4	Ask for current temperature
+34:31.968	ID:4	t=16, h=252, therm_l=19, therm_h=25, therm_sw=0
+34:31.973	ID:4	COOOOOLD! -> switch on thermostat
+34:32.216	ID:4	Temperature gotcoap_handle_notification()
+34:32.218	ID:4	Getting token
+34:32.221	ID:4	Getting observee info
+34:32.225	ID:4	Looking for token 0x0100
+34:32.227	ID:4	server replied
+34:32.230	ID:4	Notification handler
+34:32.234	ID:4	Observee URI: periodic/motion
+34:32.237	ID:4	NOTIFICATION OK: 1
+34:32.467	ID:4	coap_handle_notification()
+34:32.469	ID:4	Getting token
+34:32.472	ID:4	Getting observee info
+34:32.476	ID:4	Looking for token 0x0100
+34:32.478	ID:4	server replied
+34:32.481	ID:4	Notification handler
+34:32.485	ID:4	Observee URI: periodic/motion
+34:32.488	ID:4	NOTIFICATION OK: 1
+34:32.968	ID:4	coap_handle_notification()
+34:32.970	ID:4	Getting token
+34:32.973	ID:4	Getting observee info
+34:32.977	ID:4	Looking for token 0x0100
+34:32.979	ID:4	server replied
+34:32.982	ID:4	Notification handler
+34:32.986	ID:4	Observee URI: periodic/motion
+34:32.989	ID:4	NOTIFICATION OK: 1
+34:33.458	ID:4	coap_handle_notification()
+34:33.460	ID:4	Getting token
+34:33.463	ID:4	Getting observee info
+34:33.467	ID:4	Looking for token 0x0100
+34:33.469	ID:4	server replied
+34:33.472	ID:4	Notification handler
+34:33.476	ID:4	Observee URI: periodic/motion
+34:33.479	ID:4	NOTIFICATION OK: 1
+34:33.636	ID:3	P 2496107 31382170 68929 2412896 50682 113000 1454 19034
+34:33.731	ID:4	coap_handle_notification()
+34:33.733	ID:4	Getting token
+34:33.736	ID:4	Getting observee info
+34:33.740	ID:4	Looking for token 0x0100
+34:33.742	ID:4	server replied
+34:33.745	ID:4	Notification handler
+34:33.749	ID:4	Observee URI: periodic/motion
+34:33.752	ID:4	NOTIFICATION OK: 1
+34:34.232	ID:4	coap_handle_notification()
+34:34.234	ID:4	Getting token
+34:34.237	ID:4	Getting observee info
+34:34.241	ID:4	Looking for token 0x0100
+34:34.243	ID:4	server replied
+34:34.246	ID:4	Notification handler
+34:34.250	ID:4	Observee URI: periodic/motion
+34:34.253	ID:4	NOTIFICATION OK: 1
+34:34.483	ID:4	coap_handle_notification()
+34:34.485	ID:4	Getting token
+34:34.488	ID:4	Getting observee info
+34:34.492	ID:4	Looking for token 0x0100
+34:34.494	ID:4	server replied
+34:34.497	ID:4	Notification handler
+34:34.502	ID:4	Observee URI: periodic/motion
+34:34.504	ID:4	NOTIFICATION OK: 1
+34:35.224	ID:4	coap_handle_notification()
+34:35.226	ID:4	Getting token
+34:35.229	ID:4	Getting observee info
+34:35.232	ID:4	Looking for token 0x0100
+34:35.235	ID:4	server replied
+34:35.238	ID:4	Notification handler
+34:35.242	ID:4	Observee URI: periodic/motion
+34:35.245	ID:4	NOTIFICATION OK: 1
+34:35.996	ID:4	coap_handle_notification()
+34:35.998	ID:4	Getting token
+34:36.002	ID:4	Getting observee info
+34:36.005	ID:4	Looking for token 0x0100
+34:36.007	ID:4	server replied
+34:36.010	ID:4	Notification handler
+34:36.015	ID:4	Observee URI: periodic/motion
+34:36.017	ID:4	NOTIFICATION OK: 1
+34:36.497	ID:4	coap_handle_notification()
+34:36.499	ID:4	Getting token
+34:36.503	ID:4	Getting observee info
+34:36.506	ID:4	Looking for token 0x0100
+34:36.508	ID:4	server replied
+34:36.511	ID:4	Notification handler
+34:36.516	ID:4	Observee URI: periodic/motion
+34:36.518	ID:4	NOTIFICATION OK: 1
+34:36.749	ID:4	coap_handle_notification()
+34:36.750	ID:4	Getting token
+34:36.754	ID:4	Getting observee info
+34:36.757	ID:4	Looking for token 0x0100
+34:36.759	ID:4	server replied
+34:36.762	ID:4	Notification handler
+34:36.767	ID:4	Observee URI: periodic/motion
+34:36.769	ID:4	NOTIFICATION OK: 1
+34:37.250	ID:4	coap_handle_notification()
+34:37.252	ID:4	Getting token
+34:37.255	ID:4	Getting observee info
+34:37.259	ID:4	Looking for token 0x0100
+34:37.261	ID:4	server replied
+34:37.264	ID:4	Notification handler
+34:37.268	ID:4	Observee URI: periodic/motion
+34:37.271	ID:4	NOTIFICATION OK: 1
+34:37.490	ID:4	coap_handle_notification()
+34:37.492	ID:4	Getting token
+34:37.495	ID:4	Getting observee info
+34:37.499	ID:4	Looking for token 0x0100
+34:37.501	ID:4	server replied
+34:37.504	ID:4	Notification handler
+34:37.508	ID:4	Observee URI: periodic/motion
+34:37.511	ID:4	NOTIFICATION OK: 1
+34:38.013	ID:4	coap_handle_notification()
+34:38.015	ID:4	Getting token
+34:38.018	ID:4	Getting observee info
+34:38.022	ID:4	Looking for token 0x0100
+34:38.024	ID:4	server replied
+34:38.027	ID:4	Notification handler
+34:38.031	ID:4	Observee URI: periodic/motion
+34:38.034	ID:4	NOTIFICATION OK: 1
+34:38.264	ID:4	coap_handle_notification()
+34:38.266	ID:4	Getting token
+34:38.269	ID:4	Getting observee info
+34:38.273	ID:4	Looking for token 0x0100
+34:38.518	ID:4	server replied
+34:38.521	ID:4	Notification handler
+34:38.526	ID:4	Observee URI: periodic/motion
+34:38.528	ID:4	NOTIFICATION OK: 1
+34:38.776	ID:3	thermostat low 19
+34:38.779	ID:3	thermostat high 25
+34:38.782	ID:3	thermostat switch1
+34:39.033	ID:4	
+34:39.037	ID:4	Ask for current temperature
+34:39.759	ID:4	t=19, h=252, therm_l=19, therm_h=25, therm_sw=1
+34:40.540	ID:4	Temperature gotcoap_handle_notification()
+34:40.542	ID:4	Getting token
+34:40.545	ID:4	Getting observee info
+34:40.549	ID:4	Looking for token 0x0100
+34:40.551	ID:4	server replied
+34:40.554	ID:4	Notification handler
+34:40.558	ID:4	Observee URI: periodic/motion
+34:40.561	ID:4	NOTIFICATION OK: 1
+34:40.808	ID:4	coap_handle_notification()
+34:40.810	ID:4	Getting token
+34:40.813	ID:4	Getting observee info
+34:40.817	ID:4	Looking for token 0x0100
+34:40.819	ID:4	server replied
+34:40.822	ID:4	Notification handler
+34:40.826	ID:4	Observee URI: periodic/motion
+34:40.829	ID:4	NOTIFICATION OK: 1
+34:42.059	ID:4	coap_handle_notification()
+34:42.061	ID:4	Getting token
+34:42.064	ID:4	Getting observee info
+34:42.068	ID:4	Looking for token 0x0100
+34:42.070	ID:4	server replied
+34:42.073	ID:4	Notification handler
+34:42.077	ID:4	Observee URI: periodic/motion
+34:42.080	ID:4	NOTIFICATION OK: 1
+34:42.310	ID:4	coap_handle_notification()
+34:42.312	ID:4	Getting token
+34:42.315	ID:4	Getting observee info
+34:42.319	ID:4	Looking for token 0x0100
+34:42.321	ID:4	server replied
+34:42.324	ID:4	Notification handler
+34:42.329	ID:4	Observee URI: periodic/motion
+34:42.331	ID:4	NOTIFICATION OK: 1
+34:43.061	ID:4	coap_handle_notification()
+34:43.063	ID:4	Getting token
+34:43.066	ID:4	Getting observee info
+34:43.070	ID:4	Looking for token 0x0100
+34:43.072	ID:4	server replied
+34:43.075	ID:4	Notification handler
+34:43.080	ID:4	Observee URI: periodic/motion
+34:43.082	ID:4	NOTIFICATION OK: 1
+34:43.552	ID:4	coap_handle_notification()
+34:43.554	ID:4	Getting token
+34:43.557	ID:4	Getting observee info
+34:43.561	ID:4	Looking for token 0x0100
+34:43.563	ID:4	server replied
+34:43.566	ID:4	Notification handler
+34:43.570	ID:4	Observee URI: periodic/motion
+34:43.573	ID:4	NOTIFICATION OK: 1
+34:43.574	ID:4	
+34:43.578	ID:4	Ask for current temperature
+34:43.636	ID:3	P 2555284 31486695 70727 2434279 59175 104525 1798 21383
+34:44.078	ID:4	t=14, h=252, therm_l=19, therm_h=25, therm_sw=1
+34:44.572	ID:4	Temperature got
+34:46.327	ID:4	coap_handle_notification()
+34:46.329	ID:4	Getting token
+34:46.332	ID:4	Getting observee info
+34:46.335	ID:4	Looking for token 0x0100
+34:46.338	ID:4	server replied
+34:46.341	ID:4	Notification handler
+34:46.345	ID:4	Observee URI: periodic/motion
+34:46.347	ID:4	NOTIFICATION OK: 1
+34:47.578	ID:4	coap_handle_notification()
+34:47.580	ID:4	Getting token
+34:47.583	ID:4	Getting observee info
+34:47.587	ID:4	Looking for token 0x0100
+34:47.589	ID:4	server replied
+34:47.592	ID:4	Notification handler
+34:47.596	ID:4	Observee URI: periodic/motion
+34:47.599	ID:4	NOTIFICATION OK: 1
+34:49.068	ID:4	coap_handle_notification()
+34:49.070	ID:4	Getting token
+34:49.073	ID:4	Getting observee info
+34:49.077	ID:4	Looking for token 0x0100
+34:49.079	ID:4	server replied
+34:49.082	ID:4	Notification handler
+34:49.086	ID:4	Observee URI: periodic/motion
+34:49.089	ID:4	NOTIFICATION OK: 1
+34:49.341	ID:4	coap_handle_notification()
+34:49.343	ID:4	Getting token
+34:49.346	ID:4	Getting observee info
+34:49.350	ID:4	Looking for token 0x0100
+34:49.352	ID:4	server replied
+34:49.355	ID:4	Notification handler
+34:49.359	ID:4	Observee URI: periodic/motion
+34:49.362	ID:4	NOTIFICATION OK: 1
+34:50.842	ID:4	coap_handle_notification()
+34:50.844	ID:4	Getting token
+34:50.847	ID:4	Getting observee info
+34:50.851	ID:4	Looking for token 0x0100
+34:50.853	ID:4	server replied
+34:50.856	ID:4	Notification handler
+34:50.860	ID:4	Observee URI: periodic/motion
+34:50.863	ID:4	NOTIFICATION OK: 1
+34:51.338	ID:4	coap_handle_notification()
+34:51.340	ID:4	Getting token
+34:51.344	ID:4	Getting observee info
+34:51.347	ID:4	Looking for token 0x0100
+34:51.349	ID:4	server replied
+34:51.352	ID:4	Notification handler
+34:51.357	ID:4	Observee URI: periodic/motion
+34:51.359	ID:4	NOTIFICATION OK: 1
+34:51.600	ID:4	coap_handle_notification()
+34:51.602	ID:4	Getting token
+34:51.606	ID:4	Getting observee info
+34:51.609	ID:4	Looking for token 0x0100
+34:51.611	ID:4	server replied
+34:51.614	ID:4	Notification handler
+34:51.619	ID:4	Observee URI: periodic/motion
+34:51.621	ID:4	NOTIFICATION OK: 1
+34:51.871	ID:4	coap_handle_notification()
+34:51.873	ID:4	Getting token
+34:51.876	ID:4	Getting observee info
+34:51.880	ID:4	Looking for token 0x0100
+34:51.882	ID:4	server replied
+34:51.885	ID:4	Notification handler
+34:51.889	ID:4	Observee URI: periodic/motion
+34:51.892	ID:4	NOTIFICATION OK: 1
+34:52.622	ID:4	coap_handle_notification()
+34:52.624	ID:4	Getting token
+34:52.627	ID:4	Getting observee info
+34:52.630	ID:4	Looking for token 0x0100
+34:52.633	ID:4	server replied
+34:52.636	ID:4	Notification handler
+34:52.640	ID:4	Observee URI: periodic/motion
+34:52.643	ID:4	NOTIFICATION OK: 1
+34:52.649	ID:4	Ask for current temperature
+34:53.158	ID:4	t=23, h=252, therm_l=19, therm_h=25, therm_sw=1
+34:53.642	ID:4	Temperature got
+34:53.897	ID:4	coap_handle_notification()
+34:53.899	ID:4	Getting token
+34:53.902	ID:4	Getting observee info
+34:53.906	ID:4	Looking for token 0x0100
+34:53.908	ID:4	server replied
+34:53.911	ID:4	Notification handler
+34:53.913	ID:3	P 2605889 31604327 72124 2452500 50603 117632 1397 18221
+34:53.915	ID:4	Observee URI: periodic/motion
+34:53.918	ID:4	NOTIFICATION OK: 1
+34:54.170	ID:4	coap_handle_notification()
+34:54.172	ID:4	Getting token
+34:54.175	ID:4	Getting observee info
+34:54.178	ID:4	Looking for token 0x0100
+34:54.418	ID:4	server replied
+34:54.421	ID:4	Notification handler
+34:54.425	ID:4	Observee URI: periodic/motion
+34:54.428	ID:4	NOTIFICATION OK: 1
+34:54.693	ID:4	coap_handle_notification()
+34:54.695	ID:4	Getting token
+34:54.698	ID:4	Getting observee info
+34:54.701	ID:4	Looking for token 0x0100
+34:54.703	ID:4	server replied
+34:54.706	ID:4	Notification handler
+34:54.711	ID:4	Observee URI: periodic/motion
+34:54.714	ID:4	NOTIFICATION OK: 1
+34:55.465	ID:4	coap_handle_notification()
+34:55.467	ID:4	Getting token
+34:55.470	ID:4	Getting observee info
+34:55.474	ID:4	Looking for token 0x0100
+34:55.476	ID:4	server replied
+34:55.479	ID:4	Notification handler
+34:55.484	ID:4	Observee URI: periodic/motion
+34:55.486	ID:4	NOTIFICATION OK: 1
+34:55.716	ID:4	coap_handle_notification()
+34:55.718	ID:4	Getting token
+34:55.722	ID:4	Getting observee info
+34:55.725	ID:4	Looking for token 0x0100
+34:55.727	ID:4	server replied
+34:55.730	ID:4	Notification handler
+34:55.735	ID:4	Observee URI: periodic/motion
+34:55.737	ID:4	NOTIFICATION OK: 1
+34:56.467	ID:4	coap_handle_notification()
+34:56.469	ID:4	Getting token
+34:56.473	ID:4	Getting observee info
+34:56.476	ID:4	Looking for token 0x0100
+34:56.478	ID:4	server replied
+34:56.481	ID:4	Notification handler
+34:56.486	ID:4	Observee URI: periodic/motion
+34:56.488	ID:4	NOTIFICATION OK: 1
+34:57.208	ID:4	coap_handle_notification()
+34:57.210	ID:4	Getting token
+34:57.213	ID:4	Getting observee info
+34:57.217	ID:4	Looking for token 0x0100
+34:57.219	ID:4	server replied
+34:57.222	ID:4	Notification handler
+34:57.226	ID:4	Observee URI: periodic/motion
+34:57.229	ID:4	NOTIFICATION OK: 1
+34:57.981	ID:4	coap_handle_notification()
+34:57.983	ID:4	Getting token
+34:57.986	ID:4	Getting observee info
+34:57.989	ID:4	Looking for token 0x0100
+34:57.992	ID:4	server replied
+34:57.995	ID:4	Notification handler
+34:57.999	ID:4	Observee URI: periodic/motion
+34:58.002	ID:4	NOTIFICATION OK: 1
+34:58.732	ID:4	coap_handle_notification()
+34:58.734	ID:4	Getting token
+34:58.737	ID:4	Getting observee info
+34:58.741	ID:4	Looking for token 0x0100
+34:58.743	ID:4	server replied
+34:58.746	ID:4	Notification handler
+34:58.750	ID:4	Observee URI: periodic/motion
+34:58.753	ID:4	NOTIFICATION OK: 1
+34:58.974	ID:4	coap_handle_notification()
+34:58.976	ID:4	Getting token
+34:58.979	ID:4	Getting observee info
+34:58.983	ID:4	Looking for token 0x0100
+34:58.985	ID:4	server replied
+34:58.988	ID:4	Notification handler
+34:58.992	ID:4	Observee URI: periodic/motion
+34:58.995	ID:4	NOTIFICATION OK: 1
+34:59.497	ID:4	coap_handle_notification()
+34:59.499	ID:4	Getting token
+34:59.502	ID:4	Getting observee info
+34:59.505	ID:4	Looking for token 0x0100
+34:59.508	ID:4	server replied
+34:59.511	ID:4	Notification handler
+34:59.515	ID:4	Observee URI: periodic/motion
+34:59.518	ID:4	NOTIFICATION OK: 1
+35:00.248	ID:4	coap_handle_notification()
+35:00.250	ID:4	Getting token
+35:00.253	ID:4	Getting observee info
+35:00.257	ID:4	Looking for token 0x0100
+35:00.259	ID:4	server replied
+35:00.262	ID:4	Notification handler
+35:00.266	ID:4	Observee URI: periodic/motion
+35:00.269	ID:4	NOTIFICATION OK: 1
+35:00.499	ID:4	coap_handle_notification()
+35:00.501	ID:4	Getting token
+35:00.504	ID:4	Getting observee info
+35:00.508	ID:4	Looking for token 0x0100
+35:00.510	ID:4	server replied
+35:00.513	ID:4	Notification handler
+35:00.517	ID:4	Observee URI: periodic/motion
+35:00.520	ID:4	NOTIFICATION OK: 1
+35:03.489	ID:4	coap_handle_notification()
+35:03.491	ID:4	Getting token
+35:03.494	ID:4	Getting observee info
+35:03.498	ID:4	Looking for token 0x0100
+35:03.500	ID:4	server replied
+35:03.503	ID:4	Notification handler
+35:03.507	ID:4	Observee URI: periodic/motion
+35:03.510	ID:4	NOTIFICATION OK: 1
+35:03.636	ID:3	P 2640581 31728785 73179 2468162 34690 124458 1055 15662
+35:04.262	ID:4	coap_handle_notification()
+35:04.264	ID:4	Getting token
+35:04.267	ID:4	Getting observee info
+35:04.271	ID:4	Looking for token 0x0100
+35:04.273	ID:4	server replied
+35:04.276	ID:4	Notification handler
+35:04.280	ID:4	Observee URI: periodic/motion
+35:04.283	ID:4	NOTIFICATION OK: 1
+35:04.763	ID:4	coap_handle_notification()
+35:04.765	ID:4	Getting token
+35:04.768	ID:4	Getting observee info
+35:04.772	ID:4	Looking for token 0x0100
+35:04.774	ID:4	server replied
+35:04.777	ID:4	Notification handler
+35:04.781	ID:4	Observee URI: periodic/motion
+35:04.784	ID:4	NOTIFICATION OK: 1
+35:06.514	ID:4	coap_handle_notification()
+35:06.516	ID:4	Getting token
+35:06.519	ID:4	Getting observee info
+35:06.523	ID:4	Looking for token 0x0100
+35:06.525	ID:4	server replied
+35:06.528	ID:4	Notification handler
+35:06.532	ID:4	Observee URI: periodic/motion
+35:06.535	ID:4	NOTIFICATION OK: 1
+35:07.015	ID:4	coap_handle_notification()
+35:07.017	ID:4	Getting token
+35:07.020	ID:4	Getting observee info
+35:07.024	ID:4	Looking for token 0x0100
+35:07.026	ID:4	server replied
+35:07.029	ID:4	Notification handler
+35:07.033	ID:4	Observee URI: periodic/motion
+35:07.036	ID:4	NOTIFICATION OK: 1
+35:07.255	ID:4	coap_handle_notification()
+35:07.257	ID:4	Getting token
+35:07.260	ID:4	Getting observee info
+35:07.264	ID:4	Looking for token 0x0100
+35:07.266	ID:4	server replied
+35:07.269	ID:4	Notification handler
+35:07.273	ID:4	Observee URI: periodic/motion
+35:07.276	ID:4	NOTIFICATION OK: 1
+35:07.778	ID:4	coap_handle_notification()
+35:07.780	ID:4	Getting token
+35:07.783	ID:4	Getting observee info
+35:07.787	ID:4	Looking for token 0x0100
+35:07.789	ID:4	server replied
+35:07.792	ID:4	Notification handler
+35:07.796	ID:4	Observee URI: periodic/motion
+35:07.799	ID:4	NOTIFICATION OK: 1
+35:08.242	ID:4	Ask for current temperature
+35:08.815	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=1
+35:08.820	ID:4	HOOOOOOOOOT! -> switch off thermostat
+35:09.057	ID:3	thermostat low 19
+35:09.060	ID:3	thermostat high 25
+35:09.063	ID:3	thermostat switch0
+35:09.320	ID:4	Temperature got
+35:09.575	ID:4	coap_handle_notification()
+35:09.577	ID:4	Getting token
+35:09.580	ID:4	Getting observee info
+35:09.584	ID:4	Looking for token 0x0100
+35:09.586	ID:4	server replied
+35:09.589	ID:4	Notification handler
+35:09.593	ID:4	Observee URI: periodic/motion
+35:09.596	ID:4	NOTIFICATION OK: 1
+35:10.826	ID:4	coap_handle_notification()
+35:10.828	ID:4	Getting token
+35:10.831	ID:4	Getting observee info
+35:10.835	ID:4	Looking for token 0x0100
+35:10.837	ID:4	server replied
+35:10.840	ID:4	Notification handler
+35:10.844	ID:4	Observee URI: periodic/motion
+35:10.847	ID:4	NOTIFICATION OK: 1
+35:11.827	ID:4	coap_handle_notification()
+35:11.829	ID:4	Getting token
+35:11.832	ID:4	Getting observee info
+35:11.836	ID:4	Looking for token 0x0100
+35:11.838	ID:4	server replied
+35:11.841	ID:4	Notification handler
+35:11.845	ID:4	Observee URI: periodic/motion
+35:11.848	ID:4	NOTIFICATION OK: 1
+35:12.317	ID:4	coap_handle_notification()
+35:12.319	ID:4	Getting token
+35:12.322	ID:4	Getting observee info
+35:12.326	ID:4	Looking for token 0x0100
+35:12.328	ID:4	server replied
+35:12.331	ID:4	Notification handler
+35:12.335	ID:4	Observee URI: periodic/motion
+35:12.338	ID:4	NOTIFICATION OK: 1
+35:12.590	ID:4	coap_handle_notification()
+35:12.592	ID:4	Getting token
+35:12.595	ID:4	Getting observee info
+35:12.599	ID:4	Looking for token 0x0100
+35:12.601	ID:4	server replied
+35:12.604	ID:4	Notification handler
+35:12.608	ID:4	Observee URI: periodic/motion
+35:12.611	ID:4	NOTIFICATION OK: 1
+35:13.089	ID:4	coap_handle_notification()
+35:13.091	ID:4	Getting token
+35:13.094	ID:4	Getting observee info
+35:13.098	ID:4	Looking for token 0x0100
+35:13.100	ID:4	server replied
+35:13.103	ID:4	Notification handler
+35:13.107	ID:4	Observee URI: periodic/motion
+35:13.110	ID:4	NOTIFICATION OK: 1
+35:13.340	ID:4	coap_handle_notification()
+35:13.342	ID:4	Getting token
+35:13.345	ID:4	Getting observee info
+35:13.349	ID:4	Looking for token 0x0100
+35:13.351	ID:4	server replied
+35:13.354	ID:4	Notification handler
+35:13.358	ID:4	Observee URI: periodic/motion
+35:13.361	ID:4	NOTIFICATION OK: 1
+35:13.839	ID:4	coap_handle_notification()
+35:13.841	ID:4	Getting token
+35:13.844	ID:4	Getting observee info
+35:13.848	ID:4	Looking for token 0x0100
+35:13.850	ID:4	server replied
+35:13.853	ID:4	Notification handler
+35:13.857	ID:3	P 2695752 31840923 75022 2491485 55169 112138 1843 23323
+35:13.857	ID:4	Observee URI: periodic/motion
+35:13.860	ID:4	NOTIFICATION OK: 1
+35:14.589	ID:4	coap_handle_notification()
+35:14.591	ID:4	Getting token
+35:14.594	ID:4	Getting observee info
+35:14.598	ID:4	Looking for token 0x0100
+35:14.600	ID:4	server replied
+35:14.603	ID:4	Notification handler
+35:14.607	ID:4	Observee URI: periodic/motion
+35:14.610	ID:4	NOTIFICATION OK: 1
+35:15.590	ID:4	coap_handle_notification()
+35:15.592	ID:4	Getting token
+35:15.595	ID:4	Getting observee info
+35:15.599	ID:4	Looking for token 0x0100
+35:15.601	ID:4	server replied
+35:15.604	ID:4	Notification handler
+35:15.608	ID:4	Observee URI: periodic/motion
+35:15.611	ID:4	NOTIFICATION OK: 1
+35:16.089	ID:4	coap_handle_notification()
+35:16.091	ID:4	Getting token
+35:16.094	ID:4	Getting observee info
+35:16.098	ID:4	Looking for token 0x0100
+35:16.100	ID:4	server replied
+35:16.103	ID:4	Notification handler
+35:16.107	ID:4	Observee URI: periodic/motion
+35:16.110	ID:4	NOTIFICATION OK: 1
+35:16.340	ID:4	coap_handle_notification()
+35:16.342	ID:4	Getting token
+35:16.345	ID:4	Getting observee info
+35:16.349	ID:4	Looking for token 0x0100
+35:16.584	ID:4	server replied
+35:16.587	ID:4	Notification handler
+35:16.592	ID:4	Observee URI: periodic/motion
+35:16.594	ID:4	NOTIFICATION OK: 1
+35:17.102	ID:4	coap_handle_notification()
+35:17.104	ID:4	Getting token
+35:17.107	ID:4	Getting observee info
+35:17.111	ID:4	Looking for token 0x0100
+35:17.113	ID:4	server replied
+35:17.116	ID:4	Notification handler
+35:17.120	ID:4	Observee URI: periodic/motion
+35:17.123	ID:4	NOTIFICATION OK: 1
+35:17.371	ID:4	coap_handle_notification()
+35:17.373	ID:4	Getting token
+35:17.376	ID:4	Getting observee info
+35:17.380	ID:4	Looking for token 0x0100
+35:17.382	ID:4	server replied
+35:17.385	ID:4	Notification handler
+35:17.389	ID:4	Observee URI: periodic/motion
+35:17.392	ID:4	NOTIFICATION OK: 1
+35:18.622	ID:4	coap_handle_notification()
+35:18.624	ID:4	Getting token
+35:18.627	ID:4	Getting observee info
+35:18.631	ID:4	Looking for token 0x0100
+35:18.633	ID:4	server replied
+35:18.636	ID:4	Notification handler
+35:18.640	ID:4	Observee URI: periodic/motion
+35:18.643	ID:4	NOTIFICATION OK: 1
+35:19.623	ID:4	coap_handle_notification()
+35:19.625	ID:4	Getting token
+35:19.628	ID:4	Getting observee info
+35:19.632	ID:4	Looking for token 0x0100
+35:19.634	ID:4	server replied
+35:19.637	ID:4	Notification handler
+35:19.641	ID:4	Observee URI: periodic/motion
+35:19.644	ID:4	NOTIFICATION OK: 1
+35:20.124	ID:4	coap_handle_notification()
+35:20.126	ID:4	Getting token
+35:20.129	ID:4	Getting observee info
+35:20.133	ID:4	Looking for token 0x0100
+35:20.135	ID:4	server replied
+35:20.138	ID:4	Notification handler
+35:20.142	ID:4	Observee URI: periodic/motion
+35:20.145	ID:4	NOTIFICATION OK: 1
+35:20.364	ID:4	coap_handle_notification()
+35:20.366	ID:4	Getting token
+35:20.369	ID:4	Getting observee info
+35:20.373	ID:4	Looking for token 0x0100
+35:20.375	ID:4	server replied
+35:20.378	ID:4	Notification handler
+35:20.382	ID:4	Observee URI: periodic/motion
+35:20.385	ID:4	NOTIFICATION OK: 1
+35:20.887	ID:4	coap_handle_notification()
+35:20.889	ID:4	Getting token
+35:20.892	ID:4	Getting observee info
+35:20.896	ID:4	Looking for token 0x0100
+35:21.351	ID:4	server replied
+35:21.354	ID:4	Notification handler
+35:21.358	ID:4	Observee URI: periodic/motion
+35:21.361	ID:4	NOTIFICATION OK: 1
+35:21.617	ID:4	coap_handle_notification()
+35:21.619	ID:4	Getting token
+35:21.622	ID:4	Getting observee info
+35:21.626	ID:4	Looking for token 0x0100
+35:21.628	ID:4	server replied
+35:21.631	ID:4	Notification handler
+35:21.635	ID:4	Observee URI: periodic/motion
+35:21.638	ID:4	NOTIFICATION OK: 1
+35:21.890	ID:4	coap_handle_notification()
+35:21.892	ID:4	Getting token
+35:21.895	ID:4	Getting observee info
+35:21.899	ID:4	Looking for token 0x0100
+35:21.901	ID:4	server replied
+35:21.904	ID:4	Notification handler
+35:21.908	ID:4	Observee URI: periodic/motion
+35:21.911	ID:4	NOTIFICATION OK: 1
+35:22.880	ID:4	coap_handle_notification()
+35:22.882	ID:4	Getting token
+35:22.885	ID:4	Getting observee info
+35:22.889	ID:4	Looking for token 0x0100
+35:22.891	ID:4	server replied
+35:22.894	ID:4	Notification handler
+35:22.898	ID:4	Observee URI: periodic/motion
+35:22.901	ID:4	NOTIFICATION OK: 1
+35:23.403	ID:4	coap_handle_notification()
+35:23.405	ID:4	Getting token
+35:23.408	ID:4	Getting observee info
+35:23.412	ID:4	Looking for token 0x0100
+35:23.414	ID:4	server replied
+35:23.417	ID:4	Notification handler
+35:23.421	ID:4	Observee URI: periodic/motion
+35:23.424	ID:4	NOTIFICATION OK: 1
+35:23.654	ID:4	coap_handle_notification()
+35:23.656	ID:4	Getting token
+35:23.659	ID:4	Getting observee info
+35:23.663	ID:4	Looking for token 0x0100
+35:23.665	ID:4	server replied
+35:23.668	ID:4	Notification handler
+35:23.671	ID:3	P 2753036 31944306 77137 2517231 57282 103383 2115 25743
+35:23.672	ID:4	Observee URI: periodic/motion
+35:23.675	ID:4	NOTIFICATION OK: 1
+35:23.836	ID:4	Ask for current temperature
+35:24.430	ID:4	t=14, h=252, therm_l=19, therm_h=25, therm_sw=0
+35:24.434	ID:4	COOOOOLD! -> switch on thermostat
+35:24.920	ID:3	thermostat low 19
+35:24.923	ID:3	thermostat high 25
+35:24.926	ID:3	thermostat switch1
+35:25.164	ID:4	Temperature got
+35:25.668	ID:4	coap_handle_notification()
+35:25.670	ID:4	Getting token
+35:25.673	ID:4	Getting observee info
+35:25.677	ID:4	Looking for token 0x0100
+35:25.679	ID:4	server replied
+35:25.682	ID:4	Notification handler
+35:25.686	ID:4	Observee URI: periodic/motion
+35:25.689	ID:4	NOTIFICATION OK: 1
+35:26.169	ID:4	coap_handle_notification()
+35:26.171	ID:4	Getting token
+35:26.174	ID:4	Getting observee info
+35:26.178	ID:4	Looking for token 0x0100
+35:26.180	ID:4	server replied
+35:26.183	ID:4	Notification handler
+35:26.187	ID:4	Observee URI: periodic/motion
+35:26.190	ID:4	NOTIFICATION OK: 1
+35:26.420	ID:4	coap_handle_notification()
+35:26.422	ID:4	Getting token
+35:26.425	ID:4	Getting observee info
+35:26.429	ID:4	Looking for token 0x0100
+35:26.431	ID:4	server replied
+35:26.434	ID:4	Notification handler
+35:26.438	ID:4	Observee URI: periodic/motion
+35:26.441	ID:4	NOTIFICATION OK: 1
+35:26.921	ID:4	coap_handle_notification()
+35:26.923	ID:4	Getting token
+35:26.926	ID:4	Getting observee info
+35:26.930	ID:4	Looking for token 0x0100
+35:26.932	ID:4	server replied
+35:26.935	ID:4	Notification handler
+35:26.939	ID:4	Observee URI: periodic/motion
+35:26.942	ID:4	NOTIFICATION OK: 1
+35:27.161	ID:4	coap_handle_notification()
+35:27.163	ID:4	Getting token
+35:27.166	ID:4	Getting observee info
+35:27.170	ID:4	Looking for token 0x0100
+35:27.404	ID:4	server replied
+35:27.407	ID:4	Notification handler
+35:27.411	ID:4	Observee URI: periodic/motion
+35:27.414	ID:4	NOTIFICATION OK: 1
+35:27.913	ID:4	coap_handle_notification()
+35:27.914	ID:4	Getting token
+35:27.918	ID:4	Getting observee info
+35:27.921	ID:4	Looking for token 0x0100
+35:27.923	ID:4	server replied
+35:27.926	ID:4	Notification handler
+35:27.931	ID:4	Observee URI: periodic/motion
+35:27.933	ID:4	NOTIFICATION OK: 1
+35:29.185	ID:4	coap_handle_notification()
+35:29.187	ID:4	Getting token
+35:29.190	ID:4	Getting observee info
+35:29.194	ID:4	Looking for token 0x0100
+35:29.196	ID:4	server replied
+35:29.199	ID:4	Notification handler
+35:29.204	ID:4	Observee URI: periodic/motion
+35:29.206	ID:4	NOTIFICATION OK: 1
+35:29.436	ID:4	coap_handle_notification()
+35:29.438	ID:4	Getting token
+35:29.441	ID:4	Getting observee info
+35:29.445	ID:4	Looking for token 0x0100
+35:29.447	ID:4	server replied
+35:29.450	ID:4	Notification handler
+35:29.455	ID:4	Observee URI: periodic/motion
+35:29.457	ID:4	NOTIFICATION OK: 1
+35:29.927	ID:4	coap_handle_notification()
+35:29.929	ID:4	Getting token
+35:29.932	ID:4	Getting observee info
+35:29.935	ID:4	Looking for token 0x0100
+35:29.938	ID:4	server replied
+35:29.941	ID:4	Notification handler
+35:29.945	ID:4	Observee URI: periodic/motion
+35:29.947	ID:4	NOTIFICATION OK: 1
+35:30.199	ID:4	coap_handle_notification()
+35:30.201	ID:4	Getting token
+35:30.205	ID:4	Getting observee info
+35:30.208	ID:4	Looking for token 0x0100
+35:30.210	ID:4	server replied
+35:30.213	ID:4	Notification handler
+35:30.218	ID:4	Observee URI: periodic/motion
+35:30.220	ID:4	NOTIFICATION OK: 1
+35:30.700	ID:4	coap_handle_notification()
+35:30.702	ID:4	Getting token
+35:30.706	ID:4	Getting observee info
+35:30.709	ID:4	Looking for token 0x0100
+35:30.711	ID:4	server replied
+35:30.714	ID:4	Notification handler
+35:30.719	ID:4	Observee URI: periodic/motion
+35:30.721	ID:4	NOTIFICATION OK: 1
+35:30.952	ID:4	coap_handle_notification()
+35:30.954	ID:4	Getting token
+35:30.957	ID:4	Getting observee info
+35:30.960	ID:4	Looking for token 0x0100
+35:30.963	ID:4	server replied
+35:30.966	ID:4	Notification handler
+35:30.970	ID:4	Observee URI: periodic/motion
+35:30.973	ID:4	NOTIFICATION OK: 1
+35:31.703	ID:4	coap_handle_notification()
+35:31.705	ID:4	Getting token
+35:31.708	ID:4	Getting observee info
+35:31.712	ID:4	Looking for token 0x0100
+35:31.714	ID:4	server replied
+35:31.717	ID:4	Notification handler
+35:31.721	ID:4	Observee URI: periodic/motion
+35:31.724	ID:4	NOTIFICATION OK: 1
+35:32.193	ID:4	coap_handle_notification()
+35:32.195	ID:4	Getting token
+35:32.198	ID:4	Getting observee info
+35:32.202	ID:4	Looking for token 0x0100
+35:32.449	ID:4	server replied
+35:32.451	ID:4	Notification handler
+35:32.456	ID:4	Observee URI: periodic/motion
+35:32.459	ID:4	NOTIFICATION OK: 1
+35:32.716	ID:4	coap_handle_notification()
+35:32.718	ID:4	Getting token
+35:32.721	ID:4	Getting observee info
+35:32.725	ID:4	Looking for token 0x0100
+35:32.727	ID:4	server replied
+35:32.730	ID:4	Notification handler
+35:32.734	ID:4	Observee URI: periodic/motion
+35:32.737	ID:4	NOTIFICATION OK: 1
+35:32.967	ID:4	coap_handle_notification()
+35:32.969	ID:4	Getting token
+35:32.972	ID:4	Getting observee info
+35:32.976	ID:4	Looking for token 0x0100
+35:32.978	ID:4	server replied
+35:32.981	ID:4	Notification handler
+35:32.985	ID:4	Observee URI: periodic/motion
+35:32.988	ID:4	NOTIFICATION OK: 1
+35:33.636	ID:3	P 2811786 32048689 78532 2533559 58748 104383 1395 16325
+35:34.468	ID:4	coap_handle_notification()
+35:34.470	ID:4	Getting token
+35:34.473	ID:4	Getting observee info
+35:34.477	ID:4	Looking for token 0x0100
+35:34.479	ID:4	server replied
+35:34.482	ID:4	Notification handler
+35:34.486	ID:4	Observee URI: periodic/motion
+35:34.489	ID:4	NOTIFICATION OK: 1
+35:35.208	ID:4	coap_handle_notification()
+35:35.210	ID:4	Getting token
+35:35.213	ID:4	Getting observee info
+35:35.217	ID:4	Looking for token 0x0100
+35:35.219	ID:4	server replied
+35:35.222	ID:4	Notification handler
+35:35.226	ID:4	Observee URI: periodic/motion
+35:35.229	ID:4	NOTIFICATION OK: 1
+35:35.981	ID:4	coap_handle_notification()
+35:35.983	ID:4	Getting token
+35:35.986	ID:4	Getting observee info
+35:35.990	ID:4	Looking for token 0x0100
+35:35.992	ID:4	server replied
+35:35.995	ID:4	Notification handler
+35:35.999	ID:4	Observee URI: periodic/motion
+35:36.002	ID:4	NOTIFICATION OK: 1
+35:36.482	ID:4	coap_handle_notification()
+35:36.484	ID:4	Getting token
+35:36.487	ID:4	Getting observee info
+35:36.491	ID:4	Looking for token 0x0100
+35:36.493	ID:4	server replied
+35:36.496	ID:4	Notification handler
+35:36.500	ID:4	Observee URI: periodic/motion
+35:36.503	ID:4	NOTIFICATION OK: 1
+35:36.733	ID:4	coap_handle_notification()
+35:36.735	ID:4	Getting token
+35:36.738	ID:4	Getting observee info
+35:36.742	ID:4	Looking for token 0x0100
+35:36.744	ID:4	server replied
+35:36.747	ID:4	Notification handler
+35:36.751	ID:4	Observee URI: periodic/motion
+35:36.754	ID:4	NOTIFICATION OK: 1
+35:37.223	ID:4	coap_handle_notification()
+35:37.225	ID:4	Getting token
+35:37.229	ID:4	Getting observee info
+35:37.232	ID:4	Looking for token 0x0100
+35:37.234	ID:4	server replied
+35:37.237	ID:4	Notification handler
+35:37.242	ID:4	Observee URI: periodic/motion
+35:37.244	ID:4	NOTIFICATION OK: 1
+35:37.496	ID:4	coap_handle_notification()
+35:37.498	ID:4	Getting token
+35:37.501	ID:4	Getting observee info
+35:37.505	ID:4	Looking for token 0x0100
+35:37.507	ID:4	server replied
+35:37.510	ID:4	Notification handler
+35:37.515	ID:4	Observee URI: periodic/motion
+35:37.517	ID:4	NOTIFICATION OK: 1
+35:37.997	ID:4	coap_handle_notification()
+35:37.999	ID:4	Getting token
+35:38.003	ID:4	Getting observee info
+35:38.006	ID:4	Looking for token 0x0100
+35:38.008	ID:4	server replied
+35:38.011	ID:4	Notification handler
+35:38.016	ID:4	Observee URI: periodic/motion
+35:38.018	ID:4	NOTIFICATION OK: 1
+35:38.748	ID:4	coap_handle_notification()
+35:38.750	ID:4	Getting token
+35:38.754	ID:4	Getting observee info
+35:38.757	ID:4	Looking for token 0x0100
+35:38.759	ID:4	server replied
+35:38.762	ID:4	Notification handler
+35:38.767	ID:4	Observee URI: periodic/motion
+35:38.769	ID:4	NOTIFICATION OK: 1
+35:39.000	ID:4	coap_handle_notification()
+35:39.002	ID:4	Getting token
+35:39.005	ID:4	Getting observee info
+35:39.008	ID:4	Looking for token 0x0100
+35:39.011	ID:4	server replied
+35:39.014	ID:4	Notification handler
+35:39.018	ID:4	Observee URI: periodic/motion
+35:39.021	ID:4	NOTIFICATION OK: 1
+35:39.430	ID:4	Ask for current temperature
+35:39.775	ID:4	t=15, h=252, therm_l=19, therm_h=25, therm_sw=1
+35:40.270	ID:4	Temperature got
+35:41.025	ID:4	coap_handle_notification()
+35:41.027	ID:4	Getting token
+35:41.030	ID:4	Getting observee info
+35:41.034	ID:4	Looking for token 0x0100
+35:41.036	ID:4	server replied
+35:41.039	ID:4	Notification handler
+35:41.043	ID:4	Observee URI: periodic/motion
+35:41.046	ID:4	NOTIFICATION OK: 1
+35:41.537	ID:4	coap_handle_notification()
+35:41.539	ID:4	Getting token
+35:41.542	ID:4	Getting observee info
+35:41.546	ID:4	Looking for token 0x0100
+35:41.548	ID:4	server replied
+35:41.551	ID:4	Notification handler
+35:41.555	ID:4	Observee URI: periodic/motion
+35:41.558	ID:4	NOTIFICATION OK: 1
+35:42.059	ID:4	LIGHT VALUE: 200
+35:42.061	ID:4	LL Watch lights
+35:42.063	ID:4	LL enough light
+35:42.068	ID:4	STOP_OBSERVE Stopping observation
+35:42.072	ID:4	LL Stop motion observation
+35:42.079	ID:4	Removing obs_subject for /periodic/motion [0x0100]
+35:42.085	ID:4	Event data: 0;0;, Selected index: 0
+35:42.094	ID:4	Toggle actuators/light_bulb with parameters: ?light_value=0;
+35:42.311	ID:3	Turn off lights
+35:42.570	ID:4	TOGGLE WORKS!!!
+35:43.324	ID:4	coap_handle_notification()
+35:43.326	ID:4	Getting token
+35:43.329	ID:4	Getting observee info
+35:43.339	ID:4	Error while handling coap observe notification: no matching token found
+35:43.636	ID:3	P 2867196 32156970 79905 2550718 55408 108281 1373 17159
+35:53.634	ID:3	P 2869997 32317818 79905 2560847 2799 160848 0 10129
+35:55.024	ID:4	Ask for current temperature
+35:55.338	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=1
+35:55.343	ID:4	HOOOOOOOOOT! -> switch off thermostat
+35:55.578	ID:3	thermostat low 19
+35:55.581	ID:3	thermostat high 25
+35:55.584	ID:3	thermostat switch0
+35:55.821	ID:4	Temperature got
+36:03.636	ID:3	P 2880972 32470494 80053 2571512 10973 152676 148 10665
+36:10.617	ID:4	Ask for current temperature
+36:11.166	ID:4	t=26, h=252, therm_l=19, therm_h=25, therm_sw=0
+36:11.650	ID:4	Temperature got
+36:13.636	ID:3	P 2896969 32618158 81252 2583034 15995 147664 1199 11522
+36:23.634	ID:3	P 2899756 32779010 81252 2593287 2785 160852 0 10253
+36:26.211	ID:4	Ask for current temperature
+36:26.679	ID:4	t=15, h=252, therm_l=19, therm_h=25, therm_sw=0
+36:26.684	ID:4	COOOOOLD! -> switch on thermostat
+36:26.920	ID:3	thermostat low 19
+36:26.923	ID:3	thermostat high 25
+36:26.925	ID:3	thermostat switch1
+36:27.163	ID:4	Temperature got
+36:33.636	ID:3	P 2910905 32931513 81413 2604028 11147 152503 161 10741
+36:41.805	ID:4	Ask for current temperature
+36:42.182	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=1
+36:42.187	ID:4	HOOOOOOOOOT! -> switch off thermostat
+36:42.422	ID:3	thermostat low 19
+36:42.425	ID:3	thermostat high 25
+36:42.428	ID:3	thermostat switch0
+36:42.665	ID:4	Temperature got
+36:43.636	ID:3	P 2922080 33083994 81562 2614869 11173 152481 149 10841
+36:53.634	ID:3	P 2924866 33244858 81562 2624991 2784 160864 0 10122
+36:57.399	ID:4	Ask for current temperature
+36:57.673	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=0
+36:58.179	ID:4	Temperature got
+37:03.636	ID:3	P 2935932 33397459 81725 2635554 11064 152601 163 10563
+37:12.993	ID:4	Ask for current temperature
+37:13.447	ID:4	t=14, h=252, therm_l=19, therm_h=25, therm_sw=0
+37:13.452	ID:4	COOOOOLD! -> switch on thermostat
+37:13.635	ID:3	P 2943052 33553999 81807 2645947 7118 156540 82 10393
+37:13.685	ID:3	thermostat low 19
+37:13.688	ID:3	thermostat high 25
+37:13.691	ID:3	thermostat switch1
+37:13.930	ID:4	Temperature got
+37:23.635	ID:3	P 2949947 33710759 81873 2656080 6893 156760 66 10133
+37:28.586	ID:4	Ask for current temperature
+37:28.950	ID:4	t=13, h=252, therm_l=19, therm_h=25, therm_sw=1
+37:29.446	ID:4	Temperature got
+37:33.636	ID:3	P 2961430 33862936 82320 2670184 11481 152177 447 14104
+37:43.634	ID:3	P 2964224 34023799 82320 2680437 2792 160863 0 10253
+37:44.180	ID:4	Ask for current temperature
+37:44.694	ID:4	t=18, h=252, therm_l=19, therm_h=25, therm_sw=1
+37:45.188	ID:4	Temperature got
+37:53.636	ID:3	P 2975251 34176433 82454 2690937 11025 152634 134 10500
+37:59.774	ID:4	Ask for current temperature
+38:00.219	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=1
+38:00.224	ID:4	HOOOOOOOOOT! -> switch off thermostat
+38:00.463	ID:3	thermostat low 19
+38:00.466	ID:3	thermostat high 25
+38:00.469	ID:3	thermostat switch0
+38:00.724	ID:4	Temperature got
+38:03.636	ID:3	P 2986784 34328553 82644 2701900 11531 152120 190 10963
+38:13.635	ID:3	P 2994599 34484388 83602 2711759 7813 155835 958 9859
+38:15.367	ID:4	Ask for current temperature
+38:15.938	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=0
+38:16.432	ID:4	Temperature got
+38:23.636	ID:3	P 3005966 34636676 84003 2725290 11365 152288 401 13531
+38:30.961	ID:4	Ask for current temperature
+38:31.452	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=0
+38:31.945	ID:4	Temperature got
+38:33.636	ID:3	P 3017524 34788779 84447 2739304 11556 152103 444 14014
+38:43.634	ID:3	P 3020335 34949621 84447 2749557 2809 160842 0 10253
+38:46.555	ID:4	Ask for current temperature
+38:46.953	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=0
+38:47.447	ID:4	Temperature got
+38:53.636	ID:3	P 3031515 35102107 84597 2759966 11178 152486 150 10409
+39:02.149	ID:4	Ask for current temperature
+39:02.467	ID:4	t=17, h=252, therm_l=19, therm_h=25, therm_sw=0
+39:02.471	ID:4	COOOOOLD! -> switch on thermostat
+39:02.700	ID:3	thermostat low 19
+39:02.703	ID:3	thermostat high 25
+39:02.706	ID:3	thermostat switch1
+39:02.961	ID:4	Temperature got
+39:03.636	ID:3	P 3043034 35254248 84757 2770664 11517 152141 160 10698
+39:13.635	ID:3	P 3045846 35415093 84757 2780917 2810 160845 0 10253
+39:17.742	ID:4	Ask for current temperature
+39:18.218	ID:4	t=16, h=252, therm_l=19, therm_h=25, therm_sw=1
+39:18.712	ID:4	Temperature got
+39:23.636	ID:3	P 3057186 35567417 84906 2791330 11338 152324 149 10413
+39:33.336	ID:4	Ask for current temperature
+39:33.732	ID:4	t=23, h=252, therm_l=19, therm_h=25, therm_sw=1
+39:33.744	ID:3	P 3064382 35725656 84988 2801975 7194 158239 82 10645
+39:34.226	ID:4	Temperature got
+39:43.635	ID:3	P 3071517 35880389 85349 2815453 7132 154733 361 13478
+39:48.930	ID:4	Ask for current temperature
+39:49.234	ID:4	t=16, h=252, therm_l=19, therm_h=25, therm_sw=1
+39:49.740	ID:4	Temperature got
+39:53.636	ID:3	P 3083054 36032510 85790 2829511 11535 152121 441 14058
+40:03.635	ID:3	P 3085859 36193360 85790 2839632 2803 160850 0 10121
+40:04.524	ID:4	Ask for current temperature
+40:12.432	ID:4	t=18, h=252, therm_l=19, therm_h=25, therm_sw=1
+40:12.434	ID:4	LL Stop work 1 
+40:12.438	ID:4	STOP_WORK Stop working!
+40:12.443	ID:4	START_OBSERVE Starting observation with
+40:12.447	ID:4	LL Start motion observation
+40:12.455	ID:4	Adding obs_subject for /periodic/motion [0x0200]
+40:12.914	ID:4	Temperature gotEvent data: 2;0;, Selected index: 2
+40:12.921	ID:4	Toggle periodic/motion with parameters: ?at_work=0;
+40:13.174	ID:4	handle_obs_registration_response(): server replied
+40:13.177	ID:4	Notification handler
+40:13.181	ID:4	Observee URI: periodic/motion
+40:13.183	ID:4	OBSERVE_OK: 0
+40:13.185	ID:4	New motion: 0
+40:13.421	ID:4	coap_handle_notification()
+40:13.423	ID:4	Getting token
+40:13.426	ID:4	Getting observee info
+40:13.430	ID:4	Looking for token 0x0200
+40:13.432	ID:4	server replied
+40:13.435	ID:4	Notification handler
+40:13.440	ID:4	Observee URI: periodic/motion
+40:13.442	ID:4	NOTIFICATION OK: 1
+40:13.662	ID:4	coap_handle_notification()
+40:13.664	ID:4	Getting token
+40:13.667	ID:4	Getting observee info
+40:13.670	ID:4	Looking for token 0x0200
+40:13.909	ID:4	server replied
+40:13.912	ID:4	Notification handler
+40:13.917	ID:4	Observee URI: periodic/motion
+40:13.919	ID:4	NOTIFICATION OK: 1
+40:14.163	ID:4	coap_handle_notification()
+40:14.165	ID:4	Getting token
+40:14.168	ID:4	Getting observee info
+40:14.172	ID:4	Looking for token 0x0200
+40:14.174	ID:4	server replied
+40:14.177	ID:4	Notification handler
+40:14.180	ID:3	P 3125811 36325991 87964 2860691 39950 132631 2174 21059
+40:14.182	ID:4	Observee URI: periodic/motion
+40:14.184	ID:4	NOTIFICATION OK: 1
+40:14.436	ID:4	coap_handle_notification()
+40:14.438	ID:4	Getting token
+40:14.441	ID:4	Getting observee info
+40:14.445	ID:4	Looking for token 0x0200
+40:14.447	ID:4	server replied
+40:14.450	ID:4	Notification handler
+40:14.455	ID:4	Observee URI: periodic/motion
+40:14.457	ID:4	NOTIFICATION OK: 1
+40:14.677	ID:4	coap_handle_notification()
+40:14.679	ID:4	Getting token
+40:14.682	ID:4	Getting observee info
+40:14.685	ID:4	Looking for token 0x0200
+40:14.688	ID:4	server replied
+40:14.691	ID:4	Notification handler
+40:14.695	ID:4	Observee URI: periodic/motion
+40:14.697	ID:4	NOTIFICATION OK: 1
+40:15.699	ID:4	coap_handle_notification()
+40:15.701	ID:4	Getting token
+40:15.705	ID:4	Getting observee info
+40:15.708	ID:4	Looking for token 0x0200
+40:15.710	ID:4	server replied
+40:15.713	ID:4	Notification handler
+40:15.718	ID:4	Observee URI: periodic/motion
+40:15.720	ID:4	NOTIFICATION OK: 1
+40:18.451	ID:4	coap_handle_notification()
+40:18.453	ID:4	Getting token
+40:18.456	ID:4	Getting observee info
+40:18.459	ID:4	Looking for token 0x0200
+40:18.462	ID:4	server replied
+40:18.465	ID:4	Notification handler
+40:18.469	ID:4	Observee URI: periodic/motion
+40:18.471	ID:4	NOTIFICATION OK: 1
+40:18.702	ID:4	coap_handle_notification()
+40:18.704	ID:4	Getting token
+40:18.707	ID:4	Getting observee info
+40:18.711	ID:4	Looking for token 0x0200
+40:18.713	ID:4	server replied
+40:18.716	ID:4	Notification handler
+40:18.720	ID:4	Observee URI: periodic/motion
+40:18.723	ID:4	NOTIFICATION OK: 1
+40:19.203	ID:4	coap_handle_notification()
+40:19.205	ID:4	Getting token
+40:19.208	ID:4	Getting observee info
+40:19.212	ID:4	Looking for token 0x0200
+40:19.214	ID:4	server replied
+40:19.217	ID:4	Notification handler
+40:19.221	ID:4	Observee URI: periodic/motion
+40:19.224	ID:4	NOTIFICATION OK: 1
+40:19.943	ID:4	coap_handle_notification()
+40:19.945	ID:4	Getting token
+40:19.948	ID:4	Getting observee info
+40:19.952	ID:4	Looking for token 0x0200
+40:20.179	ID:4	server replied
+40:20.182	ID:4	Notification handler
+40:20.186	ID:4	Observee URI: periodic/motion
+40:20.189	ID:4	NOTIFICATION OK: 1
+40:20.692	ID:3	At work flag is: 0;iled!!!!hermostat_high=25&thermostat_switch=1=1 from now on
+40:23.636	ID:3	P 3156911 36449680 88836 2875705 31098 123689 872 15014
+40:33.635	ID:3	P 3159747 36610494 88836 2885960 2834 160814 0 10255
+40:35.932	ID:3	At work flag is: 0;iled!!!!hermostat_high=25&thermostat_switch=1=1 from now on
+40:36.411	ID:4	TOGGLE WORKS!!!
+40:37.660	ID:4	
+40:37.664	ID:4	Ask for current temperature
+40:38.157	ID:4	t=15, h=252, therm_l=19, therm_h=25, therm_sw=1
+40:38.673	ID:4	Temperature got
+40:38.677	ID:4	Ask for current temperature
+40:39.171	ID:4	t=217, h=252, therm_l=19, therm_h=25, therm_sw=1
+40:39.176	ID:4	HOOOOOOOOOT! -> switch off thermostat
+40:39.411	ID:3	thermostat low 15
+40:39.414	ID:3	thermostat high 17
+40:39.417	ID:3	thermostat switch0
+40:39.664	ID:4	Temperature got
+40:43.636	ID:3	P 3191415 36742510 89565 2900894 31666 132016 729 14934
+40:51.305	ID:4	Ask for current temperature
+40:51.684	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+40:52.178	ID:4	Temperature got
+40:53.636	ID:3	P 3202642 36894953 89727 2911539 11225 152443 162 10645
+41:03.635	ID:3	P 3205477 37055778 89727 2921651 2833 160825 0 10112
+41:06.899	ID:4	Ask for current temperature
+41:07.187	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+41:07.681	ID:4	Temperature got
+41:13.636	ID:3	P 3216858 37208065 90161 2935453 11379 152287 434 13802
+41:22.492	ID:4	Ask for current temperature
+41:22.939	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+41:23.444	ID:4	Temperature got
+41:23.636	ID:3	P 3228267 37360326 90326 2945951 11407 152261 165 10498
+41:33.635	ID:3	P 3231102 37521151 90326 2956063 2833 160825 0 10112
+41:38.086	ID:4	Ask for current temperature
+41:38.452	ID:4	t=12, h=252, therm_l=15, therm_h=17, therm_sw=0
+41:38.457	ID:4	COOOOOLD! -> switch on thermostat
+41:38.686	ID:3	thermostat low 15
+41:38.689	ID:3	thermostat high 17
+41:38.692	ID:3	thermostat switch1
+41:38.946	ID:4	Temperature got
+41:43.636	ID:3	P 3242672 37673248 90472 2966751 11568 152097 146 10688
+41:53.635	ID:3	P 3245501 37834081 90472 2976873 2827 160833 0 10122
+41:53.681	ID:4	Ask for current temperature
+41:54.215	ID:4	t=25, h=252, therm_l=15, therm_h=17, therm_sw=1
+41:54.221	ID:4	HOOOOOOOOOT! -> switch off thermostat
+41:54.471	ID:3	thermostat low 15
+41:54.474	ID:3	thermostat high 17
+41:54.477	ID:3	thermostat switch0
+41:54.720	ID:4	Temperature got
+42:03.636	ID:3	P 3256556 37986680 90645 2988043 11053 152599 173 11170
+42:09.274	ID:4	Ask for current temperature
+42:09.936	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+42:10.430	ID:4	Temperature got
+42:13.636	ID:3	P 3273154 38133747 92293 3004583 16596 147067 1648 16540
+42:23.635	ID:3	P 3275987 38294563 92293 3014836 2831 160816 0 10253
+42:24.867	ID:4	Ask for current temperature
+42:25.187	ID:4	t=14, h=252, therm_l=15, therm_h=17, therm_sw=0
+42:25.192	ID:4	COOOOOLD! -> switch on thermostat
+42:25.432	ID:3	thermostat low 15
+42:25.435	ID:3	thermostat high 17
+42:25.438	ID:3	thermostat switch1
+42:25.693	ID:4	Temperature got
+42:33.636	ID:3	P 3287518 38446698 92455 3025417 11529 152135 162 10581
+42:40.461	ID:4	Ask for current temperature
+42:40.951	ID:4	t=25, h=252, therm_l=15, therm_h=17, therm_sw=1
+42:40.956	ID:4	HOOOOOOOOOT! -> switch off thermostat
+42:41.184	ID:3	thermostat low 15
+42:41.187	ID:3	thermostat high 17
+42:41.190	ID:3	thermostat switch0
+42:41.445	ID:4	Temperature got
+42:43.094	ID:1	# [1024 bytes, no line ending]: ?P?P?P?P?P...
+42:43.636	ID:3	P 3299083 38598800 92601 3035814 11563 152102 146 10397
+42:53.635	ID:3	P 3301910 38759634 92601 3045936 2825 160834 0 10122
+42:56.055	ID:4	Ask for current temperature
+42:56.453	ID:4	t=14, h=252, therm_l=15, therm_h=17, therm_sw=0
+42:56.457	ID:4	COOOOOLD! -> switch on thermostat
+42:56.697	ID:3	thermostat low 15
+42:56.700	ID:3	thermostat high 17
+42:56.703	ID:3	thermostat switch1
+42:56.958	ID:4	Temperature got
+43:03.636	ID:3	P 3313458 38911748 92762 3056570 11546 152114 161 10634
+43:11.649	ID:4	Ask for current temperature
+43:11.966	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=1
+43:11.972	ID:4	HOOOOOOOOOT! -> switch off thermostat
+43:12.200	ID:3	thermostat low 15
+43:12.203	ID:3	thermostat high 17
+43:12.205	ID:3	thermostat switch0
+43:12.460	ID:4	Temperature got
+43:13.636	ID:3	P 3325026 39063839 92909 3067073 11566 152091 147 10503
+43:23.634	ID:3	P 3327852 39224662 92909 3077326 2824 160823 0 10253
+43:27.243	ID:4	Ask for current temperature
+43:27.718	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+43:28.211	ID:4	Temperature got
+43:33.636	ID:3	P 3339426 39376756 93340 3091237 11572 152094 431 13911
+43:42.836	ID:4	Ask for current temperature
+43:43.219	ID:4	t=15, h=252, therm_l=15, therm_h=17, therm_sw=0
+43:43.714	ID:4	Temperature got
+43:43.734	ID:3	P 3350668 39530795 93489 3101812 11240 154039 149 10575
+43:53.634	ID:3	P 3353467 39690050 93489 3111677 2797 159255 0 9865
+43:58.430	ID:4	Ask for current temperature
+43:58.711	ID:4	t=16, h=252, therm_l=15, therm_h=17, therm_sw=0
+43:59.194	ID:4	Temperature got
+44:03.636	ID:3	P 3364444 39842741 93609 3121678 10975 152691 120 10001
+44:13.635	ID:3	P 3372255 39998587 94567 3131602 7809 155846 958 9924
+44:14.024	ID:4	Ask for current temperature
+44:14.683	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+44:15.166	ID:4	Temperature got
+44:23.636	ID:3	P 3383315 40151189 94969 3145329 11058 152602 402 13727
+44:29.617	ID:4	Ask for current temperature
+44:29.936	ID:4	t=25, h=252, therm_l=15, therm_h=17, therm_sw=0
+44:30.440	ID:4	Temperature got
+44:33.636	ID:3	P 3394752 40303422 95144 3156241 11435 152233 175 10912
+44:43.635	ID:3	P 3404273 40457563 95296 3166659 9519 154141 152 10418
+44:45.211	ID:4	Ask for current temperature
+44:45.701	ID:4	t=16, h=252, therm_l=15, therm_h=17, therm_sw=0
+44:46.206	ID:4	Temperature got
+44:53.636	ID:3	P 3415686 40609812 95457 3177421 11411 152249 161 10762
+45:00.805	ID:4	Ask for current temperature
+45:01.213	ID:4	t=13, h=252, therm_l=15, therm_h=17, therm_sw=0
+45:01.218	ID:4	COOOOOLD! -> switch on thermostat
+45:01.453	ID:3	thermostat low 15
+45:01.456	ID:3	thermostat high 17
+45:01.459	ID:3	thermostat switch1
+45:01.697	ID:4	Temperature got
+45:03.636	ID:3	P 3426906 40762253 95589 3188085 11218 152441 132 10664
+45:13.635	ID:3	P 3429747 40923073 95589 3198206 2839 160820 0 10121
+45:16.399	ID:4	Ask for current temperature
+45:16.727	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=1
+45:16.732	ID:4	HOOOOOOOOOT! -> switch off thermostat
+45:16.966	ID:3	thermostat low 15
+45:16.969	ID:3	thermostat high 17
+45:16.972	ID:3	thermostat switch0
+45:17.211	ID:4	Temperature got
+45:23.636	ID:3	P 3440941 41075549 95752 3208812 11192 152476 163 10606
+45:31.992	ID:4	Ask for current temperature
+45:32.479	ID:4	t=22, h=252, therm_l=15, therm_h=17, therm_sw=0
+45:32.962	ID:4	Temperature got
+45:33.636	ID:3	P 3452206 41227952 95899 3219489 11263 152403 147 10677
+45:43.635	ID:3	P 3455045 41388762 95899 3229742 2837 160810 0 10253
+45:47.586	ID:4	Ask for current temperature
+45:47.992	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+45:48.476	ID:4	Temperature got
+45:53.636	ID:3	P 3466261 41541213 96060 3240321 11214 152451 161 10579
+46:03.180	ID:4	Ask for current temperature
+46:03.484	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+46:03.635	ID:3	P 3473401 41697739 96129 3250690 7138 156526 69 10369
+46:03.989	ID:4	Temperature got
+46:13.636	ID:3	P 3485529 41849271 97178 3260736 12126 151532 1049 10046
+46:18.774	ID:4	Ask for current temperature
+46:19.432	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+46:19.915	ID:4	Temperature got
+46:23.636	ID:3	P 3496762 42001699 97540 3273923 11231 152428 362 13187
+46:33.634	ID:3	P 3499597 42162514 97540 3284178 2833 160815 0 10255
+46:34.368	ID:4	Ask for current temperature
+46:34.685	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+46:35.189	ID:4	Temperature got
+46:43.636	ID:3	P 3511024 42314753 97717 3294995 11425 152239 177 10817
+46:49.961	ID:4	Ask for current temperature
+46:50.447	ID:4	t=13, h=252, therm_l=15, therm_h=17, therm_sw=0
+46:50.452	ID:4	COOOOOLD! -> switch on thermostat
+46:50.686	ID:3	thermostat low 15
+46:50.689	ID:3	thermostat high 17
+46:50.692	ID:3	thermostat switch1
+46:50.930	ID:4	Temperature got
+46:53.636	ID:3	P 3522253 42467189 97850 3305561 11227 152436 133 10566
+47:03.634	ID:3	P 3525087 42628002 97850 3315816 2832 160813 0 10255
+47:05.555	ID:4	Ask for current temperature
+47:05.950	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=1
+47:05.956	ID:4	HOOOOOOOOOT! -> switch off thermostat
+47:06.188	ID:3	thermostat low 15
+47:06.191	ID:3	thermostat high 17
+47:06.194	ID:3	thermostat switch0
+47:06.444	ID:4	Temperature got
+47:13.636	ID:3	P 3536310 42780437 98010 3326605 11221 152435 160 10789
+47:21.149	ID:4	Ask for current temperature
+47:21.463	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+47:21.946	ID:4	Temperature got
+47:23.636	ID:3	P 3547325 42933081 98157 3337218 11013 152644 147 10613
+47:33.635	ID:3	P 3550159 43093894 98157 3347473 2832 160813 0 10255
+47:36.742	ID:4	Ask for current temperature
+47:37.214	ID:4	t=26, h=252, therm_l=15, therm_h=17, therm_sw=0
+47:37.709	ID:4	Temperature got
+47:43.636	ID:3	P 3561342 43246369 98319 3358285 11181 152475 162 10812
+47:52.336	ID:4	Ask for current temperature
+47:52.717	ID:4	t=13, h=252, therm_l=15, therm_h=17, therm_sw=0
+47:52.722	ID:4	COOOOOLD! -> switch on thermostat
+47:52.969	ID:3	thermostat low 15
+47:52.972	ID:3	thermostat high 17
+47:52.975	ID:3	thermostat switch1
+47:53.222	ID:4	Temperature got
+47:53.636	ID:3	P 3572701 43398665 98479 3369254 11357 152296 160 10969
+48:03.635	ID:3	P 3575542 43559474 98479 3379507 2839 160809 0 10253
+48:07.930	ID:4	Ask for current temperature
+48:08.437	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=1
+48:08.443	ID:4	HOOOOOOOOOT! -> switch off thermostat
+48:08.682	ID:3	thermostat low 15
+48:08.685	ID:3	thermostat high 17
+48:08.688	ID:3	thermostat switch0
+48:08.942	ID:4	Temperature got
+48:13.636	ID:3	P 3592091 43706595 99857 3392705 16547 147121 1378 13198
+48:23.524	ID:4	Ask for current temperature
+48:23.635	ID:3	P 3594924 43867423 99857 3402827 2831 160828 0 10122
+48:23.950	ID:4	t=26, h=252, therm_l=15, therm_h=17, therm_sw=0
+48:24.444	ID:4	Temperature got
+48:33.636	ID:3	P 3606495 44019523 100288 3416604 11569 152100 431 13777
+48:39.117	ID:4	Ask for current temperature
+48:39.452	ID:4	t=25, h=252, therm_l=15, therm_h=17, therm_sw=0
+48:39.946	ID:4	Temperature got
+48:43.636	ID:3	P 3618094 44171591 100716 3430511 11597 152068 428 13907
+48:53.635	ID:3	P 3620926 44332408 100716 3440764 2830 160817 0 10253
+48:54.711	ID:4	Ask for current temperature
+48:55.203	ID:4	t=12, h=252, therm_l=15, therm_h=17, therm_sw=0
+48:55.208	ID:4	COOOOOLD! -> switch on thermostat
+48:55.449	ID:3	thermostat low 15
+48:55.452	ID:3	thermostat high 17
+48:55.455	ID:3	thermostat switch1
+48:55.709	ID:4	Temperature got
+49:03.636	ID:3	P 3632271 44484723 100880 3451415 11343 152315 164 10651
+49:10.305	ID:4	Ask for current temperature
+49:10.717	ID:4	t=19, h=252, therm_l=15, therm_h=17, therm_sw=1
+49:10.722	ID:4	HOOOOOOOOOT! -> switch off thermostat
+49:10.951	ID:3	thermostat low 15
+49:10.954	ID:3	thermostat high 17
+49:10.957	ID:3	thermostat switch0
+49:11.211	ID:4	Temperature got
+49:13.636	ID:3	P 3643850 44636801 101025 3462225 11577 152078 145 10810
+49:23.635	ID:3	P 3646680 44797621 101025 3472480 2828 160820 0 10255
+49:25.899	ID:4	Ask for current temperature
+49:26.252	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+49:26.757	ID:4	Temperature got
+49:33.636	ID:3	P 3658106 44949860 101227 3483744 11424 152239 202 11264
+49:41.493	ID:4	Ask for current temperature
+49:42.004	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+49:42.509	ID:4	Temperature got
+49:43.636	ID:3	P 3669525 45102111 101374 3494166 11417 152251 147 10422
+49:53.635	ID:3	P 3672357 45262936 101374 3504426 2830 160825 0 10260
+49:57.086	ID:4	Ask for current temperature
+49:57.517	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+49:58.022	ID:4	Temperature got
+50:03.636	ID:3	P 3683751 45415208 101538 3515050 11392 152272 164 10624
+50:12.680	ID:4	Ask for current temperature
+50:13.171	ID:4	t=24, h=252, therm_l=15, therm_h=17, therm_sw=0
+50:13.666	ID:4	Temperature got
+50:13.687	ID:3	P 3699979 45563473 102821 3527513 16226 148265 1283 12463
+50:23.635	ID:3	P 3702790 45723486 102821 3537510 2809 160013 0 9997
+50:28.274	ID:4	Ask for current temperature
+50:28.685	ID:4	t=21, h=252, therm_l=15, therm_h=17, therm_sw=0
+50:29.179	ID:4	Temperature got
+50:33.636	ID:3	P 3714361 45875575 103264 3551616 11569 152089 443 14106
+50:43.635	ID:3	P 3717208 46036378 103264 3561869 2845 160803 0 10253
+50:43.867	ID:4	Ask for current temperature
+50:44.187	ID:4	t=24, h=252, therm_l=15, therm_h=17, therm_sw=0
+50:44.681	ID:4	Temperature got
+50:53.636	ID:3	P 3728602 46188653 103412 3572225 11392 152275 148 10356
+50:59.461	ID:4	Ask for current temperature
+50:59.939	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+51:00.445	ID:4	Temperature got
+51:03.636	ID:3	P 3740021 46340905 103576 3582719 11417 152252 164 10494
+51:13.635	ID:3	P 3742868 46501717 103576 3592840 2845 160812 0 10121
+51:15.056	ID:4	Ask for current temperature
+51:15.453	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+51:15.946	ID:4	Temperature got
+51:17.093	ID:1	# [1024 bytes, no line ending]: ?P?P?P?P?P...
+51:23.636	ID:3	P 3754438 46653808 104006 3606818 11568 152091 430 13978
+51:30.649	ID:4	Ask for current temperature
+51:30.966	ID:4	t=23, h=252, therm_l=15, therm_h=17, therm_sw=0
+51:31.460	ID:4	Temperature got
+51:33.636	ID:3	P 3765741 46806160 104166 3617547 11301 152352 160 10729
+51:43.635	ID:3	P 3768586 46966964 104166 3627800 2843 160804 0 10253
+51:46.242	ID:4	Ask for current temperature
+51:46.718	ID:4	t=20, h=252, therm_l=15, therm_h=17, therm_sw=0
+51:47.222	ID:4	Temperature got
+51:53.636	ID:3	P 3780044 47119173 104326 3638485 11456 152209 160 10685
+52:01.836	ID:4	Ask for current temperature
+52:02.231	ID:4	t=23, h=252, therm_l=15, therm_h=17, therm_sw=0
+52:02.725	ID:4	Temperature got
+52:03.636	ID:3	P 3791527 47271360 104473 3648990 11481 152187 147 10505
+52:13.635	ID:3	P 3799374 47427166 105431 3658713 7845 155806 958 9723
+52:17.430	ID:4	Ask for current temperature
+52:17.940	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+52:18.423	ID:4	Temperature got
+52:23.636	ID:3	P 3810722 47579477 105819 3672107 11346 152311 388 13394
+52:33.024	ID:4	Ask for current temperature
+52:33.431	ID:4	t=26, h=252, therm_l=15, therm_h=17, therm_sw=0
+52:33.635	ID:3	P 3817825 47736030 105888 3682519 7101 156553 69 10412
+52:33.914	ID:4	Temperature got
+52:43.635	ID:3	P 3824780 47892735 105952 3692898 6953 156705 64 10379
+52:48.618	ID:4	Ask for current temperature
+52:48.955	ID:4	t=217, h=252, therm_l=15, therm_h=17, therm_sw=0
+52:49.438	ID:4	Temperature got
+52:53.636	ID:3	P 3836131 48045054 106129 3703529 11349 152319 177 10631
+53:03.635	ID:3	P 3838974 48205871 106129 3713641 2841 160817 0 10112
+53:04.211	ID:4	Ask for current temperature
+53:04.696	ID:4	t=15, h=252, therm_l=15, therm_h=17, therm_sw=0
+53:05.180	ID:4	Temperature got
+53:13.636	ID:3	P 3850174 48358330 106263 3724287 11198 152459 134 10646
+53:19.805	ID:4	Ask for current temperature
+53:20.220	ID:4	t=26, h=252, therm_l=15, therm_h=17, therm_sw=0
+53:20.704	ID:4	Temperature got
+53:23.636	ID:3	P 3861541 48510625 106438 3735020 11365 152295 175 10733
+53:33.635	ID:3	P 3864383 48671431 106438 3745275 2840 160806 0 10255
+53:35.399	ID:4	Ask for current temperature
+53:35.711	ID:4	t=13, h=252, therm_l=15, therm_h=17, therm_sw=0
+53:35.713	ID:4	LL New Day
+53:35.718	ID:4	STOP_OBSERVE Stopping observation
+53:35.722	ID:4	LL Stop motion observation
+53:35.729	ID:4	Removing obs_subject for /periodic/motion [0x0200]
+53:35.733	ID:4	WORK_START Start working!
+53:35.735	ID:4	LL Start work
+53:35.740	ID:4	COOOOOLD! -> switch on thermostat
+53:35.952	ID:4	Temperature gotEvent data: 2;1;, Selected index: 2
+53:35.952	ID:3	thermostat low 19
+53:35.955	ID:3	thermostat high 25
+53:35.958	ID:3	thermostat switch1
+53:35.959	ID:4	Toggle periodic/motion with parameters: ?at_work=1;
+53:36.209	ID:3	At work flag is: 1;dated!!!hermostat_high=25&thermostat_switch=1=1 from now on
+53:36.447	ID:4	TOGGLE WORKS!!!
+53:37.200	ID:4	coap_handle_notification()
+53:37.202	ID:4	Getting token
+53:37.205	ID:4	Getting observee info
+53:37.215	ID:4	Error while handling coap observe notification: no matching token found
+53:37.451	ID:4	coap_handle_notification()
+53:37.453	ID:4	Getting token
+53:37.456	ID:4	Getting observee info
+53:37.466	ID:4	Error while handling coap observe notification: no matching token found
