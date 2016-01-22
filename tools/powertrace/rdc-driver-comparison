@@ -1,0 +1,25 @@
+set key top right
+
+set style data boxes
+set style line 5 lt rgb "coral"
+set style line 4 lt rgb "blue"
+set style line 3 lt rgb "gray"
+set style line 2 lt rgb "red"
+
+set pointsize 2
+set ylabel "Power (mW)"
+set xlabel "Time (m)"
+set terminal postscript eps enhanced "Helvetica" 16 lw 4 dl 5
+set output 'rdc-driver-rx-comparison.eps'
+set title "Netstack RDC drivers RX comparison"
+
+set xtics ("8:00" 25,"11:00" 30,"14:00" 35,"15:00" 40,"18:00" 45)
+plot [25:45] [0.001:300] './experiments/finalResults/NETSTACK-CONF-DRIVER/energy-consumption-data-NETSTACK-CONF-DRIVER-nullrdc-driver' using ($1):($5) with lines ls 2 title 'nullrdc' , \
+    "./experiments/finalResults/NETSTACK-CONF-DRIVER/energy-consumption-data-NETSTACK-CONF-DRIVER-cxmac-driver" using ($1):($5) with lines ls 3 title 'cxmac' , \
+    "./experiments/finalResults/NETSTACK-CONF-DRIVER/energy-consumption-data-NETSTACK-CONF-DRIVER-contikimac-driver" using ($1):($5) with lines ls 5 title 'contikimac'
+
+set output 'rdc-driver-total-comparison.eps'
+set title "Netstack RDC drivers total comparison"
+plot [25:45] [0.001:300] './experiments/finalResults/NETSTACK-CONF-DRIVER/energy-consumption-data-NETSTACK-CONF-DRIVER-nullrdc-driver' using ($1):($6) with lines ls 2 title 'nullrdc' , \
+    "./experiments/finalResults/NETSTACK-CONF-DRIVER/energy-consumption-data-NETSTACK-CONF-DRIVER-cxmac-driver" using ($1):($6) with lines ls 3 title 'cxmac' , \
+    "./experiments/finalResults/NETSTACK-CONF-DRIVER/energy-consumption-data-NETSTACK-CONF-DRIVER-contikimac-driver" using ($1):($6) with lines ls 5 title 'contikimac'

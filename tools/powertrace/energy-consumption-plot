@@ -13,7 +13,7 @@ set terminal postscript eps enhanced "Helvetica" 16 lw 4 dl 5
 set output path."energy-consumption-".case.".eps"
 set title "Energy Consumption"
 
-set xtics ("8:00" 25,"11:00" 30,"14:00" 35,"15:00" 40,"18:00" 45)
+#set xtics ("8:00" 25,"11:00" 30,"14:00" 35,"15:00" 40,"18:00" 45)
 plot [25:45] [0.001:100] filename using ($1):($2) with lines ls 2 title 'CPU Energy' , \
     filename using ($1):($3) with lines ls 5 title 'LPM Energy', \
     filename using ($1):($4) with lines ls 4 title 'TX Energy' , \
