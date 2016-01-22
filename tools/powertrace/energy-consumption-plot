@@ -12,7 +12,9 @@ set xlabel "Time (m)"
 set terminal postscript eps enhanced "Helvetica" 16 lw 4 dl 5
 set output path."energy-consumption-".case.".eps"
 set title "Energy Consumption"
-plot [25:54] [0.001:70] filename using ($1):($2) with lines ls 2 title 'CPU Energy' , \
+
+set xtics ("8:00" 25,"11:00" 30,"14:00" 35,"15:00" 40,"18:00" 45)
+plot [25:45] [0.001:100] filename using ($1):($2) with lines ls 2 title 'CPU Energy' , \
     filename using ($1):($3) with lines ls 5 title 'LPM Energy', \
     filename using ($1):($4) with lines ls 4 title 'TX Energy' , \
     filename using ($1):($5) with lines ls 3 title "RX Energy" , \
@@ -22,7 +24,7 @@ set output path."energy-consumption-total-".case.".eps"
 set title "Energh Consumption (Total)"
 set ylabel "Power (mW)"
 set xlabel "Time (m)"
-plot [25:54] [0.001:105] filename using ($1):($6) with lines title 'Total Energy'
+plot [25:45] [0.001:120] filename using ($1):($6) with lines title 'Total Energy'
 
 
 set output path."duty-cycle-".case.".eps"
@@ -30,7 +32,8 @@ set title "Duty cycle"
 set ylabel "Duty cycle(%)"
 set xlabel "Time (m)"
 set logscale y 10
-plot [25:54] [0.01:150] filename using ($1):($7*100) with lines ls 4 title 'TX' , \
+set format y "%2.0t{/Symbol \327}10^{%L}"
+plot [25:45] [0.01:150] filename using ($1):($7*100) with lines ls 4 title 'TX' , \
     filename using ($1):($8*100) with lines ls 3 title 'RX' , \
     filename using ($1):($9*100) with lines ls 2 title 'CPU' , \
     filename using ($1):($10*100) with lines ls 5 title 'LPM'
